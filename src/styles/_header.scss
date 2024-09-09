@@ -1,0 +1,387 @@
+/* src/styles/components/_header.scss */
+
+header {
+  background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoHeader.jpg");
+  background-size: cover;
+  color: #F0F1F0;
+
+  .header_sup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem; /* Menos padding en mobile */
+
+    .logo_fedes {
+      width: 6rem; /* Mobile size */
+      cursor: pointer;
+    }
+
+    .menuHamburguesa {
+      display: block; /* Mostrar el menú hamburguesa en mobile */
+      width: 2rem;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .navegacion-horizontal {
+      display: none; /* Ocultar en mobile */
+    }
+
+    .redesYlogin {
+      display: none; /* Ocultar en mobile */
+    }
+  }
+
+  /* Menú desplegable para mobile */
+  .contenedorMenuAbierto {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #1D1D1B;
+    color: #F0F1F0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 1000;
+
+    &.menu-visible {
+      right: 0; /* Mueve el menú hacia la vista cuando está visible */
+    }
+
+    .logoYclose {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 2rem;
+
+      .logo_fedes {
+        width: 6rem;
+      }
+
+      .close-menu {
+        cursor: pointer;
+        width: 2rem;
+      }
+    }
+
+    .navegacion-vertical {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      li {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        text-align: start;
+        width: 100%;
+
+        &:hover {
+          color: #44718D;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .redesYlogin {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2rem;
+
+      .redesSociales {
+        display: flex;
+        justify-content: flex-start;
+
+        a {
+          margin-right: 1rem;
+          position: relative;
+
+          img.hover {
+            opacity: 0;
+            position: absolute;
+            bottom: 0px;
+            transition: opacity 0.3s ease-in-out;
+          }
+
+          img.default {
+            transition: opacity 0.3s ease-in-out;
+          }
+
+          &:hover {
+            img.hover {
+              opacity: 1;
+            }
+
+            img.default {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      .user_div {
+        background-color: #F0F1F0;
+        padding: 0.3rem;
+        border-radius: 100px;
+        height: fit-content;
+
+        .dropdown {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          .dropdown-toggle {
+            width: 100%;
+            justify-content: space-around;
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+          .dropdown-toggle::after {
+            display: none;
+          }
+
+          .user_img_container {
+            display: flex;
+            align-items: center;
+
+            .userImg {
+              border-radius: 100%;
+              width: 20px;
+            }
+
+            .arrow {
+              width: 13px;
+              margin-left: 1.5rem;
+            }
+          }
+
+          .dropdown-menu {
+            background-color: #F0F1F0;
+            margin-top: 0.5rem !important;
+            position: absolute;
+            bottom: 1.7rem;
+            right: -0.2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            border-radius: 10px;
+            width: 9rem;
+            padding: 1rem 0.2rem;
+
+            .dropdown-item {
+              color: #1D1D1B;
+              padding-left: 0.5rem !important;
+              padding-right: 0.5rem !important;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              p {
+                margin: 0 !important;
+              }
+
+              i::before {
+                color: #44718D;
+              }
+            }
+
+            .dropdown-divider {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Desktop adjustments */
+  @media (min-width: 1080px) {
+    .header_sup {
+      padding: 2rem;
+
+      .logo_fedes {
+        width: 9rem;
+      }
+
+      .menuHamburguesa {
+        display: none; /* Ocultar el menú hamburguesa en pantallas grandes */
+      }
+
+      .contenedorMenuAbierto {
+        display: none; /* Ocultar el menú desplegable en pantallas grandes */
+      }
+
+      .navegacion-horizontal,
+      .redesYlogin {
+        display: flex; /* Mostrar la navegación y redes sociales en desktop */
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navegacion-horizontal {
+        ul {
+          display: flex;
+          list-style: none;
+
+          li {
+            margin-left: 1.8rem;
+            font-size: 0.8rem;
+
+            &:hover {
+              color: #44718D;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .redesYlogin {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+  
+        .redesSociales {
+          display: flex;
+          justify-content: flex-start;
+  
+          a {
+            margin-right: 1rem;
+            position: relative;
+  
+            img.hover {
+              opacity: 0;
+              position: absolute;
+              bottom: 0px;
+              transition: opacity 0.3s ease-in-out;
+            }
+  
+            img.default {
+              transition: opacity 0.3s ease-in-out;
+            }
+  
+            &:hover {
+              img.hover {
+                opacity: 1;
+              }
+  
+              img.default {
+                opacity: 0;
+              }
+            }
+          }
+        }
+  
+        .user_div {
+          background-color: #F0F1F0;
+          padding: 0.3rem;
+          border-radius: 100px;
+          height: fit-content;
+  
+          .dropdown {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+  
+            .dropdown-toggle {
+              width: 100%;
+              justify-content: space-around;
+              padding-left: 0.5rem;
+              padding-right: 0.5rem;
+            }
+  
+            .dropdown-toggle::after {
+              display: none;
+            }
+  
+            .user_img_container {
+              display: flex;
+              align-items: center;
+  
+              .userImg {
+                border-radius: 100%;
+                width: 20px;
+              }
+  
+              .arrow {
+                width: 13px;
+                margin-left: 1.5rem;
+              }
+            }
+  
+            .dropdown-menu {
+              background-color: #F0F1F0;
+              margin-top: 0.5rem !important;
+              position: absolute;
+              top: 1.7rem;
+              right: -0.2rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: end;
+              border-radius: 10px;
+              width: 9rem;
+              padding: 1rem 0.2rem;
+  
+              .dropdown-item {
+                color: #1D1D1B;
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+  
+                p {
+                  margin: 0 !important;
+                }
+  
+                i::before {
+                  color: #44718D;
+                }
+              }
+  
+              .dropdown-divider {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Desktop grande adjustments */
+  @media (min-width: 1400px) {
+    .header_sup {
+      padding: 2rem 5rem; /* Más espacio para pantallas grandes */
+
+      .logo_fedes {
+        width: 10rem;
+      }
+
+      .navegacion-horizontal {
+        ul {
+          li {
+            margin-left: 3rem;
+            font-size: 1rem; /* Texto más grande */
+          }
+        }
+      }
+    }
+  }
+}

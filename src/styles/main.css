@@ -1,0 +1,447 @@
+@charset "UTF-8";
+/* src/styles/main.scss */
+/* src/styles/base/_mixins.scss */
+/* Importar el reset de estilos */
+/* src/styles/base/_reset.scss */
+/* Box-sizing rule for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Arial", sans-serif; /* Use your preferred font-family */
+  text-rendering: optimizeSpeed; /* Improves text rendering performance */
+  -webkit-font-smoothing: antialiased;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default text decoration and color for anchors */
+a {
+  text-decoration: none;
+  color: inherit; /* Keeps link color inherited from parent */
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes inline gap */
+}
+
+/* Inherit fonts for form elements */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Button resets */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Normalize form elements */
+textarea {
+  resize: vertical; /* Prevents resizing horizontally */
+}
+
+/* Set consistent style for quotes */
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid #e0e0e0;
+}
+
+/* Disable animations/transitions for users who have them disabled */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption {
+  display: none;
+}
+
+/* More robust line-height and consistent appearance in form controls */
+button, input, optgroup, select, textarea {
+  margin: 0; /* Removes default margin for form elements */
+  line-height: inherit;
+}
+
+/* Ensure form elements inherit font styles */
+input, button, select, textarea {
+  font: inherit;
+}
+
+/* Improve media defaults */
+figure {
+  margin: 0;
+}
+
+/* Add accessible line-height */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Set defaults for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Ensure consistent text spacing */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Set default display for media elements */
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* src/styles/base/_variables.scss */
+/* Importar los estilos de los componentes */
+/* src/styles/components/_header.scss */
+header {
+  background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoHeader.jpg");
+  background-size: cover;
+  color: #F0F1F0;
+  /* Menú desplegable para mobile */
+  /* Desktop adjustments */
+  /* Desktop grande adjustments */
+}
+header .header_sup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem; /* Menos padding en mobile */
+}
+header .header_sup .logo_fedes {
+  width: 6rem; /* Mobile size */
+  cursor: pointer;
+}
+header .header_sup .menuHamburguesa {
+  display: block; /* Mostrar el menú hamburguesa en mobile */
+  width: 2rem;
+  cursor: pointer;
+}
+header .header_sup .menuHamburguesa img {
+  width: 100%;
+}
+header .header_sup .navegacion-horizontal {
+  display: none; /* Ocultar en mobile */
+}
+header .header_sup .redesYlogin {
+  display: none; /* Ocultar en mobile */
+}
+header .contenedorMenuAbierto {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #1D1D1B;
+  color: #F0F1F0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+header .contenedorMenuAbierto.menu-visible {
+  right: 0; /* Mueve el menú hacia la vista cuando está visible */
+}
+header .contenedorMenuAbierto .logoYclose {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+}
+header .contenedorMenuAbierto .logoYclose .logo_fedes {
+  width: 6rem;
+}
+header .contenedorMenuAbierto .logoYclose .close-menu {
+  cursor: pointer;
+  width: 2rem;
+}
+header .contenedorMenuAbierto .navegacion-vertical {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+header .contenedorMenuAbierto .navegacion-vertical li {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  text-align: start;
+  width: 100%;
+}
+header .contenedorMenuAbierto .navegacion-vertical li:hover {
+  color: #44718D;
+  font-weight: 600;
+}
+header .contenedorMenuAbierto .redesYlogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+header .contenedorMenuAbierto .redesYlogin .redesSociales {
+  display: flex;
+  justify-content: flex-start;
+}
+header .contenedorMenuAbierto .redesYlogin .redesSociales a {
+  margin-right: 1rem;
+  position: relative;
+}
+header .contenedorMenuAbierto .redesYlogin .redesSociales a img.hover {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  transition: opacity 0.3s ease-in-out;
+}
+header .contenedorMenuAbierto .redesYlogin .redesSociales a img.default {
+  transition: opacity 0.3s ease-in-out;
+}
+header .contenedorMenuAbierto .redesYlogin .redesSociales a:hover img.hover {
+  opacity: 1;
+}
+header .contenedorMenuAbierto .redesYlogin .redesSociales a:hover img.default {
+  opacity: 0;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div {
+  background-color: #F0F1F0;
+  padding: 0.3rem;
+  border-radius: 100px;
+  height: fit-content;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-toggle {
+  width: 100%;
+  justify-content: space-around;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-toggle::after {
+  display: none;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .user_img_container {
+  display: flex;
+  align-items: center;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .user_img_container .userImg {
+  border-radius: 100%;
+  width: 20px;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .user_img_container .arrow {
+  width: 13px;
+  margin-left: 1.5rem;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-menu {
+  background-color: #F0F1F0;
+  margin-top: 0.5rem !important;
+  position: absolute;
+  bottom: 1.7rem;
+  right: -0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 10px;
+  width: 9rem;
+  padding: 1rem 0.2rem;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-item {
+  color: #1D1D1B;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-item p {
+  margin: 0 !important;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-item i::before {
+  color: #44718D;
+}
+header .contenedorMenuAbierto .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-divider {
+  display: none;
+}
+@media (min-width: 1080px) {
+  header .header_sup {
+    padding: 2rem;
+  }
+  header .header_sup .logo_fedes {
+    width: 9rem;
+  }
+  header .header_sup .menuHamburguesa {
+    display: none; /* Ocultar el menú hamburguesa en pantallas grandes */
+  }
+  header .header_sup .contenedorMenuAbierto {
+    display: none; /* Ocultar el menú desplegable en pantallas grandes */
+  }
+  header .header_sup .navegacion-horizontal,
+  header .header_sup .redesYlogin {
+    display: flex; /* Mostrar la navegación y redes sociales en desktop */
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header_sup .navegacion-horizontal ul {
+    display: flex;
+    list-style: none;
+  }
+  header .header_sup .navegacion-horizontal ul li {
+    margin-left: 1.8rem;
+    font-size: 0.8rem;
+  }
+  header .header_sup .navegacion-horizontal ul li:hover {
+    color: #44718D;
+    font-weight: 600;
+  }
+  header .header_sup .redesYlogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  header .header_sup .redesYlogin .redesSociales {
+    display: flex;
+    justify-content: flex-start;
+  }
+  header .header_sup .redesYlogin .redesSociales a {
+    margin-right: 1rem;
+    position: relative;
+  }
+  header .header_sup .redesYlogin .redesSociales a img.hover {
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  header .header_sup .redesYlogin .redesSociales a img.default {
+    transition: opacity 0.3s ease-in-out;
+  }
+  header .header_sup .redesYlogin .redesSociales a:hover img.hover {
+    opacity: 1;
+  }
+  header .header_sup .redesYlogin .redesSociales a:hover img.default {
+    opacity: 0;
+  }
+  header .header_sup .redesYlogin .user_div {
+    background-color: #F0F1F0;
+    padding: 0.3rem;
+    border-radius: 100px;
+    height: fit-content;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-toggle {
+    width: 100%;
+    justify-content: space-around;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-toggle::after {
+    display: none;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .user_img_container {
+    display: flex;
+    align-items: center;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .user_img_container .userImg {
+    border-radius: 100%;
+    width: 20px;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .user_img_container .arrow {
+    width: 13px;
+    margin-left: 1.5rem;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-menu {
+    background-color: #F0F1F0;
+    margin-top: 0.5rem !important;
+    position: absolute;
+    top: 1.7rem;
+    right: -0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 10px;
+    width: 9rem;
+    padding: 1rem 0.2rem;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-item {
+    color: #1D1D1B;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-item p {
+    margin: 0 !important;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-item i::before {
+    color: #44718D;
+  }
+  header .header_sup .redesYlogin .user_div .dropdown .dropdown-menu .dropdown-divider {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  header .header_sup {
+    padding: 2rem 5rem; /* Más espacio para pantallas grandes */
+  }
+  header .header_sup .logo_fedes {
+    width: 10rem;
+  }
+  header .header_sup .navegacion-horizontal ul li {
+    margin-left: 3rem;
+    font-size: 1rem; /* Texto más grande */
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

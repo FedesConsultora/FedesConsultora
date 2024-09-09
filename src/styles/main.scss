@@ -1,0 +1,11 @@
+/* src/styles/main.scss */
+@import 'base/mixins';
+/* Importar el reset de estilos */
+@import './base/reset';
+@import 'base/variables';
+
+/* Importar los estilos de los componentes */
+@import './header';
+@import './footer';
+@import './mainSection';
+
