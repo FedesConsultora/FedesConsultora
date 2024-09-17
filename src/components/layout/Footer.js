@@ -1,9 +1,20 @@
-import React from 'react'
+import React from 'react';
+import FooterInfo from '../footerSection/FooterInfo';
+import SocialLinks from '../footerSection/SocialLinks';
+import LegalFooter from '../footerSection/LegalFooter';
+
 
 const Footer = () => {
+  
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="footerdos">
+      <section className="footerInfo">
+        <FooterInfo />
+        <SocialLinks />
+      </section>
+      <LegalFooter />
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

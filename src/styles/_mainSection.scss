@@ -1,0 +1,1630 @@
+.segundaSection {
+    background-image: url("https://fedesagency.com/fedes-consultora/landing/fondo_section_2.jpg");
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    background-size: cover;
+    padding-bottom: 0rem;
+    overflow: hidden;
+    .informacionContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+          .minilogo-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        
+            .texto_minilogo {
+              font-size: 1rem;
+              color: #F0F1F0;
+              display: flex;
+              img{
+                  position: relative;
+                  bottom: 0.1rem;
+              }
+            }
+        
+            img {
+              width: 4rem;
+              margin-left: 0.5rem;
+            }
+          }
+        
+          .parrafo-container {
+            text-align: center;
+            color: #F0F1F0;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.4;
+        
+            .parrafo-fedes {
+              font-weight: 100;
+              letter-spacing: 0.05rem;
+              font-size: 1.7rem;
+              .extra-bold {
+                font-weight: 900;
+              }
+            }
+        
+            
+        
+            .parrafo-extra {
+              font-size: 0.9rem;
+              margin-top: 1rem;
+            }
+          }
+        
+          .sliders_container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            align-items: center;
+        
+            .unidadContainer {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 1rem;
+        
+              .textoAfuera {
+                font-size: 3rem;
+                font-weight: 900;
+                text-align: center;
+                left: 2rem;
+                color: #F0F1F0;
+                z-index: 0;
+                
+                &.primero{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    span{
+                        position: relative;
+                        top: 0.15rem;
+                        left: 2rem;
+                    }
+                    strong{
+                        position: relative;
+                        bottom: 0.7rem;
+                        left: 2rem;
+                        font-size: 0.75rem;
+                    }
+                }
+                &.segundo{
+                    span{
+                        position: relative;
+                        left: 2.3rem;
+                    }
+                }
+                &.tercero{
+                    span{
+                        position: relative;
+                        left: 3rem;
+                    }
+                }
+              }
+        
+              .slider1, .slider2, .slider3 {
+                width: 200px;
+                height: 100px;
+                background-image: url("https://fedesagency.com/fedes-consultora/landing/imagen_slider.png");
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                .textoAdentro {
+                  font-size: 1rem;
+                  color: #fff;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        
+        .buttons_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            .button1 {
+                padding: 0.8rem 2.5rem;
+                background-color: #44718D;
+                color: #F0F1F0;
+                border: none;
+                border-radius: 50px;
+                font-size: 0.8rem;
+            }
+    
+            .button1:hover {
+                box-shadow: 0px 0px 8px 2px #44718D;
+            }
+        }
+        
+        
+    }
+    .nombresContainer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2.5rem;
+        color: #F0F1F0;
+        .nombreContainer{
+            user-select: none;
+            width: 100%;
+            position: relative;
+            right: 0.3rem;
+            img{
+                width: 110%;
+            }
+            h3 {
+                text-align: center;
+                font-size: 0.60rem;
+                margin-bottom: 0.5rem;
+                position: relative;
+                top: 4rem;
+                font-weight: 900;
+            }
+            p {
+                font-size: 0.55rem;
+                text-align: center;
+                margin-bottom: 1rem;
+                position: relative;
+                top: 3.5rem;
+            }
+        }
+        
+
+        img {
+            user-select: none;
+            width: 160px;
+            margin-top: 1rem;
+        }
+    }
+    .foto_fedes {
+        
+        
+        width: 109%;
+        position: relative;
+        right: 0.9rem;
+    }
+
+   
+}
+
+
+.terceraSection {
+    background-image: url('https://fedesagency.com/fedes-consultora/landing/fondoHeader.jpg');
+    background-size: cover;
+    color: #f0f1f0;
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    .contenedorTitulos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+  
+      img {
+        margin-bottom: 1rem;
+      }
+  
+      .tituloSoluciones {
+        
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+  
+      .textoSoluciones {
+        font-size: 2.3rem;
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        font-weight: 100;
+  
+        .extra-bold {
+          font-weight: 900;
+        }
+      }
+    }
+  
+    .contenedorSoluciones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin-top: 2rem;
+  
+      .imagenCamino {
+        display: none; 
+      }
+  
+      .solution-item {
+        display: flex;
+        width: 100%;
+        position: relative;
+        padding-bottom: 4rem;
+        transition: box-shadow 0.3s ease, background-color 0.3s ease;
+        
+    
+
+        &.uno {
+            padding-top: 4rem;
+        }
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 30px;
+          width: 2px; 
+          height: 100%;
+          background-color: #44718D;
+          transform: translateX(-50%);
+          z-index: 1;
+          transition: height 0.5s ease;
+          
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 150%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 0.3) 0%,   
+                rgba(255, 255, 255, 0) 60%    
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+  
+        &.expanded {
+            
+            &::before {
+                height: 110%;
+            
+            }
+            &::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+  
+        .contenedorIcono {
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            user-select: none;
+            .iconos {
+                width: 60px;
+                position: relative;
+                z-index: 3;
+                user-select: none;
+            }
+        }
+  
+        .card {
+          width: 100%;
+          text-align: center;
+          padding: 1rem;
+          padding-left: 1.3rem;
+          display: flex;
+          flex-direction: column;
+        }
+  
+        // Control de la animación de expansión del contenido
+        .details-section {
+          overflow: hidden;
+          max-height: 0;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          user-select: none;
+        }
+  
+        &.expanded {
+          margin-bottom: 1rem;
+  
+          .details-section {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        &.uno.expanded .contenedorIcono img {
+          position: relative;
+          top: 0.1rem;
+        }
+        &.dos.expanded .contenedorIcono img {
+          position: relative;
+          top: 0.1rem;
+        }
+        &.tres.expanded .contenedorIcono img {
+          position: relative;
+          top: 1.1rem;
+        }
+  
+        article {
+          h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-align: start;
+          }
+  
+          p {
+            font-size: 1rem;
+            text-align: start;
+            margin-top: 1rem;
+          }
+        }
+  
+        .verDetalles {
+          display: flex;
+          justify-content: start;
+          margin-top: 1rem;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          align-self: flex-start;
+  
+          .textoVerDetalles {
+            font-size: 1rem;
+            margin-right: 0.5rem;
+            font-weight: 700;
+            padding-right: 1rem;
+          }
+  
+          img {
+            width: 20px;
+          }
+        }
+  
+        &.expanded .verDetalles {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+.cuartaSection {
+    background-image: url("https://fedesagency.com/fedes-consultora/landing/fondo_fecha.jpg");
+    background-size: cover;
+    overflow: hidden;
+    .contenedorMarcas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+  
+      img {
+        margin-bottom: 1rem;
+      }
+  
+      h5 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+  
+      .marcasTexto {
+        color: #44718D;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        font-weight: 100 ;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        strong {
+          font-weight: 900;
+        }
+  
+        img {
+          margin-bottom: 0;
+          position: relative;
+          bottom: 0.2rem;
+          left: -0.2rem;
+          width: 11rem;
+        }
+      }
+  
+      p {
+        margin-top: 1.6rem;
+        width: 100%;
+        margin-bottom: 0rem;
+      }
+    }
+  
+    .contenedorCarrusel {
+      width: 100%;
+      .carousel {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+  
+        .grande {
+          width: 200%;
+          display: flex;
+          transition: all 0.5s ease;
+        }
+  
+        .carousel-item {
+          position: relative;
+          flex: 1 0 calc(50%); 
+          padding: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          user-select: none;
+          .img {
+            width: 100%;
+            box-shadow: #1d1d1bb1 1px 1px 15px;
+            margin: 1rem;
+            border-radius: 1rem;
+          }
+  
+          .overlay {
+            position: absolute;
+            top: 1rem;
+            left: 0rem;
+            width: calc(100% - 2rem);
+            height: calc(100% - 4rem);
+            background-color: rgba(68, 113, 141, 0.75);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 1rem;
+            margin: 1rem;
+            &.kronen{
+              .texto-overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                  width: 200px;
+                }
+              }
+            }
+            &.tuCan{
+              .texto-overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                  width: 90px;
+                  position: relative;
+                  top: 1rem;
+                }
+              }
+            }
+            &.peters{
+              .texto-overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                  width: 200px;
+                  position: relative;
+                  top: 0.5rem;
+                }
+              }
+            }
+            &.abes{
+              .texto-overlay {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img {
+                  position: relative;
+                  top: 0.5rem;
+                  width: 120px;
+                }
+              }
+            }
+            .ver-caso {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              margin-top: 1rem;
+  
+              p {
+                margin: 1rem;
+              }
+  
+              img {
+                width: 20px;
+              }
+            }
+          }
+  
+          &:hover .overlay {
+            opacity: 1;
+          }
+        }
+  
+        .puntos {
+          width: 100%;
+          padding: 1rem;
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1rem;
+          user-select: none;
+          .punto {
+            width: 1rem;
+            height: 1rem;
+            background-color: rgb(142, 142, 142);
+            margin: 0 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+  
+            &.activo {
+              background-color: #44718D;
+            }
+          }
+        }
+      }
+    }
+  
+    .contenedorOpiniones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+      
+      p {
+        font-size: 2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+        width: 100%;
+        text-align: center;
+  
+        strong {
+          font-weight: 900;
+        }
+      }
+  
+      .cardContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card {
+          display: flex;
+          flex-direction: row-reverse;
+          height: 180px;
+          background-color: #F0F1F0;
+          box-shadow: inset 0 0 25px 1px #44718D;
+          margin-bottom: 1rem;
+          padding: 0.5rem 2rem;
+          border-top-right-radius: 6rem;
+          border-bottom-right-radius: 6rem;
+  
+          .imgContainer {
+            display: flex;
+            align-items: center;
+  
+            img {
+              width: 92px;
+              border-radius: 50%;
+              height: 60%;
+            }
+          }
+  
+          .cardInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 1rem;
+            width: 100%;
+  
+            .cardParrafo {
+              p {
+                color: #44718D;
+                font-weight: 500;
+                font-size: 0.85rem;
+                margin-bottom: 0.5rem;
+                margin-right: 1rem;
+              }
+            }
+  
+            .cardClient {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+  
+              p {
+                color: #44718D;
+                font-weight: 600;
+                font-style: italic;
+                font-size: 0.85rem;
+                margin: 0;
+              }
+  
+              img {
+                padding-left: 0.5rem;
+                margin-left: 0.5rem;
+                border-left: 1px #44718D solid;
+                width: 7rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .contenedorAccion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+  
+      div{
+        text-align: center;
+        margin-bottom: 1rem;
+        
+        h3 {
+          font-size: 1.1rem;
+          font-weight: 900;
+        }
+      }
+  
+      .buttons_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        .button1 {
+          background-color: #44718D;
+          color: #F0F1F0;
+          border: none;
+          padding: 0.8rem;
+          border-radius: 6rem;
+          width: 100%;
+          max-width: 216px;
+          cursor: pointer;
+          font-size: 0.9rem;
+          &:hover {
+            box-shadow: #44718D 0px 0px 8px 2px;
+          }
+        }
+      }
+    }
+}
+.quintaSection {
+  background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoPrensaDesktop.jpg");
+  background-size: cover;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+
+  .contenedorPrensa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .titulo_principal {
+      text-align: center;
+      color: #F0F1F0;
+      border-top: 1px solid #F0F1F0;
+      width: max-content;
+      padding-top: 1.5rem;
+      position: relative;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+    }
+
+    .text_general {
+      color: #F0F1F0;
+      font-size: 2.5rem; // Tamaño de fuente menor para mobile
+    }
+
+    .parrafo_general {
+      color: #F0F1F0;
+      font-size: 1rem; // Ajustado para móviles
+      width: 100%; // Ocupa todo el ancho en mobile
+      text-align: center;
+      font-weight: lighter !important;
+      padding-top: 1rem;
+    }
+  }
+
+  .contenedorNotas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%; // Asegura que ocupe el 100% del ancho
+
+    .carouselNotas {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+
+      .grandeNotas {
+        display: flex;
+        flex-direction: row;
+        transition: all 0.5s ease;
+        width: 200%;
+        transform: translateX(0); 
+
+        a {
+          width: 50%;
+          margin: 1rem;
+          display: block;
+          text-decoration: none;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          background-color: #cccccc50;
+          border-radius: 16px;
+          box-shadow: inset #44718D 0px 0px 32px;
+          padding: 1.5rem; // Ajuste para mobile
+          transition: all 0.5s ease-in-out;
+          
+            
+          &.expanded .overlayNotas {
+            opacity: 1;
+            max-height: 100%; /* Expande completamente en mobile */
+            .texto-overlay {
+              text-align: center;
+              padding: 1rem;
+              opacity: 1;
+              transition: opacity 0.5s ease-in-out;
+            }
+          }
+        
+          &:hover .overlayNotas {
+            opacity: 1;
+            max-height: 100%;
+          }
+            img {
+              width: 100%;
+              border-radius: 1rem;
+              height: auto; 
+              object-fit: cover;
+              transition: transform 0.3s ease;
+            }
+
+            .tituloNota {
+              padding-top: 1rem;
+              color: white;
+              font-size: 1.2rem;
+            }
+
+            .overlayNotas {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background-color: rgba(0, 0, 0, 0.7);
+              color: white;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              opacity: 1;
+              transition: opacity 0.3s ease, max-height 0.3s ease;
+              max-height: 0;
+              overflow: hidden;
+              border-radius: 16px;
+              -webkit-border-radius: 16px;
+              -moz-border-radius: 16px;
+              -ms-border-radius: 16px;
+              -o-border-radius: 16px;
+              .texto-overlay {
+                text-align: center;
+                padding: 1rem;
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out;
+                text-shadow: #F0F1F0 1px 1px 5px;
+              }
+
+              .ver-nota {
+                display: flex;
+                align-items: center;
+                p {
+                  font-weight: bold;
+                  color: #f0f1f0;
+                  margin-bottom: 0;
+                  
+                }
+                .flechaDerecha {
+                  width: 30px;
+                  height: 19px;
+                  margin-left: 1rem;
+                }
+              }
+            
+
+            
+          }
+        }
+      }
+
+      .puntosNotas {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        padding: 0;
+
+        .puntoNotas {
+          width: 1rem;
+          height: 1rem;
+          background-color: #1d1d1b60;
+          border-radius: 50%;
+          cursor: pointer;
+          margin: 0 0.5rem;
+          &.activo {
+            background-color: #1d1d1b;
+          }
+        }
+      }
+    }
+  }
+
+  .contenedorAccion {
+    text-align: center;
+    margin-top: 2rem;
+    p {
+      font-size: 1rem; // Tamaño reducido para mobile
+      color: #F0F1F0;
+    }
+  }
+}
+  
+  
+@media (min-width: 350px) {
+    .segundaSection {
+        .nombresContainer {
+            .nombreContainer{
+                h3 {
+                    font-size: 0.9rem;
+                    top: 4.5rem;
+                }
+                p {
+                    font-size: 0.8rem;
+                    top: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 420px) {
+    .segundaSection {
+        .nombresContainer {
+            .nombreContainer{
+                h3 {
+                    
+                    top: 5.5rem;
+                }
+                p {
+                    
+                    top: 5rem;
+                }
+            }
+        }
+        .foto_fedes {
+            width: 100%;
+            position: relative;
+            right: 0.9rem;
+        }
+    }
+    .terceraSection{
+        .contenedorSoluciones{
+            .solution-item{
+                &::before{
+                    left: 40px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 170%;
+                    transform: translate(-50%, -50%);
+                    z-index: 0;
+                    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                
+                }
+                .contenedorIcono{
+                    .iconos{
+                        width: 80px;
+                    }
+                }
+                &.expanded {
+                    margin-bottom: 1rem;
+            
+                }
+            }
+        }
+    }
+    .cuartaSection{
+      .contenedorCarrusel{
+        .carousel{
+          .grande{
+            .carousel-item{
+              .overlay{
+                &.kronen{
+                  .texto-overlay {
+                    
+        
+                    img {
+                      width: 300px;
+                    }
+                  }
+                }
+                &.tuCan{
+                  .texto-overlay {
+                   
+        
+                    img {
+                      width: 125px;
+                      position: relative;
+                      top: 1rem;
+                    }
+                  }
+                }
+                &.peters{
+                  .texto-overlay {
+                   
+        
+                    img {
+                      width: 250px;
+                      position: relative;
+                      top: 0.5rem;
+                    }
+                  }
+                }
+                &.abes{
+                  .texto-overlay {
+                    
+        
+                    img {
+                      position: relative;
+                      top: 0.5rem;
+                      width: 190px;
+                    }
+                  }
+                }
+              }
+              
+            }
+          }
+        }
+      }
+    }
+}
+@media (min-width: 500px) {
+    .segundaSection {
+      .nombresContainer {
+        .nombreContainer{
+          img{
+            width: 15.55rem;
+          }
+        }
+      }
+    }
+    .cuartaSection{
+      .contenedorOpiniones{
+        .cardContainer{
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
+          .card{
+            padding: 0.5rem 2.5rem;
+          }
+          p{
+            font-size: 1.1rem !important;
+          }
+        }
+      }
+    }
+}
+@media (min-width: 600px) {
+    .segundaSection {
+        .nombresContainer {
+            .nombreContainer{
+                img{
+                    width: 15.55rem;
+                    position: relative;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+    .terceraSection{
+        .contenedorSoluciones{
+            .solution-item{
+                &::before{
+                    left: 40px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
+                    height: 170%;
+                    transform: translate(-50%, -50%);
+                    z-index: 0;
+                    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
+                    opacity: 0;
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                
+                }
+                .contenedorIcono{
+                    .iconos{
+                        width: 80px;
+                    }
+                }
+                &.expanded {
+                    margin-bottom: 1rem;
+            
+                }
+            }
+        }
+    }
+    .cuartaSection{
+      .contenedorCarrusel{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+    }
+}
+@media (min-width: 680px) {
+    .segundaSection {
+        .nombresContainer {
+            .nombreContainer{
+                img{
+                    width: 15.55rem;
+                    position: relative;
+                    left: 4rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 800px) {
+    .segundaSection {
+        display: flex;
+        flex-direction: row;
+        .founders{
+            position: relative;
+            top: 7.9rem;
+            .nombresContainer {
+                .nombreContainer{
+                    position: relative;
+                    bottom: 4rem;
+                    img{
+                        width: 15.55rem;
+                        position: relative;
+                        left: -0.5rem;
+                    }
+                }
+            }
+            .foto_fedes {
+                bottom: -3.3rem;
+            }
+        }
+
+        .informacionContainer{
+            margin-bottom: 2rem;
+            .parrafo-container{
+                width: 90%;
+            }
+        }
+    }
+    .terceraSection{
+        .contenedorSoluciones{
+            .solution-item{
+                width: 50%;
+            }
+        }
+    }
+    .cuartaSection{
+      .contenedorCarrusel{
+        .carousel{
+          .grande{
+            width: 200%;
+            .carousel-item{
+              flex: 1 0 calc(25%); 
+            }
+          }
+        }
+      }
+      .cardContainer{
+        .card{
+          width: 100%;
+        }
+      }
+    }
+    
+}
+
+@media (min-width: 900px) {
+    .segundaSection {
+        .founders{
+            position: relative;
+            top: 4.6rem;
+            .nombresContainer {
+                .nombreContainer{
+                    position: relative;
+                    bottom: 4rem;
+                    img{
+                        width: 15.55rem;
+                        position: relative;
+                        left: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1030px) {
+    .segundaSection {
+        .founders{
+            user-select: none;
+            .nombresContainer {
+                .nombreContainer{
+                    position: relative;
+                    bottom: 4rem;
+                    img{
+                        width: 15.55rem;
+                        position: relative;
+                    }
+                }
+            }
+            .foto_fedes {
+                bottom: 0rem;
+            }
+        }
+        .informacionContainer{
+           .parrafo-container{
+            width: 90%;
+           }
+        }
+    }
+    .terceraSection {
+        background-image: url('https://fedesagency.com/fedes-consultora/landing/fondoHeader.jpg');
+        background-size: cover;
+        color: #f0f1f0;
+        padding: 3rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: visible;
+        .contenedorTitulos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 5rem;
+            img {
+                margin-bottom: 1rem;
+            }
+      
+            .tituloSoluciones {
+                font-size: 1.2rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+      
+            .textoSoluciones {
+                font-size: 2rem;
+                text-align: center;
+                line-height: 1.4;
+                margin-bottom: 2rem;
+                width: 70%;
+                .extra-bold {
+                    font-weight: 900;
+                }
+            }
+        }
+      
+        .contenedorSoluciones {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          position: relative;
+          width: 100%;
+          margin-top: 2rem;
+          margin-bottom: 14rem;
+      
+          .imagenCamino {
+            display: block;
+            position: absolute;
+            overflow: visible;
+            width: 100vw;
+            top: 6rem;
+            right: -1.52rem;
+          }
+      
+          .solution-item {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding-bottom: 4rem;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+            height: 15rem;
+            padding-right: 0;
+            &:hover::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            &.uno {
+                padding: 0;
+                padding-right: 2rem;
+                position: relative;
+                bottom: 8rem;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 30.5px;
+                    width: 2px; 
+                    height: 125%;
+                    background-color: #44718D;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                    transition: height 0.5s ease;
+                }
+            }
+            &.dos{
+                padding-right: 2rem;
+                position: relative;
+                bottom: 5rem;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 30.5px;
+                    width: 2px; // Grosor de la línea
+                    height: 160%;
+                    background-color: #44718D;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                    transition: height 0.5s ease;
+                    
+                }
+            }
+            &.tres{
+                position: relative;
+                top: 4rem;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 30px;
+                    width: 2px; // Grosor de la línea
+                    height: 150%;
+                    background-color: #44718D;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                    transition: height 0.5s ease;
+                    
+                }
+            }
+            
+            // Agregar el resplandor con ::after
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;  // Hacemos que sea mucho más grande que el contenedor
+                height: 150%; // Para que el resplandor se vea más allá del contenedor
+                transform: translate(-50%, -50%);
+                z-index: 0;  // Para que esté detrás del contenido
+                background: radial-gradient(
+                    circle,
+                    rgba(255, 255, 255, 0.3) 0%,   // Resplandor blanco en el centro
+                    rgba(255, 255, 255, 0) 60%     // Se desvanece hacia los bordes
+                );
+                opacity: 0;  // El resplandor inicialmente está oculto
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+      
+            &.expanded {
+                
+               
+                &::after {
+                    opacity: 1;  // Mostrar el resplandor
+                    transform: translate(-50%, -50%) scale(1.1);  // Hacer un pequeño zoom
+                }
+            }
+      
+            .contenedorIcono {
+                z-index: 2;
+                display: flex;
+                align-items: start;
+                user-select: none;
+                .iconos {
+                    width: 60px;
+                    position: relative;
+                    z-index: 3;
+                    user-select: none;
+                }
+            }
+      
+            .card {
+              width: 100%;
+              text-align: center;
+              padding: 1rem;
+              padding-left: 1.3rem;
+              display: flex;
+              flex-direction: column;
+              height: fit-content;
+            }
+      
+            // Control de la animación de expansión del contenido
+            .details-section {
+              overflow: hidden;
+              max-height: none;
+              opacity: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              user-select: none;
+              height: fit-content;
+                .solution-paragraph{
+                    position: relative;
+                    top: 2rem;
+                }
+            }
+      
+            &.expanded {
+              margin-bottom: 1rem;
+      
+                .details-section {
+                    opacity: 1;
+                    position: relative;
+                    overflow: visible;
+                    transform: translateY(0);
+                    -webkit-transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    -ms-transform: translateY(0);
+                    -o-transform: translateY(0);
+                    .solution-paragraph{
+                        position: relative;
+                        top: 0rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+      
+            // Ajustes de posición de los iconos al expandirse
+            &.uno.expanded .contenedorIcono img {
+              position: relative;
+              top: 0rem;
+            }
+            &.dos.expanded .contenedorIcono img {
+              position: relative;
+              top: 0rem;
+            }
+            &.tres.expanded .contenedorIcono img {
+              position: relative;
+              top: 0rem;
+            }
+      
+            article {
+              h3 {
+                font-size: 1.3rem;
+                font-weight: 600;
+                text-align: start;
+              }
+      
+              p {
+                font-size: 1rem;
+                text-align: start;
+                margin-top: 1rem;
+              }
+            }
+      
+            .verDetalles {
+              display: flex;
+              justify-content: start;
+              margin-top: 0.5rem;
+              opacity: 1;
+              transition: opacity 0.3s ease;
+              align-self: flex-start;
+      
+              .textoVerDetalles {
+                font-size: 1rem;
+                margin-right: 0.5rem;
+                font-weight: 700;
+                padding-right: 1rem;
+              }
+      
+              img {
+                width: 20px;
+              }
+            }
+      
+            &.expanded .verDetalles {
+              opacity: 1;
+            }
+          }
+        }
+    }
+    .quintaSection {
+      .contenedorNotas{
+        .carouselNotas{
+          .grandeNotas{
+            width: 100%;
+          }
+        }
+      }
+      
+    }
+}
+
+@media (min-width: 1100px) {
+    .segundaSection{
+        padding: 4rem 5rem !important;
+        .founders{
+            top: 0rem;
+            .nombresContainer{
+                position: relative;
+                right: 14rem;
+                top: -2rem;
+            }
+            .foto_fedes {
+                bottom: -4rem;
+                right: 15rem;
+                position: absolute;
+                width: 35rem;
+            }
+        }
+        .informacionContainer{
+            position: relative;
+            align-items: start;
+            .sliders_container{
+                display: flex;
+                flex-direction: row;
+                .unidadContainer{
+                    position: relative;
+                    &.dos {
+                        position: relative;
+                        right: 1.5rem;
+                        
+                            &::before {
+                                content: '';
+                                width: 2.5rem;
+                                height: 3px;
+                                background-image: url(https://fedesagency.com/fedes-consultora/landing/lineaPunteadaSeparadora.png);
+                                position: absolute;
+                                left: 0.2rem;
+                                top: 3rem;
+                            }
+                        
+                    }
+                    &.tres {
+                        position: relative;
+                        right: 3.5rem;
+                        
+                        &::before {
+                            content: '';
+                            width: 2.5rem;
+                            height: 3px;
+                            background-image: url(https://fedesagency.com/fedes-consultora/landing/lineaPunteadaSeparadora.png);
+                            position: absolute;
+                            left: 0.8rem;
+                            top: 3rem;
+                        }
+                    }
+                    
+                }
+            }
+            .parrafo-container{
+                width: 70%;
+                text-align: start;
+                font-size: 2.3rem;
+                .parrafo-extra{
+                    font-size:  1rem;
+                }
+            }
+        }
+        
+    }
+    .terceraSection {
+        .contenedorTitulos{
+            .textoSoluciones{
+                width: 50%;
+            }
+        }
+        .contenedorSoluciones{
+            .imagenCamino{
+                position: absolute;
+                top: 5rem !important;
+            }
+            .solution-item{
+                &.uno::before{
+                    height: 115%;
+                }
+                &.tres::before{
+                    height: 170%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1300px) {
+    .segundaSection{
+        padding: 3rem 3rem;
+        .founders{
+            left: 6rem;
+            .nombresContainer{
+                position: relative;
+                right: 14rem;
+                top: -2rem;
+            }
+        }
+        .foto_fedes {
+            bottom: -4rem;
+            right: 15rem;
+            position: absolute;
+            width: 38rem;
+        }
+    }
+    .terceraSection {
+        padding-bottom: 12rem;
+        .contenedorSoluciones{
+            .imagenCamino{
+                position: absolute;
+                top: 3rem !important;
+            }
+            .solution-item{
+                &.uno::before{
+                    height: 115%;
+                }
+                &.tres::before{
+                    height: 190%;
+                }
+            }
+        }
+    }
+}

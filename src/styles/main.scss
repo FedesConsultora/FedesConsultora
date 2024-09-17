@@ -1,11 +1,38 @@
-/* src/styles/main.scss */
 @import 'base/mixins';
-/* Importar el reset de estilos */
-@import './base/reset';
+@import 'base/reset';
 @import 'base/variables';
+@import 'base/fonts'; // Importamos las fuentes personalizadas
 
 /* Importar los estilos de los componentes */
+
+body {
+    font-family: 'Sohne Leicht', sans-serif;
+    color: $color-text;
+
+}
+
+/* Títulos con Sohne Fett */
+h1, h2, h3 {
+    font-family: 'Sohne Fett', sans-serif;
+    font-weight: 700;
+}
+
+/* Texto en cursiva con Sohne Extraleicht Kursiv */
+.italic-text {
+    font-family: 'Sohne Extraleicht Kursiv', sans-serif;
+    font-style: italic;
+}
+button {
+    font-family: 'DJR_Banner', sans-serif;
+}
+
+/* Botones y detalles con DJR Banner */
+button, .btn  {
+    font-family: 'DJR Banner Bold', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px; /* Mejora la legibilidad en los botones */
+}
+
 @import './header';
 @import './footer';
 @import './mainSection';
-

@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import Main from './components/layout/Main'; // Main se usará como wrapper para los children
 import Home from './pages/Home';
 import './styles/main.scss';
+import './i18n'; 
 
 function App() {
   return (

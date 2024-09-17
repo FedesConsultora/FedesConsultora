@@ -1,8 +1,9 @@
-// src/components/UserMenu.js
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const UserMenu = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { t } = useTranslation(); 
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -34,13 +35,13 @@ const UserMenu = () => {
         {isDropdownOpen && (
           <div className="dropdown-menu dropdown-menu-end">
             <a href="/my/home" className="dropdown-item uno">
-              Perfil <i className="fa fa-id-card-o" />
+              {t('profile')} <i className="fa fa-id-card-o" />
             </a>
             <a href="/my/home" className="dropdown-item dos">
-              Aplicaciones <i className="fa fa-id-card-o" />
+              {t('applications')} <i className="fa fa-id-card-o" />
             </a>
             <a href="/web/session/logout?redirect=/" className="dropdown-item">
-              Cerrar sesión <i className="fa fa-sign-out" />
+              {t('logout')} <i className="fa fa-sign-out" />
             </a>
           </div>
         )}
