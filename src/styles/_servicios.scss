@@ -1,0 +1,396 @@
+.terceraSection {
+    background-image: url('https://fedesagency.com/fedes-consultora/landing/fondoHeader.webp');
+    background-size: cover;
+    color: #f0f1f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+
+    .contenedorTitulos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      max-width: 40rem;
+      padding-top: 2rem;
+  
+      img {
+        margin-bottom: 1rem;
+      }
+  
+      .tituloSoluciones {
+        margin-bottom: 3rem;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+  
+      .textoSoluciones {
+        font-size: 1.8rem;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+  
+        .extra-bold {
+          font-weight: 900;
+          font-family: "Sohne Extrafett", sans-serif;
+        }
+      }
+    }
+  
+    .contenedorServiciosCarrusel {
+      position: relative;
+      width: 100%;
+      margin-top: 5rem;
+      
+      
+      .carouselServicios {
+        position: relative;
+        .grandeServicios {
+          display: flex;
+          transition: transform 0.5s ease;
+          will-change: transform;
+          width: 100vw !important;
+          height: 800px;
+          .serviceSlide {
+            
+            box-sizing: border-box;
+            padding: 1.5rem;
+            padding-top: 0rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100vw !important;
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0%;
+              left: 50%;
+              width: 100%;
+              height: 70%;
+              background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.19), rgba(255, 255, 255, 0.06 ), rgba(255, 255, 255, 0.002), rgba(0, 0, 0, 0));
+              transform: translate(-50%, -50%);
+              border-radius: 100%;
+              opacity: 0;
+              transition: opacity 0.3s ease-in-out;
+              pointer-events: none;
+              z-index: 0;
+            }
+            &[data-slide="posicionamiento"]::before {
+            }
+          
+            &[data-slide="performance"]::before {
+              top: 10%;
+            }
+          
+            &[data-slide="consultoria"]::before {
+              top: 20%;
+            }
+            &:hover::before,
+            &.active::before { // .active para mobile
+              opacity: 1;
+            }
+            .lineaImg{
+              position: absolute;
+              left: 2.7rem;
+              top: 5rem;
+              height: 15rem;
+              z-index: 5;
+            }
+            .caminoImg{
+              top: 12rem !important;
+              z-index: 3;
+            }
+            .infoUno{
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              position: relative;
+              bottom: 4rem;
+              .iconoImg{
+                min-width: 90px;
+                width: 90px;
+                position: relative;
+                bottom: 1.5rem;
+                z-index: 8;
+              }
+            }
+            .infoDos{
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              position: relative;
+              bottom: 2rem;
+              .lineaImg{
+                height: 24rem ;
+              }
+              .iconoImg{
+                min-width: 90px;
+                z-index: 8;
+                position: relative;
+                bottom: 1.5rem;
+              }
+            }
+            .infoTres{
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              position: relative;
+              top: 3rem;
+              .lineaImg{
+                height: 30rem ;
+              }
+              .iconoImg{
+                min-width: 90px;
+                justify-self: flex-start;
+                
+                position: relative;
+                bottom: 1.5rem;
+                z-index: 8;
+              }
+              h3 {
+                margin-top: 1rem;
+                font-size: 1.6rem;
+                font-weight: bold;
+                z-index: 2;
+                text-align: start !important;
+                position: relative;
+                left: 0.4rem;
+                width: 100%;
+                position: relative;
+                left: 0rem;
+              }
+            }
+            article{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              margin-left: 1rem;
+              h3 {
+                margin-top: 1rem;
+                width: 100%;
+                font-size: 1.6rem;
+                font-weight: bold;
+                z-index: 2;
+                text-align: start !important;
+              }
+    
+              p {
+                height: 100px;
+                text-align: start !important;
+                width: 100%;
+                margin-top: 0.5rem;
+                z-index: 2;
+              }
+            }
+            
+  
+            .icono {
+              width: 60px;
+              z-index: 2;
+            }
+  
+            .imagenCaminoMobile {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              opacity: 0.6;
+              z-index: 1;
+            }
+          }
+        }
+  
+        .puntosServicios {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          padding: 0;
+          margin-top: 1rem;
+  
+          .punto {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+  
+            &.activo {
+              background-color: #44718d;
+            }
+          }
+        }
+  
+        .prevButton,
+        .nextButton {
+          img{
+            width: 30px;
+          }
+          position: absolute;
+          top: 60%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 255, 255, 0.4);
+          color: #fff;
+          border: none;
+          padding: 0.5rem 0.5rem;
+          cursor: pointer;
+          z-index: 10;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          
+          &:hover{
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+  
+        .prevButton {
+          left: 1rem;
+        }
+  
+        .nextButton {
+          right: 1rem;
+        }
+      }
+    }
+    @media (min-width: 600px) {
+      .serviceSlide{
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          width: 100%;
+          height: 50% !important;
+        }
+      }
+      .textoSoluciones{
+        margin-bottom: 6rem !important;
+        font-size: 2.9rem !important;
+      }
+      .grandeServicios {
+        height: 1200px !important;
+      }
+      .infoUno{
+        width: 70% !important;
+        position: relative;
+        bottom: 7rem !important;
+        .lineaImg{
+          height: 23rem !important;
+        }
+        .iconoImg{
+          width: 25%;
+        }
+      }
+      .infoDos{
+        width: 70% !important;
+        position: relative;
+        bottom: 4rem !important;
+        .lineaImg{
+          height: 33rem !important;
+        }
+        .iconoImg{
+          width: 25%;
+        }
+      }
+      .infoTres{
+        width: 70% !important;
+        position: relative;
+        top: 10rem !important;
+        .lineaImg{
+          height: 46rem !important;
+        }
+        .iconoImg{
+          width: 25%;
+        }
+      }
+    }
+    @media (min-width: 1080px) {
+      .serviceSlide{
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 50%;
+          width: 100%;
+          height: 50% !important;
+        }
+      }
+      .tituloSoluciones {
+        font-size: 1.3rem !important;
+        font-weight: bold;
+      }
+      .contenedorServiciosCarrusel {
+        .carouselServicios {
+          .grandeServicios {
+            height: 1500px;
+            .serviceSlide {
+              flex: 0 0 calc(100% / 3);
+            }
+          }
+  
+          .puntosServicios,
+          .prevButton,
+          .nextButton {
+            display: none;
+          }
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      .infoTres, .infoDos, .infoUno{
+        p {
+          width: 220px !important;
+        }
+      }
+      .grandeServicios {
+        height: 900px !important;
+      }
+      .infoUno{
+        width: 70% !important;
+        position: relative;
+        bottom: 7rem !important;
+        .lineaImg{
+          height: 20rem !important;
+        }
+        .iconoImg{
+          width: 25%;
+        }
+      }
+      .infoDos{
+        width: 70% !important;
+        position: relative;
+        bottom: 4rem !important;
+        .lineaImg{
+          height: 25rem !important;
+        }
+        .iconoImg{
+          width: 25%;
+        }
+      }
+      .infoTres{
+        width: 70% !important;
+        position: relative;
+        top: 10rem !important;
+        .lineaImg{
+          height: 25rem !important;
+        }
+        .iconoImg{
+          width: 25%;
+          position: relative;
+          bottom: 2.7rem !important;
+        }
+      }
+    }
+  }

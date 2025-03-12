@@ -1,39 +1,44 @@
+
 .footerdos {
-    background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoHeaderEspejado.jpg");
+    background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoHeaderEspejado.webp");
     background-size: cover;
     color: #f0f1f0;
     padding: 2rem 1.5rem;
     text-align: center;
-  
+    
     .footerInfo {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 2rem;
-  
+      .redesSociales{
+        position: relative;
+        bottom: 1.1rem;
+      }
       .dudas {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         img {
-          width: 28%;
-          margin-bottom: 1.5rem;
+          width: 100px;
+          margin-bottom: 1rem;
         }
   
         .charlemos {
           font-size: 1.2rem;
-          margin-bottom: 1rem;
+          margin-bottom: 3rem;
         }
   
         p {
             width: 100%;
-          font-size: 2rem;
+          font-size: 2.5rem;
           margin-bottom: 1rem;
           font-weight: 100;
   
           .extra-bold {
             font-weight: 900;
+            font-family: "Sohne Extrafett", sans-serif;
           }
         }
   
@@ -99,6 +104,7 @@
           justify-content: center;
           .extra-bold {
             font-weight: 900;
+            font-family: "Sohne Extrafett", sans-serif;
             padding-right: 1rem;
           }
         }
@@ -112,14 +118,20 @@
             a {
               display: inline-block;
               position: relative;
-    
-              img.default {
+              border-radius: 100%;
+              -webkit-border-radius: 100%;
+              -moz-border-radius: 100%;
+              -ms-border-radius: 100%;
+              -o-border-radius: 100%;
+              img.default{
                 padding: 0.5rem;
                 transition: opacity 0.3s ease-in-out;
                 width: 45px;
                 
               }
-    
+              img.default.youtube {
+                width: 50px;
+              }
               img.hover {
                 opacity: 0;
                 position: absolute;
@@ -127,8 +139,11 @@
                 left: 0;
                 padding: 0.5rem;
                 transition: opacity 0.3s ease-in-out;
+                width: 45px;
               }
-    
+              img.hover.youtube {
+                width: 50px;
+              }
               &:hover {
                 img.default {
                   opacity: 0;
@@ -136,7 +151,6 @@
     
                 img.hover {
                   opacity: 1;
-                  width: 45px;
                 }
               }
               
@@ -205,15 +219,18 @@
             position: absolute;
             left: 7rem;
             bottom: 0.5rem;
-            background-color: #f0f1f0c0;
-            
-            padding: 0.5rem;
+            background-color: #f0f1f0;
+            padding: 1rem;
             padding-top: 1rem;
-            border-radius:20px;
-            -webkit-border-radius:20px;
-            -moz-border-radius:20px;
-            -ms-border-radius:20px;
-            -o-border-radius:20px;
+            padding-right: 2rem;
+            padding-bottom: 0rem;
+            padding-left: 2rem;
+            border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-border-radius:10px;
+            -ms-border-radius:10px;
+            -o-border-radius:10px;
+            
             li{
               display: flex;
               justify-content: start;
@@ -273,7 +290,7 @@
     padding: 4rem 2.5rem;
     .dudas{
       img{
-        width: 18% !important;
+        width: 70px;
         align-self: flex-start;
       }
       .charlemos{
@@ -284,6 +301,7 @@
         display: flex;
         font-size: 2.7rem !important;
         .extra-bold{
+          font-family: "Sohne Extrafett", sans-serif;
           padding-left: 1rem;
         }
       }
@@ -352,11 +370,35 @@
     .footerInfo{
       display: flex;
       flex-direction: row;
-      .redesSociales{
-        padding-right: 2rem;
-        padding-left: 2rem;
-        width: 40%;
+      .dudas{
+        .parrafoLargo{
+          width: 90%;
+          align-self: flex-start;
+        }
+        .buttons_container {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          a{
+            display: flex;
+            .button1,
+            .button2 {
+              padding: 0.8rem;
+              border-radius: 6rem;
+              text-align: center;
+              font-size: 1rem;
+              width: 70%;
+            }
+          }
+          
+        }
+        .redesSociales{
+          padding-right: 2rem;
+          padding-left: 2rem;
+          width: 40%;
+        }
       }
+      
     }
   }
 }

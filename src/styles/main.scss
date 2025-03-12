@@ -1,13 +1,13 @@
 @import 'base/mixins';
 @import 'base/reset';
 @import 'base/variables';
-@import 'base/fonts'; // Importamos las fuentes personalizadas
+@import 'base/fonts'; 
 
 /* Importar los estilos de los componentes */
 
 body {
     font-family: 'Sohne Leicht', sans-serif;
-    color: $color-text;
+    color: $color-black;
 
 }
 
@@ -35,4 +35,6 @@ button, .btn  {
 
 @import './header';
 @import './footer';
-@import './mainSection';
+@import './home';
+@import './nosotros';
+@import './servicios';

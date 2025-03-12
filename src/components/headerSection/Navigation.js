@@ -1,27 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = ({ isVertical }) => {
-  const { t } = useTranslation(); // Hook de traducción
-
-  // Función para manejar el desplazamiento suave
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave hacia la sección
-    }
-  };
+  const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <nav className={`navigation ${isVertical ? 'vertical' : 'horizontal'}`}>
       <ul className="navegacion">
-        <li onClick={() => scrollToSection('home')}>{t('home')}</li>
-        <li onClick={() => scrollToSection('sobreFedes_scroll')}>{t('about_us')}</li>
-        <li onClick={() => scrollToSection('servicios_scroll')}>{t('services')}</li>
-        <li onClick={() => scrollToSection('casoDeExitoScroll')}>{t('success_stories')}</li>
-        <li onClick={() => scrollToSection('contactoScroll')}>{t('contact')}</li>
-        <li onClick={() => scrollToSection('prensaScroll')}>{t('media')}</li>
+        <li onClick={() => navigate('/')}>{t('home')}</li>
+        <li onClick={() => navigate('/nosotros')}>{t('about_us')}</li>
+        <li onClick={() => navigate('/servicios')}>{t('services')}</li>
+        <li onClick={() => navigate('/galeria')}>{t('success_stories')}</li>
+        <li onClick={() => navigate('/contactanos')}>{t('contact')}</li>
+        <li onClick={() => navigate('/blog')}>{t('media')}</li>
       </ul>
     </nav>
   );

@@ -1,17 +1,21 @@
 // src/pages/Home.js
 import React from 'react';
-import SegundaSection from '../components/segundaSection/SegundaSection';
-import TerceraSection from '../components/terceraSection/TerceraSection';
-import CuartaSection from '../components/CuartaSection/CuartaSection';
-import QuintaSection from '../components/quintaSection/quintaSection';
+import HeaderInfoSection from '../components/headerSection/HeaderInfoSection.js';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <SegundaSection />
-      <TerceraSection />
-      <CuartaSection />
-      <QuintaSection />
+      <HeaderInfoSection />
+      <article className="flechaAbajo">
+        <img 
+          src="https://fedesagency.com/fedes-consultora/landing/flecha_abajo.svg" 
+          alt={t('down_arrow')}
+          loading="lazy"
+        />
+      </article>
     </div>
   );
 };

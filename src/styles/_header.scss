@@ -1,11 +1,30 @@
 /* src/styles/components/_header.scss */
-
+header.header--other{
+  background-image: url("https://www.fedesagency.com/fedes-consultora/privacidad/fondoClaro.png");
+  background-size: cover;
+  color: $color-black;
+  
+  .header_sup{
+    .navegacion-horizontal{
+      ul{
+        li{
+          font-weight: 900 !important;
+        }
+      }
+    }
+  }
+}
 header {
   background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoHeader.jpg");
   background-size: cover;
   color: #F0F1F0;
   user-select: none;
+  font-weight: 900;
+  font-family: 'Sohne Halbfett';
   .header_sup {
+    .logoYnav{
+      display: flex;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,6 +49,7 @@ header {
       display: none; 
       li{
         cursor: pointer;
+        font-weight: 600;
       }
     }
 
@@ -52,7 +72,7 @@ header {
     align-items: center;
     transition: right 0.3s ease;
     z-index: 1000;
-
+    
     &.menu-visible {
       right: 0; 
     }
@@ -62,7 +82,7 @@ header {
       justify-content: space-between;
       width: 100%;
       padding: 2rem;
-
+      padding-top: 3rem;
       .logo_fedes {
         width: 8rem;
       }
@@ -79,13 +99,14 @@ header {
       margin: 0;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       width: 100%;
 
       li {
         padding: 1rem 2rem;
-        font-size: 1.2rem;
-        text-align: start;
+        font-size: 2rem;
+        text-align: center;
         width: 100%;
         cursor: pointer;
         &:hover {
@@ -102,39 +123,63 @@ header {
       align-items: center;
       width: 100%;
       padding: 2rem;
-
-      .redesSociales {
-        display: flex;
-        justify-content: flex-start;
-        height: 100%;
-
-        a {
-          margin-right: 1rem;
-          position: relative;
-          width: 100%;
+      .redesSociales{
+        p {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          display: none;
+          justify-content: center;
+          .extra-bold {
+            font-weight: 900;
+            padding-right: 1rem;
+          }
+        }
+        .redesSocialesContainer {
           display: flex;
-          img{
-            width: 30px;
-          }
-          img.hover {
-            opacity: 0;
-            position: absolute;
-            bottom: 5px;
-            transition: opacity 0.3s ease-in-out;
-          }
-
-          img.default {
-            transition: opacity 0.3s ease-in-out;
-          }
-
-          &:hover {
-            img.hover {
-              opacity: 1;
-            }
-
-            img.default {
-              opacity: 0;
-            }
+          justify-content: space-evenly;
+          
+          
+    
+            a {
+              display: inline-block;
+              position: relative;
+              margin-right: 1.5rem;
+              border-radius: 100%;
+              -webkit-border-radius: 100%;
+              -moz-border-radius: 100%;
+              -ms-border-radius: 100%;
+              -o-border-radius: 100%;
+              img.default{
+                padding: 0.5rem;
+                transition: opacity 0.3s ease-in-out;
+                width: 45px;
+                
+              }
+              img.default.youtube {
+                width: 50px;
+              }
+              img.hover {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0.5rem;
+                transition: opacity 0.3s ease-in-out;
+                width: 45px;
+              }
+              img.hover.youtube {
+                width: 50px;
+              }
+              &:hover {
+                img.default {
+                  opacity: 0;
+                }
+    
+                img.hover {
+                  opacity: 1;
+                }
+              }
+              
           }
         }
       }
@@ -215,112 +260,7 @@ header {
       }
     }
   }
-  .header_info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      text-align: center;
-    
-      .text_container {
-        width: 100%;
-        text-align: start;
-    
-        h1 {
-          width: 100%;
-    
-          .titulo_principal {
-            font-size: 1.9rem;
-            padding: 0.5rem 2rem;
-            background-color: #F0F1F0;
-            border-radius: 0 3.25rem 3.25rem 0;
-            color: #44718D;
-            box-shadow: inset 0 0 19px rgba(68, 113, 141, 0.75);
-            margin: 0.5rem 0;
-            position: relative;
-            right: 2rem;
-            font-weight: 900;
-            padding-top: 0.6rem;
-            padding-bottom: 0.5rem;
-          }
-    
-          .titulo_secundario,
-          .titulo_secundario2 {
-            font-size: 1.9rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-          }
-        }
-    
-        p {
-          margin-top: 1rem;
-          font-size: 1rem;
-        }
-    
-        .buttons_container {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 2.5rem;
-          a{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            button {
-              width: 100%;
-              padding: 0.8rem;
-              border-radius: 3rem;
-              -webkit-border-radius: 3rem;
-              -moz-border-radius: 3rem;
-              -ms-border-radius: 3rem;
-              -o-border-radius: 3rem;
-              &.button1 {
-                background-color: #44718D;
-                color: white;
-                margin-bottom: 2rem;
-                
-                &:hover{
-                  background-color: #44718D;
-                  box-shadow: #44718D 0px 0px 8px 2px;
-                }
-              }
-      
-              &.button2 {
-                border: 1px solid #ffffff;
-                color: white;
-                &:hover{
-                  box-shadow: white  0px 0px 5px 1px;
-                }
-              }
-            }
-          }
-    
-          
-        }
-      }
-    
-      .imgHeader {
-        width: 100%;
-        margin-top: 2rem;
-    
-        img {
-          width: 100%;
-          height: auto;
-          position: relative;
-          left: 2rem;
-        }
-      }
-    }
-    
-    .flechaAbajo {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 3rem;
-      img {
-        width: 35px;
-      }
-    }
+  
   @media (min-width: 420px) {
     .header_info {
       .text_container {
@@ -380,33 +320,14 @@ header {
     .logo_fedes {
       top: 2rem;
     }
-    .header_info{
-      .text_container{
-        .buttons_container{
-          display: flex;
-          flex-direction: row;
-          margin-top: 2.5rem;
-          a{
-            width: 100%;
-            margin-right: 2rem;
-            button{
-              height: fit-content;
-              padding: 1rem;
-              &.button1{
-                margin-bottom: 0;
-              }
-            }
-          }
-          
-        }
-      }
-      
-    }
+    
   }
   /* Desktop adjustments */
   @media (min-width: 1080px) {
     .header_sup {
       padding: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
 
       .logo_fedes {
         width: 9rem;
@@ -443,42 +364,66 @@ header {
           }
         }
       }
+      
       .redesYlogin {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-  
+        
         .redesSociales {
           display: flex;
           justify-content: flex-start;
-  
-          a {
-            margin-right: 1rem;
-            position: relative;
-  
-            img.hover {
-              opacity: 0;
-              position: absolute;
-              bottom: 0px;
-              transition: opacity 0.3s ease-in-out;
-            }
-  
-            img.default {
-              transition: opacity 0.3s ease-in-out;
-            }
-  
-            &:hover {
+          .redesSocialesContainer {
+            display: flex;
+            a {
+              display: inline-block;
+              position: relative;
+              margin-right: 1rem;
+              border-radius: 100%;
+              -webkit-border-radius: 100%;
+              -moz-border-radius: 100%;
+              -ms-border-radius: 100%;
+              -o-border-radius: 100%;
+              img.default{
+                padding: 0.5rem;
+                padding-left: 0rem;
+                padding-right: 0rem;
+                transition: opacity 0.3s ease-in-out;
+                width: 20px;
+                
+              }
+              img.default.youtube {
+                width: 30px;
+              }
               img.hover {
-                opacity: 1;
-              }
-  
-              img.default {
                 opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0.5rem;
+                padding-left: 0rem;
+                padding-right: 0rem;
+                transition: opacity 0.3s ease-in-out;
+                width: 20px;
               }
+              img.hover.youtube {
+                width: 30px;
+              }
+              &:hover {
+                img.default {
+                  opacity: 0;
+                }
+    
+                img.hover {
+                  opacity: 1;
+                }
+              }
+              
             }
           }
+          
         }
   
         .user_div {
@@ -564,6 +509,7 @@ header {
         position: relative;
         bottom: 1rem;
         .buttons_container{
+          width: 60%;
           a{
             button{
               font-size: 0.85rem !important;
@@ -578,6 +524,9 @@ header {
     }
   }
   @media (min-width: 1200px) {
+    .navegacion{
+      margin-left: 3rem !important;
+    }
     .header_info{
       .text_container{
         h1{

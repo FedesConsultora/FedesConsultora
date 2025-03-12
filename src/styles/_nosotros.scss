@@ -1,0 +1,584 @@
+.segundaSection {
+    background-image: url("https://fedesagency.com/fedes-consultora/landing/fondo_section_2.webp");
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    background-size: cover;
+    padding-bottom: 0rem;
+    padding-bottom: 3rem;
+    height: auto;
+    .informacionContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+        img {
+            /* Línea corta (lineaCorta.svg) */
+            margin-bottom: 0rem;
+        }
+    
+        .minilogo-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+
+            .texto_minilogo {
+                font-size: 1rem;
+                color: #f0f1f0;
+                display: flex;
+                img {
+                    position: relative;
+                    bottom: 0.2rem;
+                    right: 0.2rem;
+                }
+            }
+
+            img {
+                width: 4rem;
+                margin-left: 0.2rem;
+            }
+        }
+    
+        .parrafo-container {
+            text-align: center;
+            color: #f0f1f0;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.4;
+    
+            .parrafo-fedes {
+                font-weight: 100;
+                letter-spacing: 0.05rem;
+                font-size: 2.3rem;
+
+                .extra-bold {
+                    font-weight: 900 !important;
+                    font-family: "Sohne Extrafett", sans-serif;
+                }
+            }
+    
+            .parrafo-extra {
+                font-size: 0.9rem;
+                margin-top: 1rem;
+            }
+        }
+    
+        .buttons_container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+    
+            .button1 {
+                padding: 0.8rem 2.5rem;
+                background-color: #44718d;
+                color: #f0f1f0;
+                border: none;
+                border-radius: 50px;
+                font-size: 0.8rem;
+                cursor: pointer;
+                transition: box-shadow 0.3s ease;
+        
+                &:hover {
+                    box-shadow: 0px 0px 8px 2px #44718d;
+                }
+            }
+        }
+    }
+}
+   .fedesSection{
+        background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoFedes.webp");
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow-x: hidden;
+        .listaFede{
+            display: none;
+        }
+        .fedesInfo{
+            padding-bottom: 2rem;
+            display: flex;
+            .contenedorFedeJuan{
+                display: flex;                
+                width: 90%;
+                flex-direction: column;
+                .nombreContainer{
+                    position: relative;
+                    top: 3rem;
+                    width: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 7rem;
+                    justify-content: space-evenly;
+                    align-self: end;
+                    color: #F0F1F0;
+                    align-items: center;
+                    h3{
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        top: 0rem;
+                        font-size: 1rem;
+                    }
+                    p{
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        bottom: 1rem;
+                        font-size: 0.7rem;
+                    }
+                    img{
+                        width: 200px;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+                .textoFede{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    .tituloFede{
+                        margin-top: 1.5rem;
+                        text-align: end;
+                    }
+                    
+                    
+                }
+                .contenedorBotonLinkedin{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 1.5rem;
+                    cursor: pointer;
+                    transition: ease-in .2s;
+                    position: relative;
+                    left: 0.9rem;
+                    img{
+                        margin-left: 1rem;
+                    }
+                    .textoLinkedin{
+                        padding-right: 1rem;
+                        margin-bottom: 0rem !important;
+                        font-weight: 900;
+                        color: #F0F1F0;
+                    }
+                    &:hover{
+                        transform: scale(1.05);
+                        .textoLinkedin{
+                            color: #CCCCCC;
+                        }
+                    }
+                }
+            }
+            .contenedorFedeChironi{
+                top: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                padding-left: 1rem;
+                width: 90%;
+                a{
+                    width: 100%;
+                }
+                .nombreContainer{
+                    width: 90%;
+                    position: relative;
+                    top: 3rem;
+                    display: flex;
+                    flex-direction: column;
+                    height: 7rem;
+                    justify-content: space-evenly;
+                    align-self: start;
+                    color: #F0F1F0;
+                    align-items: center;
+                    h3{
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        top: 0rem;
+                        font-size: 1rem;
+                    }
+                    p{
+                        width: 100%;
+                        text-align: center;
+                        position: relative;
+                        bottom: 1rem;
+                        font-size: 0.7rem;
+                    }
+                    img{
+                        width: 200px;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+                
+                .contenedorBotonLinkedin{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 1.5rem;
+                    cursor: pointer;
+                    transition: ease-in .2s;
+                    position: relative;
+                    right: 0.5em;
+                    img{
+                        margin-left: 1rem;
+                    }
+                    .textoLinkedin{
+                        padding-right: 1rem;
+                        margin-bottom: 0rem !important;
+                        font-weight: 900;
+                        color: #F0F1F0;
+                        margin-right: 1rem;
+                    }
+                    &:hover{
+                        transform: scale(1.05);
+                        .textoLinkedin{
+                            color: #CCCCCC;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .foto_fedes{
+        width: 90%;
+        height: auto;
+        }
+     
+    }
+
+    .lideresSection {
+        background-image: url("https://www.fedesagency.com/fedes-consultora/privacidad/fondoClaro.png");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        overflow-x: hidden;
+      
+        .equipoHeader {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          p {
+            margin-bottom: 0;
+          }
+          img {
+            margin-top: 0.5rem;
+          }
+        }
+      
+        .equipoInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      
+          .equipoTitulo {
+            font-size: 2.1rem;
+            margin-bottom: 3.5rem;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: 600 !important;
+            font-family: "Sohne Leicht", sans-serif;
+      
+            strong {
+              color: #437188;
+              font-family: "Sohne Extrafett", sans-serif;
+            }
+          }
+      
+          .equipoFotos {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 2rem; /* Espaciado vertical entre colUno y colDos */
+      
+            .colUno, .colDos {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem; /* Espacio entre mechi/romi y sofi/flor */
+      
+              .mechi, .romi, .sofi, .flor {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .fotoLider {
+                  height: 220px;
+                  cursor: pointer;
+                  transition: transform 0.3s ease;
+                  &:hover {
+                    transform: scale(1.05);
+                  }
+                }
+      
+                .nombreContainer {
+                  position: relative;
+                  top: 0rem;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  color: #1d1d1b;
+                  width: 100%;
+                  text-align: center;
+      
+                  h3 {
+                    margin-bottom: 0rem;
+                    font-size: 1rem;
+                    font-weight: 900;
+                    position: relative;
+                    top: 0.5rem;
+                  }
+                  .apellido {
+                    margin-bottom: 0.7rem;
+                    font-size: 1rem;
+                  }
+                  p {
+                    font-size: 0.9rem;
+                    margin-bottom: 0.5rem;
+                    position: relative;
+                    bottom: 0.4rem;
+                  }
+                  .recuadro{
+                    position: absolute;
+                    top: 0;
+                    width: 230px;
+                  }
+                  .contenedorBotonLinkedin {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: 0.2s ease-in;
+                    position: relative;
+                    margin-top: 0.5rem;
+                    .textoLinkedin {
+                      padding-right: 1rem;
+                      margin-bottom: 0rem !important;
+                      font-weight: 900;
+                      color: #1d1d1b;
+                    }
+                    .imagenFlecha {
+                        position: relative;
+                        bottom: 0.5rem;
+                    }
+                    &:hover {
+                      transform: scale(1.05);
+                      .textoLinkedin {
+                        color: #437188;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      /* Vista desktop (>=1080px) 
+         reorganiza en filas y ajusta tamaños 
+      */
+      @media (min-width: 1080px) {
+        .lideresSection {
+          padding: 3.5rem 5rem;
+          .equipoHeader{
+            align-items: flex-start;
+            font-size: 1.2rem;
+          }
+          .equipoInfo {
+            flex-direction: row;
+            align-items: flex-start;
+            .equipoTitulo {
+              width: 40%;
+              text-align: left;
+              font-size: 3.5rem;
+              margin-bottom: 0;
+            }
+            .equipoFotos {
+              flex-direction: row;
+              width: 60%;
+              gap: 2rem; /* Espacio horizontal entre colUno y colDos */
+      
+              .colUno, .colDos {
+                flex-direction: column; /* Mantiene mechi/romi en columna */
+                justify-content: space-evenly;
+      
+                .fotoLider {
+                  height: 260px;
+                }
+      
+                .nombreContainer {
+                  top: 2rem;
+                  left: 0.4rem;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+  /* 
+     Si quieres mantener breakpoints adicionales
+     (para ajustar la tipografía o espaciados a
+     distintos anchos), puedes añadirlos debajo:
+  */
+  
+  @media (min-width: 420px) {
+    
+  }
+  
+  @media (min-width: 500px) {
+    .fedesSection{
+        background-image: url("https://fedesagency.com/fedes-consultora/landing/fondoFedes.webp");
+        background-size: cover;
+        color: white;
+        display: flex;
+        justify-content: center;
+        padding-top: 10rem;
+        position: relative;
+        overflow-x: hidden;
+        .listaFede{
+            display: none;
+        }
+         .contenedorFedeJuan{
+            left: -0px;
+         }
+         .foto_fedes{
+          width: 90%;
+          height: auto;
+         }
+         .contenedorFedeChironi{
+           right: -0px;
+        }
+    }
+  }
+  @media (min-width: 600px) {
+
+    .fedesSection .contenedorFedeJuan {
+        position: relative;
+        left: 2rem;
+    }
+    .lideresSection{
+        .equipoInfo{
+            .equipoFotos{
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+        
+    }
+    
+
+  }
+  @media (min-width: 1080px) {
+    .parrafo-container {
+        text-align: center;
+        color: #f0f1f0;
+        margin-top: 1rem;
+        line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .parrafo-fedes {
+            font-weight: 100;
+            letter-spacing: 0.05rem;
+            font-size: 3.5rem !important;
+            width: 80%;
+        }
+        .parrafo-extra{
+            font-size: 1.2rem !important;
+        }
+        
+    }
+    .fedesSection{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        .foto_fedes{
+            width: 50%;
+        }
+        
+        .contenedorFedeJuan{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .listaFede{
+                display: block;
+                list-style-type: disc;
+                margin-bottom: 2rem;
+                
+                direction: rtl;   
+                list-style-position: outside;
+            }
+            .nombreContainer{
+                position: relative;
+                h3,p {
+                    position: absolute;
+                    top: 1.5rem;
+                    left: 4rem;
+                }
+                p{
+                    top: 3rem;
+                }
+            }
+            .contenedorBotonLinkedin{
+                display: flex;
+                img{
+                    margin-left: 1rem;
+                    position: relative;
+                    bottom: 0.2rem;
+                }
+                &:hover{
+                    color: $color-primary;
+                    font-weight: 900;
+                }
+            }
+        }
+        .contenedorFedeChironi{
+            .listaFede{
+                display: block;
+                list-style-type: disc;
+                margin-bottom: 2rem;
+            }
+            .nombreContainer{
+                position: relative;
+                h3,p {
+                    position: absolute;
+                    top: 1.5rem;
+                    left: 4rem;
+                }
+                p{
+                    top: 3rem;
+                }
+            }
+            .contenedorBotonLinkedin{
+                display: flex;
+                margin-bottom: 2rem;
+                img{
+                    margin-left: 1rem;
+                    position: relative;
+                    bottom: 0.2rem;
+                }
+                &:hover{
+                    color: $color-primary;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+  }
+  /* ... y así sucesivamente, 
+     de acuerdo con tus breakpoints 
+     y necesidades.
+  */
+  

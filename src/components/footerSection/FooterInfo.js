@@ -12,13 +12,13 @@ const FooterInfo = () => {
       />
       <p className="charlemos">{t('lets_chat')}</p>
       <p className='parrafoCorto'>
-        {t('still')}<h3 className="extra-bold"> {t('questions')}</h3>
+        {t('still')}<span className="extra-bold"> {t('questions')}</span>
       </p>
       <p className="parrafoLargo">
         {t('footer_paragraph')}
       </p>
       <div className="buttons_container">
-        <a href="https://www.fedesconsultora.com/appointment">
+        <a href="https://fedeshub.odoo.com/appointment/4">
           <button className="button1">{t('schedule_meeting')}</button>
         </a>
         <a

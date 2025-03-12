@@ -20,14 +20,11 @@ const HeaderInfoSection = () => {
           <a href="https://www.fedesconsultora.com/appointment">
             <button className="button1">{t('schedule_meeting')}</button>
           </a>
-          <a href="#">
-            <button className="button2">{t('view_success_stories')}</button>
-          </a>
         </div>
       </article>
       <article className="imgHeader">
         <img 
-          src="https://fedesagency.com/fedes-consultora/landing/fotoRedondeada2.png" 
+          src="https://fedesagency.com/fedes-consultora/landing/fotoRedondeada2.webp" 
           alt="Foto redondeada de Fedes Consultora" 
           loading="lazy" 
         />

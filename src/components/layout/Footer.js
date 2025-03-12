@@ -7,7 +7,7 @@ import LegalFooter from '../footerSection/LegalFooter';
 const Footer = () => {
   
   return (
-    <footer className="footerdos">
+    <footer className="footerdos"  id="footer">
       <section className="footerInfo">
         <FooterInfo />
         <SocialLinks />
