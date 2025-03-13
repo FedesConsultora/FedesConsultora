@@ -9,6 +9,7 @@ import './styles/main.scss';
 import './i18n'; 
 import Nosotros from './pages/Nosotros';
 import Servicios from './pages/Servicios';
+import Galeria from './pages/Galeria';
 
 const AppContent = () => {
   const location = useLocation();
@@ -40,7 +41,7 @@ const AppContent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path='/servicios' element={<Servicios />} />
-         
+          <Route path="/galeria" element={<Galeria />} />
         </Routes>
       </Main>
       <Footer />

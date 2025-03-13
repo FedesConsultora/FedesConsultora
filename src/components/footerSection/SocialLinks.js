@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const SocialLinks = () => {
+const SocialLinks = ( isHome ) => {
   const { t } = useTranslation(); // Hook de traducción
 
   return (

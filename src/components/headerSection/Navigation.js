@@ -13,7 +13,7 @@ const Navigation = ({ isVertical }) => {
         <li onClick={() => navigate('/')}>{t('home')}</li>
         <li onClick={() => navigate('/nosotros')}>{t('about_us')}</li>
         <li onClick={() => navigate('/servicios')}>{t('services')}</li>
-        <li onClick={() => navigate('/galeria')}>{t('success_stories')}</li>
+        <li onClick={() => navigate('/galeria')}>{t('galery')}</li>
         <li onClick={() => navigate('/contactanos')}>{t('contact')}</li>
         <li onClick={() => navigate('/blog')}>{t('media')}</li>
       </ul>

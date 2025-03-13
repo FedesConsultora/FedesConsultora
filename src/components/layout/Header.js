@@ -40,7 +40,7 @@ const Header = () => {
         </div>
         
         <div className="redesYlogin">
-          <SocialMedia />
+          <SocialMedia isHome={isHome} />
           <UserMenu />
         </div>
         <HamburgerMenu isHome={isHome} toggleMenu={toggleMenu} />
@@ -73,7 +73,7 @@ const Header = () => {
             {t('services')}
           </li>
           <li onClick={() => handleNavClick('/galeria')}>
-            {t('success_stories')}
+            {t('galery')}
           </li>
           <li onClick={() => handleNavClick('/contactanos')}>
             {t('contact')}
