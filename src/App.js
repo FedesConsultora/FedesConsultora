@@ -10,6 +10,8 @@ import './i18n';
 import Nosotros from './pages/Nosotros';
 import Servicios from './pages/Servicios';
 import Galeria from './pages/Galeria';
+import Contacto from './pages/Contacto';
+import Blog from './pages/Blog';
 
 const AppContent = () => {
   const location = useLocation();
@@ -42,6 +44,8 @@ const AppContent = () => {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path='/servicios' element={<Servicios />} />
           <Route path="/galeria" element={<Galeria />} />
+          <Route path="/contactanos" element={<Contacto />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </Main>
       <Footer />

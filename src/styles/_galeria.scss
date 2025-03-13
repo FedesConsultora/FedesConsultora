@@ -18,17 +18,17 @@
       align-self: start;
       margin-left: 4rem;
       .tituloSoluciones {
-        font-size: 1.13rem;
+        font-size: 1.2rem;
         padding-top: 0.3rem;
       }
     }
   
     .galeriaTitulo {
-      width: 80%;
-      font-size: 3.3rem;
+      width: 90%;
+      font-size: 3rem;
       text-align: center;
       margin-bottom: 3rem;
-      font-weight: 100;
+      font-weight: 600;
       font-family: 'Sohne Leicht';
       strong {
         font-weight: 900;
@@ -161,6 +161,11 @@
   
     // DESKTOP => flechas por fuera
     @media (min-width: 1080px) {
+        .galeriaTitulo {
+            width: 80% !important;
+            font-size: 4rem !important;
+            
+          }
       .main-image-container {
         .prev {
           position: absolute;
