@@ -1,11 +1,10 @@
 // src/layout/Header.js
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useNavigate } from 'react-router-dom'; // <-- Aquí
+import { useLocation, useNavigate } from 'react-router-dom';
 import Logo from '../Logo';
 import Navigation from '../headerSection/Navigation';
 import SocialMedia from '../SocialMedia';
-import UserMenu from '../headerSection/UserMenu';
 import HamburgerMenu from '../headerSection/HamburgerMenu';
 import SocialLinks from '../footerSection/SocialLinks';
 
@@ -13,18 +12,17 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { t } = useTranslation();
   const location = useLocation();
-  const navigate = useNavigate(); // <-- Hook para navegar
-
+  const navigate = useNavigate();
+  
   const isHome = location.pathname === '/';
-
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Función para navegar y cerrar menú
   const handleNavClick = (path) => {
     navigate(path);
-    setMenuOpen(false); 
+    setMenuOpen(false);
   };
 
   return (
@@ -41,7 +39,9 @@ const Header = () => {
         
         <div className="redesYlogin">
           <SocialMedia isHome={isHome} />
-          <UserMenu />
+          <a href="https://fedeshub.odoo.com/odoo" target="_blank" rel="noopener noreferrer" className="hub-button">
+            {t('Ingresar al Hub')}
+          </a>
         </div>
         <HamburgerMenu isHome={isHome} toggleMenu={toggleMenu} />
       </aside>
@@ -61,31 +61,20 @@ const Header = () => {
           />
         </article>
         
-        {/* Menú vertical con navegación */}
         <ul className="navegacion-vertical">
-          <li onClick={() => handleNavClick('/')}>
-            {t('home')}
-          </li>
-          <li onClick={() => handleNavClick('/nosotros')}>
-            {t('about_us')}
-          </li>
-          <li onClick={() => handleNavClick('/servicios')}>
-            {t('services')}
-          </li>
-          <li onClick={() => handleNavClick('/galeria')}>
-            {t('galery')}
-          </li>
-          <li onClick={() => handleNavClick('/contactanos')}>
-            {t('contact')}
-          </li>
-          <li onClick={() => handleNavClick('/blog')}>
-            {t('media')}
-          </li>
+          <li onClick={() => handleNavClick('/')}>{t('home')}</li>
+          <li onClick={() => handleNavClick('/nosotros')}>{t('about_us')}</li>
+          <li onClick={() => handleNavClick('/servicios')}>{t('services')}</li>
+          <li onClick={() => handleNavClick('/galeria')}>{t('galery')}</li>
+          <li onClick={() => handleNavClick('/contactanos')}>{t('contact')}</li>
+          <li onClick={() => handleNavClick('/blog')}>{t('media')}</li>
         </ul>
 
         <div className="redesYlogin">
           <SocialLinks />
-          <UserMenu />
+          <a href="https://fedeshub.odoo.com/odoo" target="_blank" rel="noopener noreferrer" className="hub-button">
+            {t('Ingresar al Hub')}
+          </a>
         </div>
       </div>
     </header>

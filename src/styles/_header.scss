@@ -115,7 +115,7 @@ header {
         }
       }
     }
-
+    
     .redesYlogin {
       display: flex;
       flex-direction: row;
@@ -123,6 +123,21 @@ header {
       align-items: center;
       width: 100%;
       padding: 2rem;
+      
+      .hub-button {
+        background-color: #44718D;
+        color: #fff;
+        font-weight: 700;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease-in-out;
+        display: inline-block; 
+      
+        &:hover {
+          background-color: #2d546e;
+        }
+      }
       .redesSociales{
         p {
           font-size: 2rem;
@@ -343,6 +358,20 @@ header {
 
       .navegacion-horizontal,
       .redesYlogin {
+        .hub-button {
+          background-color: #44718D;
+          color: #fff;
+          font-weight: 700;
+          padding: 0.5rem 1rem;
+          border-radius: 8px;
+          text-decoration: none;
+          transition: background 0.3s ease-in-out;
+          display: inline-block; 
+        
+          &:hover {
+            background-color: #2d546e;
+          }
+        }
         display: flex;
         align-items: center;
         justify-content: space-between;

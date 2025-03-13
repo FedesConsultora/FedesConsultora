@@ -1,66 +1,96 @@
+// src/components/Blog/NotasList.js
 import React, { useState, useEffect } from "react";
 import NotaCard from "./NotaCard";
-import blogData from "../../data/blogData";
+import { getBlogPosts } from "../../services/googleApi";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const NotasList = () => {
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [notesPerPage, setNotesPerPage] = useState(3);
 
-  // Función para actualizar la cantidad de notas por página según la pantalla
+  // Llamada a la API para obtener las publicaciones del blog
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getBlogPosts();
+        // Se asume que la API devuelve un array con los campos: id, date, title, description, author, image, link, etc.
+        console.log(data);
+        setBlogPosts(data);
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  // Ajuste de la cantidad de publicaciones según el tamaño de pantalla
   useEffect(() => {
     const updateNotesPerPage = () => {
       if (window.innerWidth >= 1200) {
-        setNotesPerPage(6); // Desktop grande (3 columnas)
+        setNotesPerPage(6);
       } else if (window.innerWidth >= 800) {
-        setNotesPerPage(6); // Tablet / Laptop (2 columnas)
+        setNotesPerPage(6);
       } else {
-        setNotesPerPage(3); // Móvil (1 columna)
+        setNotesPerPage(3);
       }
     };
 
-    updateNotesPerPage(); // Ejecutar al montar
+    updateNotesPerPage();
     window.addEventListener("resize", updateNotesPerPage);
     return () => window.removeEventListener("resize", updateNotesPerPage);
   }, []);
 
-  // Ordenar las notas por fecha (más recientes primero)
-  const sortedNotes = [...blogData].sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  // Calcular las notas que se mostrarán en la página actual
+  // Ordenamos las publicaciones por fecha (más recientes primero)
+  const sortedNotes = [...blogPosts].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
   const indexOfLastNote = currentPage * notesPerPage;
   const indexOfFirstNote = indexOfLastNote - notesPerPage;
   const currentNotes = sortedNotes.slice(indexOfFirstNote, indexOfLastNote);
-
-  // Calcular total de páginas y actualizar botones de paginación
-  const totalPages = Math.ceil(blogData.length / notesPerPage);
+  const totalPages = Math.ceil(blogPosts.length / notesPerPage);
 
   const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
 
+  if (loading) {
+    return (
+      <div className="blog-loading" style={{ textAlign: "center", padding: "2rem" }}>
+        <Player
+          autoplay
+          loop
+          src="/assets/videos/LoadingBlanco.json"
+          style={{ height: "300px", width: "300px" }}
+        />
+      </div>
+    );
+  }
+
   return (
     <>
-        <section className="contenedor-notas">
+      <section className="contenedor-notas">
         {currentNotes.map((nota) => (
-            <NotaCard key={nota.id} nota={nota} />
+          <NotaCard key={nota.id} nota={nota} />
         ))}
+      </section>
 
-        
-        </section>
-        {/* Controles de paginación */}
-        {totalPages > 1 && (
-            <div className="paginacion">
-            {[...Array(totalPages)].map((_, index) => (
-                <button
-                key={index}
-                className={`pagina ${currentPage === index + 1 ? "activo" : ""}`}
-                onClick={() => handlePageChange(index + 1)}
-                >
-                {index + 1}
-                </button>
-            ))}
-            </div>
-        )}
+      {/* Controles de paginación */}
+      {totalPages > 1 && (
+        <div className="paginacion">
+          {[...Array(totalPages)].map((_, index) => (
+            <button
+              key={index}
+              className={`pagina ${currentPage === index + 1 ? "activo" : ""}`}
+              onClick={() => handlePageChange(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
     </>
-    
   );
 };
 
