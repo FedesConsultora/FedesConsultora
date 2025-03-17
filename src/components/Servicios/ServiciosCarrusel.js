@@ -6,12 +6,12 @@ import { useTranslation } from 'react-i18next';
 const ServiciosCarrusel = () => {
   const { t } = useTranslation();
 
-  // Datos de ejemplo con 3 slides
+  // Definición de los servicios usando claves de traducción para título y texto.
   const servicesData = [
     {
       id: 'posicionamiento',
-      titulo: 'Posicionamiento',
-      texto: `El complemento perfecto para elevar tu facturación. Potenciamos el liderazgo de tu compañía con marketing disruptivo, branding creativo y comunicación de impacto para tu marca.`,
+      tituloKey: 'service.posicionamiento.titulo',
+      textoKey: 'service.posicionamiento.texto',
       class: 'infoUno',
       icono: 'https://fedesagency.com/fedes-consultora/landing/iconoPosicionamiento.svg',
       linea: 'https://fedesagency.com/fedes-consultora/landing/lineaSenialadoraChica.svg',
@@ -19,8 +19,8 @@ const ServiciosCarrusel = () => {
     },
     {
       id: 'performance',
-      titulo: 'Performance',
-      texto: `Potenciamos la estructura, tecnología y organización de tu empresa para transformarla en una compañía sólida y escalable.`,
+      tituloKey: 'service.performance.titulo',
+      textoKey: 'service.performance.texto',
       class: 'infoDos',
       icono: 'https://fedesagency.com/fedes-consultora/landing/iconoPerformance.svg',
       linea: 'https://fedesagency.com/fedes-consultora/landing/lineaSenialadoraMediana.svg',
@@ -28,8 +28,8 @@ const ServiciosCarrusel = () => {
     },
     {
       id: 'consultoria',
-      titulo: 'Consultoría empresarial',
-      texto: `Potenciamos la estructura, tecnología y organización de tu empresa para que sea sólida y escalable.`,
+      tituloKey: 'service.consultoria.titulo',
+      textoKey: 'service.consultoria.texto',
       class: 'infoTres',
       icono: 'https://fedesagency.com/fedes-consultora/landing/iconoConsultoria.svg',
       linea: 'https://fedesagency.com/fedes-consultora/landing/lineaSenialadoraLarga.svg',
@@ -37,19 +37,16 @@ const ServiciosCarrusel = () => {
     }
   ];
 
-  // Page actual (para el carrusel)
+  // Estado para la página actual del carrusel y cantidad de ítems visibles
   const [currentPage, setCurrentPage] = useState(0);
-
-  // Medir ancho de contenedor
   const containerRef = useRef(null);
   const [visibleItems, setVisibleItems] = useState(1);
 
-  // Determinar si estamos en mobile (1 ítem) o desktop (3 ítems)
+  // Ajuste de visibleItems según el ancho del contenedor
   useEffect(() => {
     const handleResize = () => {
       if (!containerRef.current) return;
       const width = containerRef.current.offsetWidth;
-      // si <1200 => 1 item (mobile), sino => 3 (desktop)
       if (width < 1200) {
         setVisibleItems(1);
       } else {
@@ -61,11 +58,10 @@ const ServiciosCarrusel = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // total pages
-  const totalItems = servicesData.length; // 3
+  const totalItems = servicesData.length;
   const totalPages = Math.ceil(totalItems / visibleItems);
 
-  // Botones next / prev
+  // Botones next y prev
   const handleNext = () => {
     const next = currentPage + 1;
     setCurrentPage(next >= totalPages ? 0 : next);
@@ -75,7 +71,7 @@ const ServiciosCarrusel = () => {
     setCurrentPage(prev < 0 ? totalPages - 1 : prev);
   };
 
-  // swipe
+  // Swipe handlers
   const handlers = useSwipeable({
     onSwipedLeft: handleNext,
     onSwipedRight: handlePrev,
@@ -83,14 +79,10 @@ const ServiciosCarrusel = () => {
     trackMouse: true,
   });
 
-  // *** Toggling del efecto radial en mobile ***
-  // Guardamos cuál slide está “tap” en mobile
+  // Efecto de toggle en mobile para marcar el slide activo
   const [activeSlide, setActiveSlide] = useState(null);
-
-  // Si es desktop (visibleItems===3), no hacemos toggle en click
-  // pero en mobile (visibleItems===1), un click togglea la clase:
   const handleTap = (slideId) => {
-    if (visibleItems === 3) return; // en desktop no hacer nada
+    if (visibleItems === 3) return;
     setActiveSlide((prev) => (prev === slideId ? null : slideId));
   };
 
@@ -107,7 +99,6 @@ const ServiciosCarrusel = () => {
           }}
         >
           {servicesData.map((item) => {
-            // Determinar si en mobile este slide está “activo” (tap)
             const isActive = activeSlide === item.id;
             return (
               <div
@@ -121,10 +112,8 @@ const ServiciosCarrusel = () => {
                   alignItems: 'center',
                   position: 'relative',
                 }}
-                // en mobile, togglear la clase active
                 onClick={() => handleTap(item.id)}
               >
-                {/* Imagen de fondo que se mueve con el slide */}
                 <img
                   src={item.imagenCamino}
                   alt="Camino"
@@ -138,33 +127,29 @@ const ServiciosCarrusel = () => {
                     zIndex: 1,
                   }}
                 />
-
-                {/* Contenido */}
                 <div className={item.class}>
                   <img
                     src={item.linea}
-                    alt="linea"
+                    alt="línea"
                     className="lineaImg"
                   />
                   <img
                     className="iconoImg"
                     src={item.icono}
-                    alt="icon"
+                    alt="icono"
                   />
                   <article>
-                    <h3>{item.titulo}</h3>
-                    <p>{item.texto}</p>
+                    <h3>{t(item.tituloKey)}</h3>
+                    <p>{t(item.textoKey)}</p>
                   </article>
                 </div>
-
-                {/* Botones next/prev dentro de cada slide (si deseas) */}
                 {totalPages > 1 && (
                   <>
                     <button onClick={handlePrev} className="prevButton">
-                      <img src="https://fedesagency.com/fedes-consultora/landing/galeria_flecha_izq.png" alt="flecha izq" />
+                      <img src="https://fedesagency.com/fedes-consultora/landing/galeria_flecha_izq.png" alt={t('arrow_left')} />
                     </button>
                     <button onClick={handleNext} className="nextButton">
-                      <img src="https://fedesagency.com/fedes-consultora/landing/galeria_flecha_der.png" alt="flecha der" />
+                      <img src="https://fedesagency.com/fedes-consultora/landing/galeria_flecha_der.png" alt={t('arrow_right')} />
                     </button>
                   </>
                 )}
@@ -173,8 +158,6 @@ const ServiciosCarrusel = () => {
           })}
         </div>
       </div>
-
-      {/* (Opcional) Indicadores/puntos fuera de .grandeServicios */}
       {totalPages > 1 && (
         <ul className="puntosServicios">
           {Array.from({ length: totalPages }).map((_, i) => (

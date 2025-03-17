@@ -40,7 +40,7 @@ const LideresSection = () => {
               <div className="nombreContainer">
                 <h3>MERCEDES</h3>
                 <h3 className="apellido">SAVICKAS</h3>
-                <p>CMO</p>
+                <p>{t('CMO')}</p>
                 <img
                   className='recuadro'
                   src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
@@ -49,7 +49,7 @@ const LideresSection = () => {
                 />
                 <a href="https://www.linkedin.com/in/maria-mercedes-savickas-354073a/">
                   <div className="contenedorBotonLinkedin">
-                    <p className="textoLinkedin">VIEW LINKEDIN</p>
+                    <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
                       src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
@@ -72,7 +72,7 @@ const LideresSection = () => {
               <div className="nombreContainer">
                 <h3>ROMINA</h3>
                 <h3 className="apellido">ALBANESI</h3>
-                <p>Líder de Comunicación</p>
+                <p>{t('leader_comunication')}</p>
                 <img
                   className='recuadro'
                   src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
@@ -81,7 +81,7 @@ const LideresSection = () => {
                 />
                 <a href="https://www.linkedin.com/in/rominaalbanesi/">
                   <div className="contenedorBotonLinkedin">
-                    <p className="textoLinkedin">VIEW LINKEDIN</p>
+                    <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
                       src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
@@ -106,7 +106,7 @@ const LideresSection = () => {
               <div className="nombreContainer">
                 <h3>SOFÍA</h3>
                 <h3 className="apellido">PIETROPAOLI</h3>
-                <p>Líder de Diseño</p>
+                <p>{t('leader_desing')}</p>
                 <img
                   className='recuadro'
                   src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
@@ -115,7 +115,7 @@ const LideresSection = () => {
                 />
                 <a href="https://www.linkedin.com/in/sofia-pietropaoli-9a51b7190/">
                   <div className="contenedorBotonLinkedin">
-                    <p className="textoLinkedin">VIEW LINKEDIN</p>
+                    <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
                       src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
@@ -139,7 +139,7 @@ const LideresSection = () => {
               <div className="nombreContainer">
                 <h3>FLORENCIA</h3>
                 <h3 className="apellido">MARCHESOTTI</h3>
-                <p>Líder de Proyectos</p>
+                <p>{t('leader_proyect')}</p>
                 <img
                   className='recuadro'
                   src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
@@ -148,7 +148,7 @@ const LideresSection = () => {
                 />
                 <a href="https://www.linkedin.com/in/florencia-marchesotti-7570a3212/">
                   <div className="contenedorBotonLinkedin">
-                    <p className="textoLinkedin">VIEW LINKEDIN</p>
+                    <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
                       src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"

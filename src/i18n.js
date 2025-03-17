@@ -61,36 +61,30 @@ i18n.use(initReactI18next).init({
             "leaders_text_strong1": "committed",
             "leaders_text_part2": "to delivering",
             "leaders_text_strong2": "results for your company.",
-
-            //Tercera sección
+            "leader_desing": "Design leader",
+            "leader_comunication": "Communication leader",
+            "CMO": "CMO",
+            "leader_proyect": "Proyect leader",
+            //SERVICIOS
             "our_solutions": "OUR THREE MAIN SERVICES",
             "innovative_solutions": "Innovative solutions that generate",
             "tangible_results": "tangible",
             "measurable_results": "and measurable results",
-            "positioning_title": "Positioning",
-            "positioning_desc": "The perfect complement to boost your revenue. We boost your company's leadership with disruptive marketing, creative branding, and impactful communications.",
-            "performance_title": "Performance",
-            "performance_desc": "We boost your company's revenue with effective advertising campaigns. How do we do it? With our AD-OP Method.",
-            "consulting_title": "Business Consulting",
-            "consulting_desc": "We enhance your company's structure, technology, and organization to transform it into a solid and scalable enterprise.",
-            "view_details": "VIEW DETAILS",
-
-            //Cuarta sección
-            "success_cases": "SUCCESS STORIES",
-            "trusted_by_brands": "These brands trust",
-            "collaborations_desc": "Through close collaborations and a deep understanding of their needs, we’ve helped these companies achieve new levels of accomplishment and success. Discover how our expertise and commitment made a difference for these businesses.",
-            "view_case_study": "VIEW CASE STUDY",
-            "brand_1": "Brand 1",
-            "brand_2": "Brand 2",
-            "brand_3": "Brand 3",
-            "brand_4": "Brand 4",
-            "what_clients_say": "And what do they say about",
-            "our_clients": "us?",
-            "client_feedback_1": "Fedes Consultora revitalized our image. They are simply the best!",
-            "client_feedback_2": "Fedes Consultora boosted our sales with their innovative and professional approach.",
-            "client_feedback_3": "Thanks to Fedes Consultora, we implemented cutting-edge technologies and improved our efficiency.",
-            "not_here_yet": "Is your brand not here yet?",
-            "make_it_happen": "Let's chat to make it happen.",
+            "arrow_left": "Left arrow",
+            "service": {
+              "posicionamiento": {
+                "titulo": "Positioning",
+                "texto": "The perfect complement to boost your revenue. We enhance your company's leadership with disruptive marketing, creative branding, and impactful communication."
+              },
+              "performance": {
+                "titulo": "Performance",
+                "texto": "We boost your company's revenue by enhancing its structure, technology, and organization to transform it into a solid and scalable enterprise."
+              },
+              "consultoria": {
+                "titulo": "Business Consulting",
+                "texto": "We strengthen your company's structure, technology, and organization to make it solid and scalable."
+              }
+            },
 
             // Traducciones de la Quinta Sección
             "our_footprint": "Our",
@@ -103,7 +97,46 @@ i18n.use(initReactI18next).init({
             "note_2_description": "Digitalization has become a necessity to survive. Why, then, is there still so much resistance?",
             "read_more": "READ MORE",
             "stay_tuned": "Stay tuned for the upcoming notes we will upload to learn more about us!",
+            // Gallery translations
+            "gallery_loading": "Loading images...",
+            "gallery_empty": "No images found",
+            "gallery_title": "GALLERY",
+            "gallery_subtitle": "Our <1>essence,</1> captured in <1>images that inspire</1>",
 
+            "contact_page": {
+              "title": "CONTACT",
+              "subtitle": "Let's work together to boost <strong>your business</strong>",
+              "description": "Contact us for any inquiry related to our <strong>consulting and digital marketing services.</strong> We will respond as soon as possible.",
+              "form": {
+                "label_fullname": "Full Name *",
+                "label_phone": "Phone",
+                "label_email": "Email *",
+                "label_company": "Company",
+                "label_interest": "Service of interest *",
+                "interest_options": {
+                  "consultoria": "Business Consulting",
+                  "redes": "Social Media Management",
+                  "performance": "Performance"
+                },
+                "label_message": "Message *",
+                "button_send": "Send Message",
+                "sending": "Sending message...",
+                "success": "Message sent successfully 🎉"
+              },
+              "info": {
+                "title": "Fedes Consultora",
+                "address": "Plaza Paso 159, Buenos Aires",
+                "phone": "+54 9 221 303-2529",
+                "email": "info@fedesconsultora.com"
+              }
+            },
+            "blog_page": {
+              "title": "BLOG",
+              "subtitle": "Our <1>footprint</1>, in the voice of <1>the media</1>",
+              "description": "We invite you to explore our articles where we share valuable resources, practical advice, and our experiences on our journey towards digital transformation.",
+              "read_more": "Read more",
+              "loading": "Loading posts..."
+            }
         }
     },
     es: {
@@ -137,7 +170,6 @@ i18n.use(initReactI18next).init({
             "view_success_stories": "VER CASOS DE ÉXITO",
 
             //Segunda sección traducciones
-            
             // Página Nosotros
             "small_line": "línea pequeña",
             "small_logo_fedes": "logo pequeño fedes",
@@ -169,19 +201,31 @@ i18n.use(initReactI18next).init({
             "leaders_text_strong1": "comprometidos",
             "leaders_text_part2": "en brindar",
             "leaders_text_strong2": "resultados para tu compañía.",
+            "leader_desing": "Líder de diseño",
+            "leader_comunication": "Líder de comunicación",
+            "CMO": "CMO",
+            "leader_proyect": "Líder de proyecto",
                 
-            //Tercera sección traducciones
+            // Traducciones para la sección de servicios (tercera sección)
             "our_solutions": "NUESTROS TRES SERVICIOS PRINCIPALES",
-            "innovative_solutions": "Soluciones innovadoras que generan resultados",
-            "tangible_results": "tangibles",
+            "innovative_solutions": "Soluciones innovadoras que generan",
+            "tangible_results": "resultados tangibles",
             "measurable_results": "y mensurables",
-            "positioning_title": "Posicionamiento",
-            "positioning_desc": "El complemento perfecto para elevar tu facturación. Potenciamos el liderazgo de tu compañía con marketing disruptivo, branding creativo y comunicación de impacto para tu marca.",
-            "performance_title": "Performance",
-            "performance_desc": "Potenciamos la facturación de tu compañía con campañas publicitarias efectivas. ¿Cómo lo hacemos? Con nuestro Método AD-OP.",
-            "consulting_title": "Consultoría Empresarial",
-            "consulting_desc": "Potenciamos la estructura, tecnología y organización de tu empresa para transformarla en una compañía sólida y escalable.",
-            "view_details": "VER DETALLES",
+            "arrow_left": "Flecha Izquierda",
+            "service": {
+              "posicionamiento": {
+                "titulo": "Posicionamiento",
+                "texto": "El complemento perfecto para elevar tu facturación. Potenciamos el liderazgo de tu compañía con marketing disruptivo, branding creativo y comunicación de impacto para tu marca."
+              },
+              "performance": {
+                "titulo": "Performance",
+                "texto": "Potenciamos la estructura, tecnología y organización de tu empresa para transformarla en una compañía sólida y escalable."
+              },
+              "consultoria": {
+                "titulo": "Consultoría empresarial",
+                "texto": "Potenciamos la estructura, tecnología y organización de tu empresa para que sea sólida y escalable."
+              }
+            },
 
             // Traducciones de la Cuarta Sección
             "success_cases": "CASOS DE ÉXITO",
@@ -211,6 +255,49 @@ i18n.use(initReactI18next).init({
             "note_2_description": "La digitalización se ha vuelto una necesidad para no desaparecer. ¿Por qué entonces sigue habiendo tanta resistencia?",
             "read_more": "LEER MÁS",
             "stay_tuned": "¡Mantente atento a las próximas notas que subiremos para enterarte más sobre nosotros!",
+
+            // Traducciones de la Galería
+            "gallery_loading": "Cargando imágenes...",
+            "gallery_empty": "No hay imágenes",
+            "gallery_title": "GALERÍA",
+            "gallery_subtitle": "Nuestra <1>esencia,</1> capturada en <1>imágenes que inspiran</1>",
+
+            //Contacto
+            "contact_page": {
+              "title": "CONTACTO",
+              "subtitle": "Trabajemos juntos para impulsar <strong>tu negocio</strong>",
+              "description": "Contáctanos sobre cualquier consulta relacionada con nuestros <strong>servicios de consultoría y marketing digital.</strong> Te responderemos <strong>lo antes posible.</strong>",
+              "form": {
+                "label_fullname": "Nombre completo *",
+                "label_phone": "Teléfono",
+                "label_email": "Email *",
+                "label_company": "Empresa",
+                "label_interest": "Servicio de interés *",
+                "sending": "Enviando...",
+                "interest_options": {
+                  "consultoria": "Consultoría Empresarial",
+                  "redes": "Posicionamiento",
+                  "performance": "Performance"
+                },
+                "label_message": "Mensaje *",
+                "button_send": "Enviar mensaje",
+                "success": "Mensaje enviado con éxito 🎉",
+
+              },
+              "info": {
+                "title": "Fedes Consultora",
+                "address": "Plaza Paso 159, Buenos Aires",
+                "phone": "+54 9 221 303-2529",
+                "email": "info@fedesconsultora.com"
+              },
+            },
+            "blog_page": {
+              "title": "BLOG",
+              "subtitle": "Nuestra <1>huella</1>, en la voz de <1>los medios</1>",
+              "description": "Te invitamos a explorar nuestros artículos, donde compartimos recursos valiosos, consejos prácticos y experiencias en nuestro camino hacia la transformación digital.",
+              "read_more": "Leer más",
+              "loading": "Cargando publicaciones..."
+            }
         }
 
     }

@@ -17,7 +17,7 @@ const HeaderInfoSection = () => {
           {t('header_paragraph')}
         </p>
         <div className="buttons_container">
-          <a href="https://www.fedesconsultora.com/appointment">
+          <a href="https://fedeshub.odoo.com/appointment/4">
             <button className="button1">{t('schedule_meeting')}</button>
           </a>
         </div>

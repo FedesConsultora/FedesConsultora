@@ -47,3 +47,26 @@ export const getGaleriaFotos = async () => {
       return [];
     }
   };
+
+
+  /**
+ * Envía datos del formulario de contacto a Google Sheets.
+  */
+  export const enviarConsultaContacto = async (formData) => {
+    try {
+      await fetch(`${API_URL}?action=contact`, {
+        method: "POST",
+        mode: "no-cors",  // mantené no-cors
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      // Asumí éxito siempre (no podés comprobarlo con no-cors)
+      return { success: true };
+    } catch (error) {
+      console.error("Error enviando consulta:", error);
+      return { success: false };
+    }
+  };

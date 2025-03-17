@@ -2,20 +2,20 @@
 import React, { useState, useEffect } from "react";
 import NotaCard from "./NotaCard";
 import { getBlogPosts } from "../../services/googleApi";
+import { useTranslation } from "react-i18next";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const NotasList = () => {
+  const { t } = useTranslation();
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [notesPerPage, setNotesPerPage] = useState(3);
 
-  // Llamada a la API para obtener las publicaciones del blog
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await getBlogPosts();
-        // Se asume que la API devuelve un array con los campos: id, date, title, description, author, image, link, etc.
         console.log(data);
         setBlogPosts(data);
       } catch (error) {
@@ -27,7 +27,6 @@ const NotasList = () => {
     fetchData();
   }, []);
 
-  // Ajuste de la cantidad de publicaciones según el tamaño de pantalla
   useEffect(() => {
     const updateNotesPerPage = () => {
       if (window.innerWidth >= 1200) {
@@ -44,7 +43,6 @@ const NotasList = () => {
     return () => window.removeEventListener("resize", updateNotesPerPage);
   }, []);
 
-  // Ordenamos las publicaciones por fecha (más recientes primero)
   const sortedNotes = [...blogPosts].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
@@ -64,6 +62,7 @@ const NotasList = () => {
           src="/assets/videos/LoadingBlanco.json"
           style={{ height: "300px", width: "300px" }}
         />
+        <p>{t('blog_page.loading')}</p>
       </div>
     );
   }
@@ -75,8 +74,6 @@ const NotasList = () => {
           <NotaCard key={nota.id} nota={nota} />
         ))}
       </section>
-
-      {/* Controles de paginación */}
       {totalPages > 1 && (
         <div className="paginacion">
           {[...Array(totalPages)].map((_, index) => (
