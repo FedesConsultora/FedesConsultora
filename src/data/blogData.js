@@ -52,7 +52,7 @@ const blogData = [
       image: "https://fedesagency.com/fedes-consultora/landing/imagen-nota-larga6.jpg",
       author: "Sofía Pietropaoli",
       authorImg: "https://fedesagency.com/fedes-consultora/landing/autor3.png",
-      link: "https://www.linkedin.com/posts/sofia-pietropaoli-9a51b7190_ayer-me-tom%C3%A9-un-rato-para-disfrutar-de-activity-7235424211089977345-yIpP",
+      link: "https://www.linkedin.com/posts/sofia-pietropaoli_ayer-me-tom%C3%A9-un-rato-para-disfrutar-de-activity-7235424211089977345-Tt4V?utm_source=share&utm_medium=member_desktop&rcm=ACoAACo4Iq8BaBg1LyP3dpEN47JR-snBgkA-0yE",
     },
     {
       id: 6,

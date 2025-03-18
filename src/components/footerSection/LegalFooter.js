@@ -84,7 +84,7 @@ const LegalFooter = () => {
           )}
         </div>
       </div>
-      <p>© 2024 | FEDES Consultora - {t('footer_message')}</p> 
+      <p>© 2025 | FEDES Consultora - {t('footer_message')}</p> 
     </section>
   );
 };

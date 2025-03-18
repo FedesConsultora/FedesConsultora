@@ -59,7 +59,6 @@ const Galeria = () => {
           src="/assets/videos/Loading.json"
           style={{ height: '300px', width: '300px' }}
         />
-        <p>{t('gallery_loading')}</p>
       </div>
     );
   }

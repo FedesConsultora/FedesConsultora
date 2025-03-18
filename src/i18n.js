@@ -136,6 +136,37 @@ i18n.use(initReactI18next).init({
               "description": "We invite you to explore our articles where we share valuable resources, practical advice, and our experiences on our journey towards digital transformation.",
               "read_more": "Read more",
               "loading": "Loading posts..."
+            },
+            "manual_page": {
+                "title": "THE ESSENCE OF A BRAND MANUAL",
+                "intro_text": "A brand manual isn't just a pretty logo; it's a strategic guide that defines your identity and communicates your company's values.",
+                "more_than_visual": "More than a visual guide",
+                "more_than_visual_text_1": "When we think of a brand manual, it's easy to picture it as a technical document full of guidelines on logo usage, color schemes, or typography. <strong>But reducing it to that would be underestimating it.</strong>",
+                "more_than_visual_text_2": "A brand manual is much more than a visual guide; it's a strategic tool that defines how a company presents itself to the world and builds meaningful relationships with its audience.",
+                "why_fundamental": "Why is it a fundamental asset in corporate communication?",
+                "why_fundamental_text": "A well-designed and updated manual not only organizes graphic elements but also becomes the common thread linking all brand expressions, from marketing to internal communication.",
+                "click_emojis": "*Click on the emojis to see more benefits*",
+                "benefits": {
+                    "identity": "<strong>Define the company's identity.</strong> It’s not just about colors and logos but about values, purpose, and tone of voice. A strategy-aligned manual reinforces consistency at all touchpoints.",
+                    "communication": "<strong>Enhance multichannel communication.</strong> Adaptability without losing consistency. The brand must be recognizable in social media, events, or commercial presentations.",
+                    "value_proposal": "<strong>Reflect the value proposition.</strong> Differentiating in a crowded market requires more than good products or services. A strategic manual projects what makes your company unique.",
+                    "efficiency": "<strong>Optimize processes and improve efficiency.</strong> Having clear guidelines saves time when creating communication pieces, avoids improvisation, and maintains message consistency."
+                },
+                "impact_organization": "Impact on the organization",
+                "impact_text": "A well-structured manual aligns teams and turns employees into brand ambassadors.",
+                "click_emojis_details": "*Click on the emojis to see more details*",
+                "impact": {
+                    "marketing_sales": "<strong>For marketing and sales teams:</strong> provides templates, key messages, storytelling examples, and formats adapted for effective communication.",
+                    "employees": "<strong>For employees:</strong> facilitates the onboarding of new members and helps align the entire team under the same corporate identity.",
+                    "internal_external_comms": "<strong>For internal and external communication:</strong> standardizes messages in social media, advertising, events, and other touchpoints.",
+                    "employer_branding": "<strong>For employer branding:</strong> employees aligned with the brand become its best ambassadors."
+                },
+                "challenge_2025": "🌍 2025 Challenge",
+                "challenge_title": "<strong>Engaging employees as protagonists of communication</strong>",
+                "challenge_text_1": "The strongest brands are not built through advertising campaigns but through the commitment of those who make them up. In Simon Sinek’s words: \"Brands are not what we say they are; they’re what others say about us.\"",
+                "challenge_text_2": "Therefore, an updated brand manual strengthens not only the external image but also serves as an internal compass, enabling every employee to become an active part of the company's narrative.",
+                "challenge_text_3": "Does your company have a brand manual aligned with its vision? At Fedes Consultora, we help businesses develop manuals that organize their visual identity, boost positioning, strengthen reputation, and prepare them to lead their sector.",
+                "challenge_contact": "<strong>📩 If you want your brand to not only look good but communicate with impact, let's talk.</strong>"
             }
         }
     },
@@ -147,10 +178,10 @@ i18n.use(initReactI18next).init({
             "questions": "tenés dudas?",
             "still": "¿Aún",
             "schedule_meeting": "AGENDÁ UNA REUNIÓN",
-            "send_message": "ENVÍANOS UN MENSAJE",
+            "send_message": "ENVIANOS UN MENSAJE",
             "follow_us": "Seguinos",
             "on": "en",
-            "footer_paragraph": "Ponete en contacto con nuestro equipo para brindarte claridad sobre nuestro servicio y cómo podemos ayudarte a potenciar tu negocio.",
+            "footer_paragraph": "Ponete en contacto con nuestro equipo para que pueda brindarte claridad sobre nuestro servicio y sobre cómo potenciar tu negocio.",
             // Traducciones del Header
             "home": "INICIO",
             "about_us": "SOBRE FEDES",
@@ -166,7 +197,7 @@ i18n.use(initReactI18next).init({
             "unlock_potential": "Desbloqueá el",
             "business_potential": "potencial",
             "business_growth": "de tu empresa",
-            "header_paragraph": "Impulsamos el éxito sostenible de tu negocio con publicidad innovadora, estrategias de posicionamiento y consultoría experta, para aumentar tu facturación y consolidar tu posición como líder del mercado.",
+            "header_paragraph": "Impulsamos el éxito sostenible de tu negocio con publicidad innovadora, estrategias de posicionamiento y consultoría experta para aumentar tu facturación y consolidar tu posición como líder del mercado.",
             "view_success_stories": "VER CASOS DE ÉXITO",
 
             //Segunda sección traducciones
@@ -297,6 +328,37 @@ i18n.use(initReactI18next).init({
               "description": "Te invitamos a explorar nuestros artículos, donde compartimos recursos valiosos, consejos prácticos y experiencias en nuestro camino hacia la transformación digital.",
               "read_more": "Leer más",
               "loading": "Cargando publicaciones..."
+            },
+            "manual_page": {
+                "title": "LA ESENCIA DE UN MANUAL DE MARCA",
+                "intro_text": "Un manual de marca no es solo un logo bonito, es la guía estratégica que define tu identidad y comunica los valores de tu empresa.",
+                "more_than_visual": "Más que una guía visual",
+                "more_than_visual_text_1": "Cuando pensamos en un manual de marca, es fácil imaginarlo como un documento técnico lleno de pautas sobre cómo usar el logo, qué colores emplear o qué tipografía elegir. <strong>Pero reducirlo a eso es subestimarlo.</strong>",
+                "more_than_visual_text_2": "Un manual de marca es mucho más que una guía visual: es una herramienta estratégica que define cómo una compañía se presenta al mundo y construye relaciones significativas con su audiencia.",
+                "why_fundamental": "¿Por qué es un activo fundamental en la comunicación corporativa?",
+                "why_fundamental_text": "Un manual bien diseñado y actualizado no sólo ordena los elementos gráficos, sino que se convierte en el hilo conductor que une todas las expresiones de la marca, desde el marketing hasta la comunicación interna.",
+                "click_emojis": "*Presioná los emojis para ver más beneficios*",
+                "benefits": {
+                    "0": "<strong>Definir la identidad de la compañía.</strong> No se trata solamente de colores y logotipos, sino de valores, propósito y tono de voz. Un manual alineado a la estrategia refuerza la coherencia en todos los puntos de contacto.",
+                    "1": "<strong>Potenciar la comunicación multicanal.</strong> Adaptabilidad sin perder consistencia. La marca tiene que ser reconocible tanto en redes sociales como en eventos o presentaciones comerciales.",
+                    "2": "<strong>Reflejar la propuesta de valor.</strong> Diferenciarse en un mercado saturado requiere más que buenos productos o servicios. Un manual estratégico proyecta lo que hace única a tu empresa.",
+                    "3": "<strong>Optimizar procesos y mejorar la eficiencia.</strong> Contar con lineamientos claros ahorra tiempo en la creación de piezas de comunicación, evita improvisaciones y mantiene la coherencia de los mensajes."
+                },
+                "impact_organization": "Impacto en la organización",
+                "impact_text": "Un manual bien estructurado alinea equipos y convierte a los colaboradores en embajadores de la marca.",
+                "click_emojis_details": "*Presioná los emojis para ver más detalles*",
+                "impact": {
+                    "0": "<strong>Para el equipo de marketing y ventas:</strong> aporta templates, mensajes clave, ejemplos de storytelling y formatos adaptados para una comunicación efectiva.",
+                    "1": "<strong>Para los colaboradores:</strong> facilita la integración de nuevos miembros y ayuda a alinear a todo el equipo bajo la misma identidad corporativa.",
+                    "2": "<strong>Para la comunicación interna y externa:</strong> estandariza los mensajes en redes sociales, publicidad, eventos y otros puntos de contacto.",
+                    "3": "<strong>Para el employer branding:</strong> los colaboradores alineados con la marca se convierten en sus mejores embajadores."
+                },
+                "challenge_2025": "🌍 Desafío 2025",
+                "challenge_title": "<strong>Integrar a los colaboradores como protagonistas de la comunicación</strong>",
+                "challenge_text_1": "Las marcas más fuertes no se construyen con campañas publicitarias, sino con el compromiso de quienes las conforman. En palabras de Simon Sinek: \"Las marcas no son lo que decimos que son; son lo que otros dicen sobre nosotros\".",
+                "challenge_text_2": "Por eso, un manual de marca actualizado no sólo fortalece la imagen externa, sino que también es una brújula interna para que cada colaborador se convierta en parte activa de la narrativa de la empresa.",
+                "challenge_text_3": "¿Tu empresa tiene un manual de marca alineado a su visión? En Fedes Consultora ayudamos a compañías a desarrollar manuales que organizan su identidad visual, potencian su posicionamiento, fortalecen su reputación y los preparan para liderar su sector.",
+                "challenge_contact": "<strong>📩 Si querés que tu marca no sólo se vea bien, sino que comunique con impacto, hablemos.</strong>"
             }
         }
 

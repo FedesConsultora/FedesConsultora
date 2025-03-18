@@ -62,7 +62,6 @@ const NotasList = () => {
           src="/assets/videos/LoadingBlanco.json"
           style={{ height: "300px", width: "300px" }}
         />
-        <p>{t('blog_page.loading')}</p>
       </div>
     );
   }

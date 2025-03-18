@@ -12,6 +12,7 @@ import Servicios from './pages/Servicios';
 import Galeria from './pages/Galeria';
 import Contacto from './pages/Contacto';
 import Blog from './pages/Blog';
+import ManualMarca from './pages/ManualMarca';
 
 const AppContent = () => {
   const location = useLocation();
@@ -46,6 +47,7 @@ const AppContent = () => {
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/contactanos" element={<Contacto />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/manual-de-marca" element={<ManualMarca />} />
         </Routes>
       </Main>
       <Footer />

@@ -20,7 +20,7 @@ const SocialMedia = ({ isHome }) => {
   return (
     <article className="redesSociales">
       <div className="redesSocialesContainer">
-        <a href="https://www.facebook.com/fedesagencyok">
+        <a href="https://www.youtube.com/@fedesconsultora">
           {/* Ternario para default (isHome? blanco : negro) */}
           <img
             src={isHome ? youtubeWhite : youtubeBlack}

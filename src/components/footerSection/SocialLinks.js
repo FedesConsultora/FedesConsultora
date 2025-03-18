@@ -11,7 +11,7 @@ const SocialLinks = ( isHome ) => {
         {t('on')}
       </p>
       <div className="redesSocialesContainer">
-        <a href="https://www.facebook.com/fedesagencyok">
+        <a href="https://www.youtube.com/@fedesconsultora">
           <img
             src="https://fedesagency.com/fedes-consultora/landing/youtube_blanco.png"
             alt="Facebook logo de Fedes Consultora"
