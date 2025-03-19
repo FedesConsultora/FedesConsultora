@@ -324,7 +324,7 @@ i18n.use(initReactI18next).init({
             },
             "blog_page": {
               "title": "BLOG",
-              "subtitle": "Nuestra <1>huella</1>, en la voz de <1>los medios</1>",
+              "subtitle": "Nuestra <1>huella</1> en la voz de <1>los medios</1>",
               "description": "Te invitamos a explorar nuestros artículos, donde compartimos recursos valiosos, consejos prácticos y experiencias en nuestro camino hacia la transformación digital.",
               "read_more": "Leer más",
               "loading": "Cargando publicaciones..."
