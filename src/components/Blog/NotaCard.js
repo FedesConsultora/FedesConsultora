@@ -1,8 +1,7 @@
 // src/components/Blog/NotaCard.js
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import SmartLink from "../SmartLink";  
 
 const NotaCard = ({ nota }) => {
   const { t } = useTranslation();
@@ -20,9 +19,9 @@ const NotaCard = ({ nota }) => {
       <div className="nota-contenido">
         <h2 className="titulo">{nota.title}</h2>
         <p className="descripcion">{nota.description}</p>
-        <Link to={nota.link} className="leer-mas" target="_blank" rel="noopener noreferrer">
+        <SmartLink href={nota.link} className="leer-mas">
           {t('blog_page.read_more')} <FaArrowRight className="flecha" />
-        </Link>
+        </SmartLink>
       </div>
       <img className="nota-imagen" src={nota.image} alt={nota.title} />
     </article>

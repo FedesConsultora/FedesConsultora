@@ -1,0 +1,125 @@
+// src/styles/pages/_serviciosFedes.scss
+.blogArticleSection {
+  width: 100%;
+  padding: 6rem 1rem;
+  background: url('https://fedesagency.com/fedes-consultora/landing/fondoPrensaDesktop2.webp') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+
+  .articleCard {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    max-width: 1200px;
+    width: 100%;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .header {
+      text-align: center;
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        color: #44718D;
+        margin-bottom: .5rem;
+      }
+      .lede {
+        font-size: 1.15rem;
+        color: #2B2B2B;
+      }
+    }
+
+    .introParrafo p {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: justify;
+      color: #2B2B2B;
+    }
+
+    .gridServicios {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+
+    .servicioCard {
+      background: #F7FAFC;
+      border-radius: 16px;
+      padding: 2rem 1.5rem 2.5rem;
+      position: relative;
+      transition: transform .3s;
+
+      &:hover { transform: translateY(-4px); }
+
+      .numero {
+        position: absolute;
+        top: -14px;
+        right: -14px;
+        background: #44718D;
+        color: #fff;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .icono {
+        font-size: 2rem;
+        color: #44718D;
+        margin-bottom: .8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: #44718D;
+        margin-bottom: .5rem;
+      }
+
+      p {
+        font-size: .95rem;
+        color: #2B2B2B;
+        text-align: justify;
+      }
+    }
+
+    .conclusion {
+      text-align: center;
+      p {
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
+        color: #2B2B2B;
+      }
+      .ctaLink {
+        display: inline-block;
+        background: #44718D;
+        color: #fff;
+        padding: .8rem 1.8rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity .25s;
+        &:hover { opacity: .85; }
+      }
+    }
+  }
+}
+
+
+/* 2 columnas: tablets (≥ 600 px aprox.) */
+@media (min-width: 600px) {
+  .gridServicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columnas máx.: desktop (≥ 1024 px) */
+@media (min-width: 1024px) {
+  .gridServicios {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}

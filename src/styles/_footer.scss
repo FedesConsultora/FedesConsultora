@@ -166,7 +166,7 @@
       flex-direction: column;
       align-items: center;
       margin-top: 2rem;
-  
+      
       .logoEidioma {
         display: flex;
         flex-direction: column;
@@ -258,13 +258,37 @@
           }
         } 
       }
-  
+      
       p {
         font-size: 0.9rem;
         margin-bottom: 0;
       }
     }
-    
+    .legalLinks {
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .legalLinksContainer{
+        position: relative;
+        bottom: 0.1rem;
+        margin-bottom: 1rem;
+      }
+      a.legalLink {
+        color: #f0f1f0;
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin: 0 0.5rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .separator {
+        color: #f0f1f0;
+      }
+    }
   }
   
 

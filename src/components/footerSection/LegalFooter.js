@@ -84,7 +84,15 @@ const LegalFooter = () => {
           )}
         </div>
       </div>
-      <p>© 2025 | FEDES Consultora - {t('footer_message')}</p> 
+      <div className="legalLinks">
+        <article className='legalLinksContainer'>
+          <a href="/politica-de-privacidad" className="legalLink">Política de Privacidad</a>
+          <span className="separator">|</span>
+          <a href="/terminos-y-condiciones" className="legalLink">Términos y Condiciones</a>
+        </article>
+        
+        <p>© 2025 | FEDES Consultora - {t('footer_message')}</p> 
+      </div>
     </section>
   );
 };

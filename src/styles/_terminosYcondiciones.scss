@@ -1,0 +1,97 @@
+.legal-container.condiciones {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-image: url("https://www.fedesagency.com/fedes-consultora/privacidad/fondoCondicionesPrivacidad.webp") !important;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+  .intro-legal {
+    width: 100%;
+    text-align: center;
+    color: #1d1d1b;
+    margin-bottom: 3rem;
+
+    .titulo-principal {
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-top: 2px solid #1d1d1b;
+      display: inline-block;
+      padding-top: 1rem;
+      font-family: "Sohne Leicht";
+      font-weight: 300;
+    }
+
+    .fecha-actualizacion {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      color: #44718d;
+      font-weight: 100;
+    }
+
+    .descripcion {
+      font-size: 1.1rem;
+      width: 100%;
+      line-height: 1.6;
+      font-weight: 100;
+    }
+  }
+
+  .legal-content {
+    width: 100%;
+    max-width: 960px;
+    color: #1d1d1b;
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: #1d1d1b;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-left: 1rem;
+      li {
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    p,
+    li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .meta-quote {
+      background: #eef6fa;
+      border-left: 4px solid #44718d;
+      margin: 1rem 0;
+      padding: 1rem;
+      font-style: italic;
+      color: #44718d;
+    }
+  }
+
+  // Desktop tweaks
+  @media (min-width: 1024px) {
+    padding: 4rem 4rem;
+    padding-top: 3rem;
+    .intro-legal .titulo-principal {
+      font-size: 1.8rem;
+    }
+    .legal-content h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

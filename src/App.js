@@ -13,6 +13,12 @@ import Galeria from './pages/Galeria';
 import Contacto from './pages/Contacto';
 import Blog from './pages/Blog';
 import ManualMarca from './pages/ManualMarca';
+import ServiciosFedes from './pages/ServiciosFedes';
+import ViajeroEternidad from './pages/ViajeroEternidad';
+import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
+import TerminosCondiciones from './pages/TerminosCondiciones';
+import Kickoff2025 from './pages/Kickoff2025';
+import ThankYou from './pages/ThankYou';
 
 const AppContent = () => {
   const location = useLocation();
@@ -48,6 +54,12 @@ const AppContent = () => {
           <Route path="/contactanos" element={<Contacto />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/manual-de-marca" element={<ManualMarca />} />
+          <Route path="/servicios-fedes" element={<ServiciosFedes />} />
+          <Route path="/viajero-eternidad" element={<ViajeroEternidad />} />
+          <Route path="/kickoff-2025" element={<Kickoff2025 />} />
+          <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
+          <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Main>
       <Footer />

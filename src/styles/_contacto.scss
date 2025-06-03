@@ -3,6 +3,30 @@
     background-image: url("https://www.fedesagency.com/fedes-consultora/privacidad/fondoClaro.png") !important;
     background-size: cover;
     padding-top: 0rem !important;
+
+    .botonWhatsapp {
+      margin-top: 0.5rem;
+      padding: 0.8rem;
+      background-color: #25d366;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.25s ease, transform 0.25s ease;
+
+      .iconoWp {
+        font-size: 1.2rem;
+      }
+      &:hover {
+        background-color: #1ebe54;
+        transform: scale(1.03);
+      }
+    }
     .main{
         display: flex;
         flex-direction: column;
@@ -24,7 +48,7 @@
   
     .contactoTitulo {
       text-align: center;
-      font-size: 3rem;
+      font-size: 2rem;
       margin-bottom: 1.5rem;
       font-weight: 600;
       font-family: 'Sohne Leicht';
@@ -99,9 +123,9 @@
         border-radius: 10px;
         cursor: pointer;
         transition: background-color 0.3s;
-  
         &:hover {
           background-color: #2d546e;
+          transform: scale(1.03);
         }
       }
     }
@@ -160,4 +184,47 @@
         width: 60% !important;
     }
 
+  }
+  /* Botón volver al inicio */
+  .botonVolverInicio {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.9rem 2rem;
+    background-color: #437188;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+      background-color: #2d546e;
+      transform: scale(1.03);
+    }
+  }
+
+  .thankyou-page {
+    display: flex;
+    justify-content: center;
+    .contenedorTitulos{
+      margin-top: 2rem;
+    }
+    .botonVolverInicio{
+      position: relative;
+      bottom: 6rem;
+    }
+    .thankyou-animation{
+      position: relative;
+      bottom: 3.5rem;
+    }
+    .main {
+      text-align: center;
+    }
+
+  }
+
+  @media (max-width: 1080px) {
+    .contactoTitulo{
+      margin-bottom: 2.5rem !important;
+    }
   }

@@ -312,6 +312,7 @@ i18n.use(initReactI18next).init({
                 },
                 "label_message": "Mensaje *",
                 "button_send": "Enviar mensaje",
+                "button_send_whatsapp": "Enviar por WhatsApp",
                 "success": "Mensaje enviado con éxito 🎉",
 
               },
