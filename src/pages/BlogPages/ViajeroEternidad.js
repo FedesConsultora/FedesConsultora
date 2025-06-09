@@ -1,7 +1,6 @@
 import React from 'react';
 import {
-  FaBookOpen,  FaQuoteLeft, FaMapMarkedAlt, FaUsers,
-  FaHandshake, FaSyncAlt, FaSnowflake
+  FaBookOpen,  FaQuoteLeft, FaMapMarkedAlt, FaUsers, FaSyncAlt, FaSnowflake
 } from 'react-icons/fa';
 
 /* ─── Bloques ya armados según el orden pedido ─── */

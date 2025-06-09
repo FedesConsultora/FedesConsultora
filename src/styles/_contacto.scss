@@ -4,6 +4,22 @@
     background-size: cover;
     padding-top: 0rem !important;
 
+    .formError {
+      background: #ffe5e5;
+      color: #c0392b;
+      padding: 0.8rem 1rem;
+      border: 1px solid #ffc5c5;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Ajuste: cursor bloqueado mientras envía */
+    button[disabled] {
+      cursor: not-allowed !important;
+      opacity: 0.75;
+    }
+
     .botonWhatsapp {
       margin-top: 0.5rem;
       padding: 0.8rem;

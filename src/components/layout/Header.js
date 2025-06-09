@@ -39,7 +39,7 @@ const Header = () => {
         
         <div className="redesYlogin">
           <SocialMedia isHome={isHome} />
-          <a href="https://fedeshub.odoo.com/odoo" target="_blank" rel="noopener noreferrer" className="hub-button">
+          <a href="https://hub.fedes.ai/odoo" target="_blank" rel="noopener noreferrer" className="hub-button">
             {t('Ingresar al Hub')}
           </a>
         </div>

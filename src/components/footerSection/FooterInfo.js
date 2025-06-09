@@ -22,7 +22,7 @@ const FooterInfo = () => {
             <button className="button1">{t('schedule_meeting')}</button>
           </a>
           <a
-            href="https://wa.me/+541171450296?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20que%20ofrecen%20en%20Fedes%20Consultora."
+            href="https://wa.me/+5492213092529?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20que%20ofrecen%20en%20Fedes%20Consultora."
             target="_blank"
             rel="noopener noreferrer"
           >

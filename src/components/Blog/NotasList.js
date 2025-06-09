@@ -2,11 +2,9 @@
 import React, { useState, useEffect } from "react";
 import NotaCard from "./NotaCard";
 import { getBlogPosts } from "../../services/googleApi";
-import { useTranslation } from "react-i18next";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const NotasList = () => {
-  const { t } = useTranslation();
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);

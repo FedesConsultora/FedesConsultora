@@ -1,0 +1,116 @@
+/* ───────────────────────────────────────────────
+   Tres C  ·  glass-cards con degradé corporativo
+   Paleta: #709CBB  →  #181D3B
+   ─────────────────────────────────────────────── */
+
+/* paleta */
+$primary   : #709cbb;
+$secondary : #181d3b;
+$glass     : rgba(255,255,255,.75);
+$blur      : 14px;
+
+/* animación */
+@keyframes slideUp {
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+
+/* ————————————————— sección aislada ————————————————— */
+.tresCSection {
+  width:100%; padding:6rem 1rem;
+  background:url('https://fedesagency.com/fedes-consultora/landing/fondoPrensaDesktop2.webp') center/cover no-repeat;
+  display:flex; justify-content:center;
+
+  .articleCard {
+    background:#fff; border-radius:26px;
+    box-shadow:0 12px 34px rgba(0,0,0,.14);
+    max-width:1200px; width:100%;
+    padding:4.5rem 2rem 4rem;
+    display:flex; flex-direction:column; gap:3.2rem;
+
+    .header h1{
+      font-size:clamp(2.2rem,4.2vw,3rem);
+      color:$primary; text-align:center; font-weight:800;
+      position:relative; display:inline-block;
+
+      &::after{
+        content:''; position:absolute; left:0; bottom:-8px;
+        width:100%; height:4px; border-radius:3px;
+        background:linear-gradient(90deg,$primary 0%,$secondary 100%);
+      }
+    }
+
+    /* grid */
+    .gridNotas{
+      display:grid; gap:2rem; grid-template-columns:1fr;
+      @media(min-width:700px){  grid-template-columns:repeat(2,1fr); }
+      @media(min-width:1024px){ grid-template-columns:repeat(3,1fr); }
+    }
+
+    /* tarjeta base */
+    .notaCard{
+      --accent:#{$primary};
+      position:relative; overflow:hidden;
+      background:$glass; backdrop-filter:blur($blur);
+      border-radius:20px;
+      padding:2.3rem 1.9rem 2.9rem;
+      box-shadow:0 6px 22px rgba(0,0,0,.08);
+      opacity:0; transform:translateY(48px) scale(.97);
+      transition:.4s;
+
+      &::before{
+        content:''; position:absolute; inset:0; border-radius:inherit;
+        padding:2px;
+        background:linear-gradient(135deg,var(--accent),rgba(255,255,255,0));
+        -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+        -webkit-mask-composite:xor; mask-composite:exclude;
+        pointer-events:none;
+      }
+
+      &.show{ animation:slideUp .7s cubic-bezier(.25,.8,.25,1) forwards; }
+      &:hover{
+        transform:translateY(-6px) scale(1.015);
+        box-shadow:0 14px 28px rgba(0,0,0,.12);
+      }
+
+      .icono{ font-size:2.35rem; color:var(--accent); margin-bottom:1.2rem; }
+
+      p{
+        font-size:1.06rem; line-height:1.7; white-space:pre-line; margin:0;
+        &:first-line{ font-family:'Sohne Halbfett'; font-weight:700; color:var(--accent); }
+      }
+
+      /* —— bloque destacado —— */
+      &.destacado{
+        --accent:#{$secondary};
+        background:$primary; color:#fff; text-align:center;
+
+        .icono{ color:#fff; }
+        &::before{ background:linear-gradient(135deg,$primary,$secondary); }
+
+        .sentence{
+          font-family:'Sohne Fett'; font-weight:900;
+          font-size:2.1rem; line-height:2.6rem; margin:.4rem 0;
+          &:nth-child(odd) { color:$secondary; }
+          &:nth-child(even){ color:#fff; }
+        }
+      }
+    }
+  }
+
+  /* tablet */
+  @media(min-width:700px) and (max-width:1023px){
+    .notaCard.destacado .sentence{ font-size:1.9rem; line-height:2.4rem; }
+  }
+  /* mobile */
+  @media(max-width:699px){
+    .gridNotas .notaCard{ grid-column:span 1!important; }
+    .notaCard{ padding:1.8rem 1.3rem 2.4rem; }
+    .notaCard.destacado{
+      text-align:left;
+      .sentence{
+        font-size:1.55rem; line-height:2.1rem;
+        &:nth-child(even){ color:#000; }
+      }
+    }
+  }
+}
