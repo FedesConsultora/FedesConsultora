@@ -1,0 +1,228 @@
+/* ───────────────────────────────────────────────
+   Creatividad & Innovación
+   Glass-cards · degradé Fedes · accesible & responsive
+   ─────────────────────────────────────────────── */
+
+/* === 1 · Variables globales === */
+$primary   : #709cbb;  // Celeste Fedes
+$secondary : #181d3b;  // Navy Fedes
+$glass     : rgba(255,255,255,.78);
+$blur      : 14px;
+$radius    : 20px;
+$timing    : .35s;
+
+/* === 2 · Keyframes === */
+@keyframes slideUp     { to { opacity:1; transform:translateY(0) scale(1); } }
+@keyframes hueShift    { 0%{filter:hue-rotate(0)} 100%{filter:hue-rotate(30deg)} }
+@keyframes pulseShadow {
+  0%  { box-shadow:0 0 0 rgba($primary,.0);}
+  70% { box-shadow:0 0 18px rgba($primary,.35);}
+  100%{ box-shadow:0 0 0 rgba($primary,.0);}
+}
+
+/* === 3 · Sección aislada === */
+.creInnovaSection {
+  width:100%;
+  padding:6rem 1rem;
+  background:url('https://fedesagency.com/fedes-consultora/landing/fondoPrensaDesktop2.webp')
+             center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  scroll-margin-top:5rem;            
+
+  /* ---------- 3.1 · Contenedor ---------- */
+  .articleCard {
+    background:#fff;
+    border-radius:$radius + 6;
+    box-shadow:0 12px 34px rgba(0,0,0,.14);
+    max-width:1200px;
+    width:100%;
+    padding:4.5rem 2rem 0;
+    display:flex;
+    flex-direction:column;
+    gap:3rem;
+
+    /* Header con sub-rayado degradé */
+    .header h1 {
+      font-size:clamp(2.1rem,4vw,2.9rem);
+      color:$secondary;
+      text-align:center;
+      font-family:'Sohne Fett';
+      position:relative;
+      display:inline-block;
+      line-height:1.25;
+
+      &::after{
+        content:'';
+        position:absolute;
+        left:0; bottom:-8px;
+        width:100%; height:4px;
+        border-radius:3px;
+        background:linear-gradient(90deg,$primary 0%,$secondary 100%);
+      }
+    }
+
+    /* ---------- 3.2 · · · Grid ---------- */
+    .gridNotas{
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+
+      @media (min-width:700px){   grid-template-columns:repeat(2,1fr); }
+      @media (min-width:1024px){  grid-template-columns:repeat(3,1fr); }
+    }
+
+    /* ---------- 3.3 · Tarjetas ---------- */
+    .notaCard{
+      --accent:#{$primary};
+
+      background:$glass;
+      backdrop-filter:blur($blur);
+      border-radius:$radius;
+      padding:2.4rem 2rem 3rem;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 6px 22px rgba(0,0,0,.08);
+      opacity:0;
+      transform:translateY(55px) scale(.95);
+      transition:transform $timing ease, box-shadow $timing ease;
+
+      /* Borde degradado */
+      &::before{
+        content:'';
+        position:absolute;
+        inset:0;
+        border-radius:inherit;
+        padding:2px;
+        background:linear-gradient(135deg,var(--accent),transparent);
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite:xor;
+                mask-composite:exclude;
+        pointer-events:none;
+        transition:filter $timing;
+      }
+
+      /* Estado visible (aparece) */
+      &.show{ animation:slideUp .8s cubic-bezier(.25,.8,.25,1) forwards; }
+
+      /* Hover / focus interacciones */
+      &:hover,
+      &:focus-within{
+        transform:translateY(-6px) scale(1.02);
+        box-shadow:0 14px 28px rgba(0,0,0,.12);
+
+        &::before{ animation:hueShift .8s ease forwards; }
+        .icono   { transform:scale(1.18); }
+      }
+
+      /* Accesibilidad teclado */
+      &:focus-within{ outline:2px dashed $secondary; outline-offset:4px; }
+
+      /* Icono */
+      .icono{
+        font-size:2.4rem;
+        color:var(--accent);
+        margin-bottom:1.2rem;
+        transition:transform $timing;
+        will-change:transform;
+      }
+
+      /* Título interno (primera línea) */
+      .blockTitle{
+        font-family:'Sohne Halbfett';
+        font-size:1.25rem;
+        color:var(--accent);
+        margin:0 0 .8rem;
+      }
+
+      /* Texto cuerpo */
+      p{
+        font-size:1.06rem;
+        line-height:1.68;
+        margin:0;
+        white-space:pre-line;
+      }
+
+      /* —— Doble columna ≥ 900 px —— */
+      &.dobleCol p{
+        @media(min-width:900px){
+          column-count:2;
+          column-gap:2rem;
+          text-align:left;
+        }
+      }
+
+      /* —— Tarjeta destacada —— */
+      &.destacado{
+        --accent:#{$secondary};
+        background:$primary;
+        color:#fff;
+        text-align:center;
+
+        .icono{ color:#fff; }
+
+        &::before{
+          background:linear-gradient(135deg,$primary,$secondary);
+          filter:blur(.2px);
+        }
+
+        .sentence{
+          font-family:'Sohne Fett';
+          font-weight:900;
+          font-size:2rem;
+          line-height:2.45rem;
+          margin:.35rem 0;
+          letter-spacing:-.2px;
+
+          &:nth-child(odd) { color:$secondary; }
+          &:nth-child(even){ color:#fff; }
+        }
+      }
+
+      /* Pulsar suavemente cuando .show permanece en viewport */
+      &.show:not(.destacado){
+        animation:slideUp .8s ease-out forwards,
+                   pulseShadow 3s 1.2s infinite;
+      }
+    }
+
+    /* ---------- 3.4 · Imagen inferior ---------- */
+    .articleImage{
+      width:calc(100% + 4rem);
+      margin:3rem -2rem 0;
+      overflow:hidden;
+      border-radius:0 0 ($radius + 4) ($radius + 4);
+      img{ display:block; width:100%; height:auto; }
+
+      
+    }
+  }
+
+  /* === 4 · Breakpoints finos === */
+  /* Tablet */
+  @media(min-width:700px) and (max-width:1023px){
+    .notaCard.destacado .sentence{
+      font-size:1.8rem; line-height:2.25rem;
+    }
+  }
+
+  /* Mobile */
+  @media(max-width:699px){
+    .gridNotas .notaCard{ grid-column:span 1!important; }
+    .notaCard{ padding:1.8rem 1.3rem 2.3rem; }
+
+    /* Destacado: alterna navy / negro para contraste */
+    .notaCard.destacado{
+      text-align:left;
+      .sentence{
+        font-size:1.55rem; line-height:2.05rem;
+        &:nth-child(even){ color:#000; }
+      }
+    }
+
+    /* Columna única */
+    .notaCard.dobleCol p{ column-count:1; }
+  }
+}

@@ -20,6 +20,7 @@ import TerminosCondiciones from './pages/TerminosCondiciones';
 import Kickoff2025 from './pages/BlogPages/Kickoff2025';
 import ThankYou from './pages/ThankYou';
 import CreadoresTresC from './pages/BlogPages/TresC';
+import CreatividadInnovacion from './pages/BlogPages/CreatividadInnovacion';
 
 const AppContent = () => {
   const location = useLocation();
@@ -59,6 +60,7 @@ const AppContent = () => {
           <Route path="/viajero-eternidad" element={<ViajeroEternidad />} />
           <Route path="/kickoff-2025" element={<Kickoff2025 />} />
           <Route path="/creadores-tres-c" element={<CreadoresTresC />} />
+          <Route path="/creatividad-e-innovacion" element={<CreatividadInnovacion />} />
 
           <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
