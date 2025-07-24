@@ -105,7 +105,7 @@ const Galeria = () => {
               onClick={handlePrev}
             >
               <img
-                src="https://fedesagency.com/fedes-consultora/landing/galeria_flecha_izq.png"
+                src="https://fedes.ai/fedes-consultora/landing/galeria_flecha_izq.png"
                 alt="Flecha Izquierda"
               />
             </div>
@@ -122,7 +122,7 @@ const Galeria = () => {
               onClick={handleNext}
             >
               <img
-                src="https://fedesagency.com/fedes-consultora/landing/galeria_flecha_der.png"
+                src="https://fedes.ai/fedes-consultora/landing/galeria_flecha_der.png"
                 alt="Flecha Derecha"
               />
             </div>

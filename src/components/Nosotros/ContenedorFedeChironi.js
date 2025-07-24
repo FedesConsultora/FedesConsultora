@@ -18,7 +18,7 @@ const ContenedorFedeChironi = () => {
         <div className="contenedorBotonLinkedin">
           {t('view_linkedin')}
           <img
-            src="https://fedesagency.com/fedes-consultora/landing/flechaDerecha.svg"
+            src="https://fedes.ai/fedes-consultora/landing/flechaDerecha.svg"
             alt={t('arrow_right')}
             loading="lazy"
           />
@@ -28,7 +28,7 @@ const ContenedorFedeChironi = () => {
         <h3>FEDERICO CHIRONI</h3>
         <p>CoFounder y CEO</p>
         <img
-          src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular.svg"
+          src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular.svg"
           alt={t('semi_circular_frame')}
           loading="lazy"
         />

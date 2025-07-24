@@ -1,0 +1,276 @@
+/* src/styles/components/ArticleLayout.scss */
+
+$default-accent : #709cbb;
+$secondary      : #181d3b;
+$glass          : rgba(255,255,255,.78);
+$blur           : 14px;
+$radius         : 20px;
+$timing         : .35s;
+
+.blogArticleSection {
+  --accent  : #{$default-accent};
+  --accent2 : #{$secondary};
+
+  width: 100%;
+  padding: 0 1rem 6rem;
+  display: flex;
+  justify-content: center;
+  background: url('https://fedes.ai/fedes-consultora/landing/fondoPrensaDesktop2.webp') center/cover no-repeat;
+
+  .articleCard {
+    background: #fff;
+    border-radius: calc(#{$radius + 6});
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .14);
+    overflow: hidden;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+
+    .heroImage {
+      width: 100%;
+      height: 85vh;
+      min-height: 280px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        transition: filter .4s ease;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+    }
+
+    .articleIntro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0rem 2rem 0;
+      text-align: center;
+      width: 100%;
+
+      .metaLine {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 720px;
+        margin-top: 2rem;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .autor {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+
+          .authorImage {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ddd;
+          }
+
+          .authorName {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #222;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+          }
+        }
+
+        .fecha {
+          font-size: 1rem;
+          font-weight: bold;
+          color: #44718D;
+          background-color: #eef6fa;
+          padding: 0.3rem 1rem;
+          border-radius: 20px;
+          margin-bottom: 0rem;
+        }
+      }
+
+      h1 {
+        font-size: clamp(2.3rem, 5vw, 2.6rem);
+        font-family: 'Sohne Fett';
+        line-height: 1.2;
+        margin: 0;
+        text-shadow: 2px 2px 6px rgba(0,0,0,.45);
+        max-width: 90%;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 100%;
+          height: 4px;
+          background: linear-gradient(90deg, var(--accent), var(--accent2));
+          border-radius: 3px;
+        }
+      }
+
+      .descripcion {
+        font-size: 1.05rem;
+        margin-top: 1.2rem;
+        max-width: 750px;
+        color: #333;
+      }
+    }
+
+    .gridNotas {
+      display: grid;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      grid-template-columns: 1fr;
+
+      @media (min-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 960px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .notaCard {
+      background: $glass;
+      backdrop-filter: blur($blur);
+      border-radius: $radius;
+      position: relative;
+      padding: 2.4rem 2rem 3rem;
+      overflow: hidden;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, .08);
+      visibility: hidden;
+      transform: translateY(55px) scale(.95);
+      transition: transform $timing ease, box-shadow $timing ease;
+
+      &.show {
+        visibility: visible;
+        transform: translateY(0) scale(1);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 2px;
+        background: transparent;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      &:hover,
+      &:focus-within {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, .12);
+
+        &::before {
+          background: linear-gradient(135deg, var(--accent), transparent);
+        }
+
+        .icono {
+          transform: scale(1.18);
+        }
+      }
+
+      &:focus-within {
+        outline: 2px dashed var(--accent2);
+        outline-offset: 4px;
+      }
+
+      .icono {
+        font-size: 2.4rem;
+        color: var(--accent);
+        margin-bottom: 1.2rem;
+        transition: transform $timing;
+      }
+
+      .blockTitle {
+        font-family: 'Sohne Halbfett';
+        font-size: 1.25rem;
+        color: var(--accent);
+        margin: 0 0 .8rem;
+      }
+
+      p {
+        font-size: 1.06rem;
+        line-height: 1.68;
+        margin: 0;
+        white-space: pre-line;
+      }
+
+      &.dobleCol p {
+        @media (min-width: 900px) {
+          column-count: 2;
+          column-gap: 2rem;
+        }
+      }
+
+      .pasoBadge {
+        position: absolute;
+        top: .8rem;
+        right: .8rem;
+        font-size: .85rem;
+        font-weight: 700;
+        background: var(--accent);
+        color: #fff;
+        padding: .2rem .55rem;
+        border-radius: 12px;
+      }
+
+      &.destacado {
+        background: var(--accent);
+        color: #fff;
+        text-align: center;
+
+        .icono {
+          color: #fff;
+        }
+
+        &::before {
+          background: linear-gradient(135deg, var(--accent), var(--accent2));
+        }
+
+        .sentence {
+          font-family: 'Sohne Fett';
+          font-size: 2rem;
+          line-height: 2.45rem;
+          margin: .35rem 0;
+        }
+      }
+    }
+
+    @media (max-width: 699px) {
+      .notaCard {
+        padding: 1.8rem 1.3rem 2.3rem;
+      }
+
+      .notaCard.destacado .sentence {
+        font-size: 1.55rem;
+        line-height: 2.05rem;
+      }
+
+      .notaCard.dobleCol p {
+        column-count: 1;
+      }
+    }
+  }
+}

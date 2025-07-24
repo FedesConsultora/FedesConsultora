@@ -3,19 +3,19 @@ import React from 'react';
 
 const SocialMedia = ({ isHome }) => {
   // Rutas blancas
-  const youtubeWhite = 'https://fedesagency.com/fedes-consultora/landing/youtube_blanco.png';
-  const instagramWhite = 'https://fedesagency.com/fedes-consultora/landing/instagram_blanco.svg';
-  const linkedinWhite = 'https://fedesagency.com/fedes-consultora/landing/linkedin_blanco.svg';
+  const youtubeWhite = 'https://fedes.ai/fedes-consultora/landing/youtube_blanco.png';
+  const instagramWhite = 'https://fedes.ai/fedes-consultora/landing/instagram_blanco.svg';
+  const linkedinWhite = 'https://fedes.ai/fedes-consultora/landing/linkedin_blanco.svg';
 
   // Rutas negras
-  const youtubeBlack = 'https://fedesagency.com/fedes-consultora/landing/youtube_negro.png';
-  const instagramBlack = 'https://fedesagency.com/fedes-consultora/privacidad/instagramIconBlack.svg';
-  const linkedinBlack = 'https://fedesagency.com/fedes-consultora/privacidad/linkedinIconBlack.svg';
+  const youtubeBlack = 'https://fedes.ai/fedes-consultora/landing/youtube_negro.png';
+  const instagramBlack = 'https://fedes.ai/fedes-consultora/privacidad/instagramIconBlack.svg';
+  const linkedinBlack = 'https://fedes.ai/fedes-consultora/privacidad/linkedinIconBlack.svg';
 
   // Rutas a color (para hover)
-  const youtubeColor = 'https://fedesagency.com/fedes-consultora/landing/youtube_color.png';
-  const instagramColor = 'https://fedesagency.com/fedes-consultora/landing/instagram_color.svg';
-  const linkedinColor = 'https://fedesagency.com/fedes-consultora/landing/LinkedIn_color.svg';
+  const youtubeColor = 'https://fedes.ai/fedes-consultora/landing/youtube_color.png';
+  const instagramColor = 'https://fedes.ai/fedes-consultora/landing/instagram_color.svg';
+  const linkedinColor = 'https://fedes.ai/fedes-consultora/landing/LinkedIn_color.svg';
 
   return (
     <article className="redesSociales">

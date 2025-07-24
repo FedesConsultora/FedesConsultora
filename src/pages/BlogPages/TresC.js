@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+// src/pages/BlogPages/TresC.js
+import React from 'react';
 import {
   FaLightbulb, FaFingerprint, FaRedoAlt,
   FaLink, FaExclamationTriangle
 } from 'react-icons/fa';
+import ArticleLayout from '../../components/layout/ArticleLayout';
 
-/* —— Bloques de contenido —— */
-const bloques = [
+const blocks = [
   {
     id: 'intro',
     span: 3,
@@ -56,71 +57,12 @@ La coherencia es lo que permite que todo tenga un hilo: el posteo, la respuesta 
   }
 ];
 
-const TresC = () => {
-  const ref = useRef(null);
-
-  /* Re-animar cada vez que entra / sale del viewport */
-  useEffect(() => {
-    const cards = ref.current.querySelectorAll('.notaCard');
-    const io = new IntersectionObserver(
-      entries =>
-        entries.forEach(e =>
-          e.isIntersecting
-            ? e.target.classList.add('show')
-            : e.target.classList.remove('show')
-        ),
-      { threshold: 0.15 }
-    );
-    cards.forEach(c => io.observe(c));
-    return () => cards.forEach(c => io.unobserve(c));
-  }, []);
-
+export default function TresC() {
   return (
-    <main className="blogArticleSection tresCSection">
-      <article className="articleCard">
-        <header className="header">
-          <h1>Las tres C de los creadores de contenido</h1>
-        </header>
-
-        <div className="gridNotas" ref={ref}>
-          {bloques.map(({ id, span, icono, texto, destacado }) => (
-            <section
-              key={id}
-              className={`notaCard${destacado ? ' destacado' : ''}`}
-              style={{ gridColumn: `span ${span}` }}
-            >
-              <div className="icono">{icono}</div>
-
-              {destacado ? (
-                texto.split('. ').map((f, i) => (
-                  <p key={i} className="sentence">
-                    {f.trim()}
-                    {f.trim().endsWith('.') ? '' : '.'}
-                  </p>
-                ))
-              ) : (
-                <p>
-                  {texto.split('\n').map((line, i) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}
-                </p>
-              )}
-            </section>
-          ))}
-        </div>
-        <div className="articleImage">
-          <img
-            src="https://fedesagency.com/fedes-consultora/landing/imagen-nota-larga16.png"
-            alt="Imagen de 3C"
-            loading="lazy"
-          />
-        </div>
-      </article>
-    </main>
+    <ArticleLayout
+      id={19}
+      blocks={blocks}
+      accent="#706cbb"
+    />
   );
-};
-
-export default TresC;
+}

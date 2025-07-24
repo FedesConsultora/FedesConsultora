@@ -9,8 +9,8 @@ const Logo = ({ isHome }) => {
         className="logo_fedes"
         src={
           isHome
-            ? 'https://fedesagency.com/fedes-consultora/landing/logoBlanco.png'
-            : 'https://fedesagency.com/fedes-consultora/privacidad/logoFedesNegro.svg'
+            ? 'https://fedes.ai/fedes-consultora/landing/logoBlanco.png'
+            : 'https://fedes.ai/fedes-consultora/privacidad/logoFedesNegro.svg'
         }
         alt="Logotipo de Fedes Consultora"
         loading="lazy"

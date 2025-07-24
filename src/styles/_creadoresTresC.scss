@@ -17,7 +17,7 @@ $blur      : 14px;
 /* ————————————————— sección aislada ————————————————— */
 .tresCSection {
   width:100%; padding:6rem 1rem;
-  background:url('https://fedesagency.com/fedes-consultora/landing/fondoPrensaDesktop2.webp') center/cover no-repeat;
+  background:url('https://fedes.ai/fedes-consultora/landing/fondoPrensaDesktop2.webp') center/cover no-repeat;
   display:flex; justify-content:center;
 
   .articleCard {
@@ -66,7 +66,6 @@ $blur      : 14px;
         pointer-events:none;
       }
 
-      &.show{ animation:slideUp .7s cubic-bezier(.25,.8,.25,1) forwards; }
       &:hover{
         transform:translateY(-6px) scale(1.015);
         box-shadow:0 14px 28px rgba(0,0,0,.12);

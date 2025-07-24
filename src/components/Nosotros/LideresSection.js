@@ -11,7 +11,7 @@ const LideresSection = () => {
       <article className="equipoHeader">
         <p>{t('leaders')}</p>
         <img
-          src="https://fedesagency.com/fedes-consultora/landing/lineaChicaNegra.svg"
+          src="https://fedes.ai/fedes-consultora/landing/lineaChicaNegra.svg"
           alt={t('small_line')}
           loading="lazy"
         />
@@ -33,7 +33,7 @@ const LideresSection = () => {
             <div className="mechi">
               <img
                 className="fotoLider"
-                src="https://fedesagency.com/fedes-consultora/landing/foto_mechi.webp"
+                src="https://fedes.ai/fedes-consultora/landing/foto_mechi.webp"
                 alt="Mercedes Savickas"
                 loading="lazy"
               />
@@ -43,7 +43,7 @@ const LideresSection = () => {
                 <p>{t('CMO')}</p>
                 <img
                   className='recuadro'
-                  src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
+                  src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular_negro.png"
                   alt="Recuadro SemiCircular"
                   loading="lazy"
                 />
@@ -52,7 +52,7 @@ const LideresSection = () => {
                     <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
-                      src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
+                      src="https://fedes.ai/fedes-consultora/landing/flechaDerechaNegra.png"
                       alt="Flecha Derecha"
                       loading="lazy"
                     />
@@ -65,7 +65,7 @@ const LideresSection = () => {
             <div className="romi">
               <img
                 className="fotoLider"
-                src="https://fedesagency.com/fedes-consultora/landing/foto_romi.webp"
+                src="https://fedes.ai/fedes-consultora/landing/foto_romi.webp"
                 alt="Romina Albanesi"
                 loading="lazy"
               />
@@ -75,7 +75,7 @@ const LideresSection = () => {
                 <p>{t('leader_comunication')}</p>
                 <img
                   className='recuadro'
-                  src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
+                  src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular_negro.png"
                   alt="Recuadro SemiCircular"
                   loading="lazy"
                 />
@@ -84,7 +84,7 @@ const LideresSection = () => {
                     <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
-                      src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
+                      src="https://fedes.ai/fedes-consultora/landing/flechaDerechaNegra.png"
                       alt="Flecha Derecha"
                       loading="lazy"
                     />
@@ -99,7 +99,7 @@ const LideresSection = () => {
             <div className="sofi">
               <img
                 className="fotoLider"
-                src="https://fedesagency.com/fedes-consultora/landing/foto_sofi.webp"
+                src="https://fedes.ai/fedes-consultora/landing/foto_sofi.webp"
                 alt="Sofía Pietropaoli"
                 loading="lazy"
               />
@@ -109,7 +109,7 @@ const LideresSection = () => {
                 <p>{t('leader_desing')}</p>
                 <img
                   className='recuadro'
-                  src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
+                  src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular_negro.png"
                   alt="Recuadro SemiCircular"
                   loading="lazy"
                 />
@@ -118,7 +118,7 @@ const LideresSection = () => {
                     <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
-                      src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
+                      src="https://fedes.ai/fedes-consultora/landing/flechaDerechaNegra.png"
                       alt="Flecha Derecha"
                       loading="lazy"
                     />
@@ -132,7 +132,7 @@ const LideresSection = () => {
               <img
               
                 className="fotoLider"
-                src="https://fedesagency.com/fedes-consultora/landing/foto_flor.webp"
+                src="https://fedes.ai/fedes-consultora/landing/foto_flor.webp"
                 alt="Florencia Marchesotti"
                 loading="lazy"
               />
@@ -142,7 +142,7 @@ const LideresSection = () => {
                 <p>{t('leader_proyect')}</p>
                 <img
                   className='recuadro'
-                  src="https://fedesagency.com/fedes-consultora/landing/recuadro_semicircular_negro.png"
+                  src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular_negro.png"
                   alt="Recuadro SemiCircular"
                   loading="lazy"
                 />
@@ -151,7 +151,7 @@ const LideresSection = () => {
                     <p className="textoLinkedin">{t('view_linkedin')}</p>
                     <img
                       className="imagenFlecha"
-                      src="https://fedesagency.com/fedes-consultora/landing/flechaDerechaNegra.png"
+                      src="https://fedes.ai/fedes-consultora/landing/flechaDerechaNegra.png"
                       alt="Flecha Derecha"
                       loading="lazy"
                     />

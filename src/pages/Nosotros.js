@@ -29,7 +29,7 @@ const Nosotros = () => {
       <section className="segundaSection">
         <article className="informacionContainer">
           <img
-            src="https://fedesagency.com/fedes-consultora/landing/lineaCorta.svg"
+            src="https://fedes.ai/fedes-consultora/landing/lineaCorta.svg"
             alt={t('small_line')}
             loading="lazy"
           />
@@ -37,7 +37,7 @@ const Nosotros = () => {
             <p className="texto_minilogo">
               {t('why')} &nbsp;
               <img
-                src="https://fedesagency.com/fedes-consultora/landing/mini_logo.svg"
+                src="https://fedes.ai/fedes-consultora/landing/mini_logo.svg"
                 alt={t('small_logo_fedes')}
                 loading="lazy"
               />?

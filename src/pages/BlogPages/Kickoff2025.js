@@ -1,17 +1,18 @@
+// src/pages/BlogPages/Kickoff2025.js
 import React from 'react';
 import {
   FaRocket, FaUsersCog, FaBullseye,
   FaHandshake, FaHeart, FaCommentDots
 } from 'react-icons/fa';
+import ArticleLayout from '../../components/layout/ArticleLayout';
 
-/* ─ Bloques en el orden EXACTO del texto ─ */
 const bloques = [
   {
     id: 1,
     span: 3,          
     icono: <FaRocket />,
     texto: `En Fedes, cada comienzo de año es una invitación a volver a lo esencial.
-    Por eso, el kick-off no es una reunión más: es un momento fundacional. Nos encontramos como equipo para lo que realmente importa. Para pensar juntos, para planificar, para decirnos esas cosas que a veces cuesta, pero que son las que mueven.`
+Por eso, el kick-off no es una reunión más: es un momento fundacional. Nos encontramos como equipo para lo que realmente importa. Para pensar juntos, para planificar, para decirnos esas cosas que a veces cuesta, pero que son las que mueven.`
   },
   {
     id: 2,
@@ -31,7 +32,7 @@ const bloques = [
     span: 2,
     icono: <FaUsersCog />,
     texto: `Nuestra forma de trabajar está atravesada por algo que nos define: el compromiso. Con los procesos, con los resultados, con los vínculos y, sobre todo, con el valor que le damos al trabajo en equipo.
-    El kick-off fue eso: una pausa activa para repensar, reorganizar, para abrir el juego y escucharnos.`
+El kick-off fue eso: una pausa activa para repensar, reorganizar, para abrir el juego y escucharnos.`
   },
   {
     id: 5,
@@ -52,48 +53,18 @@ const bloques = [
     span: 3,
     icono: <FaBullseye />,
     texto: `¿Querés este nivel de compromiso y estrategia en tu marca?
-    Conversemos. En Fedes, las ideas no quedan en la mesa: se ejecutan, se miden y se transforman en resultados.
+Conversemos. En Fedes, las ideas no quedan en la mesa: se ejecutan, se miden y se transforman en resultados.
 
-    Escribinos y pensemos juntos la estrategia que tu marca necesita para crecer con propósito.`
+Escribinos y pensemos juntos la estrategia que tu marca necesita para crecer con propósito.`
   }
 ];
 
-const Kickoff2025 = () => (
-  <main className="blogArticleSection">
-    <article className="articleCard">
-      <header className="header">
-        <h1>Kick-off 2025</h1>
-        <h2 className="sub">Cuando la estrategia se piensa y también se siente</h2>
-      </header>
-
-      <div className="gridNotas">
-        {bloques.map(({ id, span, icono, texto, destacado, dobleCol }) => (
-          <section
-            key={id}
-            className={`notaCard${destacado ? ' destacado' : ''}${dobleCol ? ' dobleCol' : ''}`}
-            style={{ gridColumn: `span ${span}` }}
-          >
-            <div className="icono">{icono}</div>
-            <p>
-              {texto.split('\n').map((line, i) => (
-                <React.Fragment key={i}>
-                  {line}
-                  <br />
-                </React.Fragment>
-              ))}
-            </p>
-          </section>
-        ))}
-      </div>
-      <div className="articleImage">
-        <img
-          src="https://fedesagency.com/fedes-consultora/landing/imagen-nota-larga15.jpg"
-          alt="Kick-off 2025"
-          loading="lazy"
-        />
-      </div>
-    </article>
-  </main>
-);
-
-export default Kickoff2025;
+export default function Kickoff2025() {
+  return (
+    <ArticleLayout
+      id={18} // Este ID debe coincidir con el ID del post en Google Sheets
+      blocks={bloques}
+      accent="#709cbb"
+    />
+  );
+}

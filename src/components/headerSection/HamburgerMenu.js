@@ -8,8 +8,8 @@ const HamburgerMenu = ({ toggleMenu, isHome }) => {
       <img
         src={
           isHome
-            ? 'https://fedesagency.com/fedes-consultora/landing/menuHamburguesa.svg'
-            : 'https://fedesagency.com/fedes-consultora/landing/menuHamburgesaNegro.svg'
+            ? 'https://fedes.ai/fedes-consultora/landing/menuHamburguesa.svg'
+            : 'https://fedes.ai/fedes-consultora/landing/menuHamburgesaNegro.svg'
         }
         alt="Menú de navegación hamburguesa de Fedes Consultora"
         loading="lazy"

@@ -24,7 +24,7 @@ const HeaderInfoSection = () => {
       </article>
       <article className="imgHeader">
         <img 
-          src="https://fedesagency.com/fedes-consultora/landing/fotoRedondeada2.webp" 
+          src="https://fedes.ai/fedes-consultora/landing/fotoRedondeada2.webp" 
           alt="Foto redondeada de Fedes Consultora" 
           loading="lazy" 
         />

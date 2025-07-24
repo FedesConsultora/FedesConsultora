@@ -50,12 +50,12 @@ const Header = () => {
         <article className="logoYclose">
           <img
             className="logo_fedes"
-            src="https://fedesagency.com/fedes-consultora/landing/logoBlanco.png"
+            src="https://fedes.ai/fedes-consultora/landing/logoBlanco.png"
             alt="Logotipo de Fedes Consultora"
           />
           <img
             className="close-menu"
-            src="https://fedesagency.com/fedes-consultora/landing/close.svg"
+            src="https://fedes.ai/fedes-consultora/landing/close.svg"
             alt={t('close_menu')}
             onClick={toggleMenu}
           />

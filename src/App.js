@@ -13,7 +13,7 @@ import Galeria from './pages/Galeria';
 import Contacto from './pages/Contacto';
 import Blog from './pages/Blog';
 import ManualMarca from './pages/BlogPages/ManualMarca';
-import ServiciosFedes from './pages/ServiciosFedes';
+import ServiciosFedes from './pages/BlogPages/ServiciosFedes';
 import ViajeroEternidad from './pages/BlogPages/ViajeroEternidad';
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
 import TerminosCondiciones from './pages/TerminosCondiciones';
@@ -21,10 +21,13 @@ import Kickoff2025 from './pages/BlogPages/Kickoff2025';
 import ThankYou from './pages/ThankYou';
 import CreadoresTresC from './pages/BlogPages/TresC';
 import CreatividadInnovacion from './pages/BlogPages/CreatividadInnovacion';
+import PosicionamientoEstrategico from './pages/BlogPages/PosicionamientoEstrategico';
+
+
 
 const AppContent = () => {
   const location = useLocation();
-
+  
   const getContainerClass = () => {
     switch (location.pathname) {
       case '/':
@@ -61,7 +64,7 @@ const AppContent = () => {
           <Route path="/kickoff-2025" element={<Kickoff2025 />} />
           <Route path="/creadores-tres-c" element={<CreadoresTresC />} />
           <Route path="/creatividad-e-innovacion" element={<CreatividadInnovacion />} />
-
+          <Route path="/posicionamiento-estrategico" element={<PosicionamientoEstrategico />} />
           <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
           <Route path="/thank-you" element={<ThankYou />} />

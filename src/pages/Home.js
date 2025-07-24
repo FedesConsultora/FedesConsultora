@@ -11,7 +11,7 @@ const Home = () => {
       <HeaderInfoSection />
       <article className="flechaAbajo">
         <img 
-          src="https://fedesagency.com/fedes-consultora/landing/flecha_abajo.svg" 
+          src="https://fedes.ai/fedes-consultora/landing/flecha_abajo.svg" 
           alt={t('down_arrow')}
           loading="lazy"
         />

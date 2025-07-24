@@ -13,11 +13,11 @@ const LegalFooter = () => {
 
   const langMapping = {
     es: {
-      imgSrc: 'https://fedesagency.com/fedes-consultora/landing/bandera_argentina.svg',
+      imgSrc: 'https://fedes.ai/fedes-consultora/landing/bandera_argentina.svg',
       text: 'ES'
     },
     en: {
-      imgSrc: 'https://fedesagency.com/fedes-consultora/landing/bandera_estados_unidos.svg',
+      imgSrc: 'https://fedes.ai/fedes-consultora/landing/bandera_estados_unidos.svg',
       text: 'EN'
     }
   };
@@ -27,7 +27,7 @@ const LegalFooter = () => {
       <div className="logoEidioma">
         <img
           className="logo_fedes"
-          src="https://fedesagency.com/fedes-consultora/landing/logoBlanco.png"
+          src="https://fedes.ai/fedes-consultora/landing/logoBlanco.png"
           alt="Small logo of Fedes Consultora"
           loading="lazy"
         />
@@ -50,7 +50,7 @@ const LegalFooter = () => {
               <span id="currentLang">{langMapping[i18n.language]?.text || 'ES'}</span>
               <img
                 className="arrow"
-                src="https://fedesagency.com/fedes-consultora/landing/flecha_abajo_blanca.svg"
+                src="https://fedes.ai/fedes-consultora/landing/flecha_abajo_blanca.svg"
                 alt="Arrow"
                 height="20"
               />

@@ -1,105 +1,99 @@
-import React, { useState } from 'react';
-import { useTranslation, Trans } from 'react-i18next';
+// src/pages/BlogPages/ManualMarca.js
 
-const ManualMarca = () => {
-  const { t } = useTranslation();
+import React from 'react';
+import ArticleLayout from '../../components/layout/ArticleLayout';
 
-  const [activeBenefit, setActiveBenefit] = useState(null);
-  const [activeImpact, setActiveImpact] = useState(null);
+const blocks = [
+  {
+    id: 'intro',
+    span: 3,
+    icono: '🚀',
+    texto: `Manual de Marca\nUn documento vivo, más allá del diseño`
+  },
+  {
+    id: 'introduccion',
+    span: 3,
+    icono: '🚀',
+    texto: `Un manual de marca no es sólo un PDF con logos y paletas: es una herramienta estratégica que traduce la identidad de una organización en criterios claros para comunicar. Cuando está bien hecho, alinea equipos, potencia la coherencia y mejora la percepción externa.`
+  },
+  {
+    id: 'porque_es_fundamental',
+    span: 3,
+    icono: '🚀',
+    texto: `¿Por qué es fundamental?\nPorque permite que todos hablen el mismo idioma sin necesidad de improvisar. Porque ordena y profesionaliza. Porque ayuda a ser reconocibles y recordados, no solo visualmente, sino también en el tono, en los valores, en la actitud.`
+  },
+  {
+    id: 'benefit-identity',
+    span: 1,
+    icono: '🚀',
+    texto: `Refuerza la identidad y esencia de la organización`
+  },
+  {
+    id: 'benefit-communication',
+    span: 1,
+    icono: '🚀',
+    texto: `Ordena y unifica la comunicación externa e interna`
+  },
+  {
+    id: 'benefit-value-proposal',
+    span: 1,
+    icono: '🚀',
+    texto: `Mejora la propuesta de valor al hacerla más consistente`
+  },
+  {
+    id: 'benefit-efficiency',
+    span: 1,
+    icono: '🚀',
+    texto: `Aumenta la eficiencia y reduce el margen de error`
+  },
+  {
+    id: 'impacto_intro',
+    span: 3,
+    icono: '✅',
+    texto: `¿En qué impacta dentro de una organización?\nEl manual de marca impacta más allá del área de diseño: mejora la experiencia del cliente, optimiza procesos internos y potencia la reputación corporativa.`
+  },
+  {
+    id: 'impact-marketing-sales',
+    span: 1,
+    icono: '✅',
+    texto: `Optimiza el marketing y mejora las ventas`
+  },
+  {
+    id: 'impact-employees',
+    span: 1,
+    icono: '✅',
+    texto: `Fortalece el compromiso de los colaboradores`
+  },
+  {
+    id: 'impact-internal-external',
+    span: 1,
+    icono: '✅',
+    texto: `Unifica la comunicación interna y externa`
+  },
+  {
+    id: 'impact-employer-branding',
+    span: 1,
+    icono: '✅',
+    texto: `Mejora el employer branding y atrae talento`
+  },
+  {
+    id: 'challenge',
+    span: 3,
+    dobleCol: true,
+    icono: '🌍',
+    texto: `Desafío 2025\nIntegrar a los colaboradores como protagonistas de la comunicación\nLas marcas más fuertes no se construyen con campañas publicitarias, sino con el compromiso de quienes las conforman. En palabras de Simon Sinek: "Las marcas no son lo que decimos que son; son lo que otros dicen sobre nosotros".\nPor eso, un manual de marca actualizado no sólo fortalece la imagen externa, sino que también es una brújula interna para que cada colaborador se convierta en parte activa de la narrativa de la empresa.\n¿Tu empresa tiene un manual de marca alineado a su visión? En Fedes Consultora ayudamos a compañías a desarrollar manuales que organizan su identidad visual, potencian su posicionamiento, fortalecen su reputación y los preparan para liderar su sector.\n📩 Si querés que tu marca no sólo se vea bien, sino que comunique con impacto, hablemos.`
+  }
+];
 
-  const toggleBenefit = (index) => {
-    setActiveBenefit(activeBenefit === index ? null : index);
-  };
-
-  const toggleImpact = (index) => {
-    setActiveImpact(activeImpact === index ? null : index);
-  };
-
-  const benefits = [
-    { emoji: '🚀', content: t('manual_page.benefits.identity') },
-    { emoji: '🚀', content: t('manual_page.benefits.communication') },
-    { emoji: '🚀', content: t('manual_page.benefits.value_proposal') },
-    { emoji: '🚀', content: t('manual_page.benefits.efficiency') },
-  ];
-
-  const impacts = [
-    { emoji: '✅', content: t('manual_page.impact.marketing_sales') },
-    { emoji: '✅', content: t('manual_page.impact.employees') },
-    { emoji: '✅', content: t('manual_page.impact.internal_external_comms') },
-    { emoji: '✅', content: t('manual_page.impact.employer_branding') },
-  ];
-
+export default function ManualMarca() {
   return (
-    <main className="manualSection">
-      <div className="cardsContainer">
-
-        <div className="manualCard introCard">
-          <h2 className="cardTitle">{t('manual_page.title')}</h2>
-          <p className="cardText uno">{t('manual_page.intro_text')}</p>
-          <h2 className="cardTitleDos">{t('manual_page.more_than_visual')}</h2>
-          <p className="cardText"><Trans i18nKey="manual_page.more_than_visual_text_1" /></p>
-          <p className="cardText">{t('manual_page.more_than_visual_text_2')}</p>
-        </div>
-
-        <div className="manualCard benefitsCard">
-          <h3 className="cardSubtitle">{t('manual_page.why_fundamental')}</h3>
-          <p className="cardText">{t('manual_page.why_fundamental_text')}</p>
-          <p className="aclaracion">{t('manual_page.click_emojis')}</p>
-
-          <div className="benefitsCarousel">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className={`benefitPill ${activeBenefit === index ? 'open' : ''}`}
-                onClick={() => toggleBenefit(index)}
-              >
-                <span className="emoji">{benefit.emoji}</span>
-                <div className="pillContent">
-                  <p><Trans i18nKey={`manual_page.benefits.${Object.keys(t('manual_page.benefits'))[index]}`} /></p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="manualCard impactCard">
-          <h3 className="cardSubtitle">{t('manual_page.impact_organization')}</h3>
-          <p className="cardText">{t('manual_page.impact_text')}</p>
-          <p className="aclaracion">{t('manual_page.click_emojis_details')}</p>
-
-          <div className="impactChecklist">
-            {impacts.map((impact, index) => (
-              <div
-                key={index}
-                className={`checkItem ${activeImpact === index ? 'open' : ''}`}
-                onClick={() => toggleImpact(index)}
-              >
-                <span className="emoji">{impact.emoji}</span>
-                <div className="pillContent">
-                  <p><Trans i18nKey={`manual_page.impact.${Object.keys(t('manual_page.impact'))[index]}`} /></p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="manualCard conclusionCard">
-          <div className="cardContent">
-            <h3 className="cardSubtitle">{t('manual_page.challenge_2025')}</h3>
-            <p className="cardText"><Trans i18nKey="manual_page.challenge_title" /></p>
-            <p className="cardText">{t('manual_page.challenge_text_1')}</p>
-            <p className="cardText">{t('manual_page.challenge_text_2')}</p>
-            <p className="cardText">{t('manual_page.challenge_text_3')}</p>
-            <p className="cardText"><Trans i18nKey="manual_page.challenge_contact" /></p>
-          </div>
-          <div className="cardImage">
-            <img src="https://fedesagency.com/fedes-consultora/landing/fotoBlogPubli3.jpg" alt="Publicación" loading="lazy" />
-          </div>
-        </div>
-
-      </div>
-    </main>
+    <ArticleLayout
+      id={1}
+      blocks={blocks.map((block) => ({
+        ...block,
+        icono: <span role="img" aria-label="icon">{block.icono}</span>
+      }))}
+      accent="#709cbb"
+    />
   );
-};
-
-export default ManualMarca;
+}
