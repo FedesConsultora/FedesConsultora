@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# 🦷 FedesPage – Página institucional de Fedes Consultora
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FedesPage es una **landing institucional desarrollada en React**, pensada para mostrar información actualizada en tiempo real a partir de datos almacenados en **Google Sheets**. Es liviana, moderna y responsive, ideal para destacar servicios, testimonios, proyectos y contenido dinámico con gran facilidad.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologías principales
 
-### `npm start`
+- ⚛️ [React](https://reactjs.org/) – Librería base para el desarrollo del frontend
+- 🎨 [SASS](https://sass-lang.com/) – Para el estilado modular y escalable
+- 📚 [React Router DOM](https://reactrouter.com/) – Manejo de rutas SPA
+- 🌍 [react-i18next](https://react.i18next.com/) – Internacionalización multilenguaje
+- 🎥 [Lottie](https://lottiefiles.com/) – Animaciones interactivas SVG
+- 🔧 [Google Apps Script](https://developers.google.com/apps-script) – Backend sin servidor para traer datos desde Google Sheets
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Estructura del proyecto
 
-### `npm test`
+```
+fedespage/
+│
+├── public/
+│   └── assets/           # Imágenes, íconos y archivos estáticos
+│
+├── src/
+│   ├── api/              # Lógica de conexión con Google Apps Script (fetch)
+│   ├── components/       # Componentes reutilizables
+│   ├── pages/            # Vistas principales (Inicio, Servicios, Contacto...)
+│   ├── styles/           # Estilos SASS centralizados
+│   ├── hooks/            # Custom hooks como useToast, useUTM, etc.
+│   ├── i18n/             # Configuración de idiomas (es/en)
+│   ├── App.js            # Configuración de rutas y layout principal
+│   └── index.js          # Punto de entrada de la app
+│
+├── .env                  # Variables de entorno
+├── package.json
+└── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🌐 ¿Cómo se actualiza el contenido?
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Los datos se cargan desde una **hoja de cálculo de Google Sheets** vinculada al sitio mediante un **script de Google Apps Script** desplegado como Web App. Se pueden administrar:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 📝 Publicaciones y textos de secciones
+- 🖼️ Imágenes para sliders y carruseles
+- 🔗 Enlaces externos o call to actions
+- 📅 Novedades, promociones, eventos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Esto permite que **usuarios no técnicos** puedan actualizar el contenido fácilmente sin tocar el código.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📸 Carruseles dinámicos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Las imágenes de carrusel se almacenan en Google Drive o se linkean desde la hoja, y son renderizadas automáticamente. Cada imagen puede contener:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Texto superpuesto
+- Enlace de acción (opcional)
+- Tiempos de transición personalizados
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Scripts disponibles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+| Comando             | Descripción                                |
+|---------------------|--------------------------------------------|
+| `npm start`         | Inicia el servidor de desarrollo           |
+| `npm run build`     | Genera el build optimizado para producción |
+| `npm run build-sass`| Compila y observa archivos `.scss`         |
+| `npm test`          | Corre tests (si se agregan)                |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🔒 Seguridad y performance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Código modular y optimizado
+- No se almacenan datos sensibles en el navegador
+- Compatible con buenas prácticas de SEO
+- Rápido y responsive en todos los dispositivos
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ✍️ Personalización
 
-### Making a Progressive Web App
+Todo el contenido editable se gestiona desde Sheets. Además, se pueden modificar fácilmente:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Estilos (colores, fuentes) desde `styles/main.scss`
+- Secciones visibles o animaciones desde los componentes
+- Añadir tracking de visitas o scripts externos desde `index.html`
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📬 Contacto
 
-### Deployment
+Desarrollado por el equipo de **Fedes Consultora**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Para soporte técnico, integraciones personalizadas o desarrollo a medida:<br>
+> 📩 [info@fedesconsultora.com](mailto:info@fedesconsultora.com)
