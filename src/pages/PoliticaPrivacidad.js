@@ -9,7 +9,6 @@ export default function PoliticaPrivacidad() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <section className="legal-container">
       <div className="intro-legal">
