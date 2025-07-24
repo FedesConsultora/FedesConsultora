@@ -1,4 +1,4 @@
-# 🦷 FedesPage – Página institucional de Fedes Consultora
+# FedesPage – Página institucional de Fedes Consultora
 
 FedesPage es una **landing institucional desarrollada en React**, pensada para mostrar información actualizada en tiempo real a partir de datos almacenados en **Google Sheets**. Es liviana, moderna y responsive, ideal para destacar servicios, testimonios, proyectos y contenido dinámico con gran facilidad.
 
