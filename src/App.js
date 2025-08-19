@@ -23,6 +23,7 @@ import CreadoresTresC from './pages/BlogPages/TresC';
 import CreatividadInnovacion from './pages/BlogPages/CreatividadInnovacion';
 import PosicionamientoEstrategico from './pages/BlogPages/PosicionamientoEstrategico';
 import CRMIntegradoEcommerce from './pages/BlogPages/CRMIntegradoEcommerce';
+import SEOEcommerce from './pages/BlogPages/SEOEcommerce';
 
 
 
@@ -66,7 +67,8 @@ const AppContent = () => {
           <Route path="/creadores-tres-c" element={<CreadoresTresC />} />
           <Route path="/creatividad-e-innovacion" element={<CreatividadInnovacion />} />
           <Route path="/posicionamiento-estrategico" element={<PosicionamientoEstrategico />} />
-          <Route path="/crm-y-eccomerce" element={<CRMIntegradoEcommerce />} />
+          <Route path="/crm-y-ecommerce" element={<CRMIntegradoEcommerce />} />
+          <Route path="/seo-para-ecommerce" element={<SEOEcommerce />} />
 
           <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
