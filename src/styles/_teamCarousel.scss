@@ -1,0 +1,253 @@
+/* ───────────────────────────────
+   TeamCarousel · SCSS completo
+   ─────────────────────────────── */
+
+/* Paleta Fedes (fallback por si no importás _variables.scss) */
+$color-primary  : #44718D !default;
+$color-secondary: #ffffff !default;
+$color-black    : #2B2B2B !default;
+
+/* Flotado suave solo en la imagen */
+@keyframes bob {
+  0%   { transform: translateY(0) rotate(0.001deg); }
+  50%  { transform: translateY(-6px) rotate(0.001deg); }
+  100% { transform: translateY(0) rotate(0.001deg); }
+}
+
+.teamCarouselSection{
+  background: transparent;
+  padding: 2.2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* Encabezado pequeño */
+  .equipoHeader{
+    display:flex; flex-direction:column; align-items:center; text-align:center;
+
+    p{
+      margin:0 0 .25rem;
+      color:$color-black;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    img{
+      height:10px; width:100px;
+      object-fit:contain; display:block;
+    }
+  }
+
+  /* Contenido: título + carrusel */
+  .equipoInfo{
+    display:flex; flex-direction:column; align-items:center;
+
+    /* Título: base gris (sin bold) + highlights en primario */
+    .equipoTitulo{
+      margin: 1.2rem 0 2rem;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.15;
+      text-align:center;
+      margin-bottom: 2rem;
+
+      .muted{
+        color: rgba($color-black, .9);
+        font-family: 'Sohne Leicht', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 500;
+      }
+      .highlight{
+        color: $color-primary;
+        font-weight: 900;
+      }
+    }
+
+    /* Carrusel (animado por JS → no usar animation aquí) */
+    .teamCarousel{
+      width:100%;
+      overflow:hidden;
+      cursor: grab;
+      touch-action: pan-y;                 /* scroll vertical ok, drag horizontal */
+      overscroll-behavior-inline: contain; /* sin rebote lateral */
+      user-select: none;                   /* no selección al soltar */
+
+      /* Fade sutil a los lados para continuidad infinita */
+      --edge: 70px;
+      -webkit-mask-image: linear-gradient(
+        90deg, transparent 0, black var(--edge),
+        black calc(100% - var(--edge)), transparent 100%
+      );
+              mask-image: linear-gradient(
+        90deg, transparent 0, black var(--edge),
+        black calc(100% - var(--edge)), transparent 100%
+      );
+
+      &.is-dragging { cursor: grabbing; }
+      &.is-paused   { cursor: grab; }
+    }
+
+    /* Pista (la mueve JS con rAF) */
+    .teamTrack{
+      display:flex;
+      gap: 1.25rem;
+      will-change: transform;
+      backface-visibility: hidden;
+      transform: translateX(0);
+      user-select: none;  /* extra por si acaso */
+    }
+
+    /* ── Member Card: alturas uniformes y distribución fija ── */
+    .memberCard{
+      --float-delay: calc(var(--i) * .18s);
+
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: .4rem .5rem 1rem;
+      width: clamp(170px, 20vw, 220px);
+      flex: 0 0 auto;
+      text-align:center;
+      transition: transform .25s ease;
+
+      /* layout consistente */
+      display:flex;
+      flex-direction: column;
+      align-items:center;
+
+      -webkit-user-select: none;
+      user-select: none;
+
+      .avatarWrap{
+        display:flex; justify-content:center; align-items:center;
+        margin-bottom:.6rem;
+      }
+
+      /* La imagen redonda ya trae su sombra en el .webp */
+      .avatar{
+        width: clamp(140px, 16vw, 180px);
+        min-height: 136px;
+        animation: bob 5.2s ease-in-out var(--float-delay) infinite;
+        will-change: transform;
+        pointer-events: auto;
+      }
+
+      /* contenedor de texto + botón */
+      .cardBody{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: .35rem;
+      }
+
+      /* Nombre: hasta 2 líneas, misma altura para todos */
+      .memberName{
+        color: $color-black;
+        font-weight: 800;
+        font-size: .98rem;
+        line-height: 1.22;
+        margin: .1rem 0 0;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-word;
+        hyphens: auto;
+
+        min-height: calc(1.22em * 2); /* reserva 2 líneas */
+      }
+
+      /* Rol/cargo: idem 2 líneas + altura fija */
+      .memberRole{
+        color: rgba($color-black, .7);
+        font-size: .92rem;
+        line-height: 1.24;
+        margin: 0;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-word;
+        hyphens: auto;
+
+        min-height: calc(1.24em * 2);
+      }
+
+      /* Botón LinkedIn alineado y “anclado” al fondo del card */
+      .btnLinkedIn{
+        --bg: rgba(68,113,141,.10);
+        display:inline-flex;
+        align-items:center;
+        gap:.55rem;
+        padding:.46rem .86rem;
+        border-radius:999px;
+        background:var(--bg);
+        color:$color-primary;
+        font-weight:800;
+        font-size:.9rem;
+        line-height:1;
+        text-decoration:none;
+        border:2px solid $color-primary;
+        transition: background .25s ease, transform .25s ease, box-shadow .25s ease, color .25s ease;
+
+        margin-top: auto; /* empuja el botón abajo para igualar la altura */
+
+        svg{
+          width:18px; height:18px;
+          flex:0 0 18px;
+          display:block;
+          position: relative;
+          bottom: 2px;  /* pequeño ajuste vertical respecto del texto */
+        }
+        span{ display:block; }
+
+        &:hover{
+          background:$color-primary;
+          color:$color-secondary;
+          transform: translateY(-1px);
+          box-shadow: 0 6px 16px rgba(68,113,141,.22);
+        }
+        &:active{ transform: translateY(0); box-shadow:none; }
+      }
+
+      &:hover, &:focus-within{ transform: translateY(-4px) scale(1.04); }
+      &:focus-within{ outline:2px dashed $color-primary; outline-offset:6px; }
+    }
+  }
+
+  /* ── Responsive ────────────────────────────────────── */
+  @media (min-width: 700px) and (max-width: 1079px){
+    .equipoInfo .teamCarousel{ --edge: 100px; }
+    .memberCard{ width: clamp(180px, 23vw, 230px); }
+    .memberCard .avatar{ width: clamp(150px, 18vw, 190px); }
+  }
+
+  @media (min-width: 1080px){
+    padding: 3rem 5rem;
+    .equipoHeader{ align-items:flex-start; }
+    .equipoInfo{
+      .equipoTitulo{ text-align:left; width:100%; margin-bottom:4rem; }
+      .teamCarousel{ --edge: 120px; }
+    }
+    .memberCard{ width: clamp(200px, 18vw, 240px); }
+  }
+
+  @media (max-width: 699px){
+    .equipoInfo .teamCarousel{ --edge: 40px; }
+    .memberCard{ width: clamp(160px, 62vw, 210px); }
+    .memberCard .avatar{ width: clamp(130px, 48vw, 170px); }
+  }
+}
+
+/* Reduce Motion: desactiva el flotado si el usuario lo pide */
+@media (prefers-reduced-motion: reduce){
+  .teamCarouselSection .memberCard .avatar{
+    animation: none !important;
+  }
+}

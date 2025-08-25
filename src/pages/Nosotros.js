@@ -10,7 +10,7 @@ import ImagenFedes from '../components/Nosotros/ImagenFedes';
 
 // Hook para chequear si estamos en desktop
 import useIsDesktop from '../hooks/useIsDesktop';
-import LideresSection from '../components/Nosotros/LideresSection';
+import LideresSection from '../components/Nosotros/TeamCarousel';
 
 const Nosotros = () => {
   const { t } = useTranslation();
