@@ -8,7 +8,7 @@ const TEAM = [
   { name: 'Gonzalo Cañibano',      role: 'Analista de Cuentas',                  photo: 'https://fedes.ai/fedes-consultora/landing/foto_gonzalo.webp', linkedin: 'https://www.linkedin.com/in/gonzalo-canibano-a703872a/' },
   { name: 'Enzo Pinotti',          role: 'Desarrollador',                        photo: 'https://fedes.ai/fedes-consultora/landing/foto_enzo.webp',    linkedin: 'https://www.linkedin.com/in/enzo-daniel-pinotti-667270179/' },
   { name: 'Florencia Marchesotti', role: 'Analista en Diseño',                   photo: 'https://fedes.ai/fedes-consultora/landing/foto_flor.webp',    linkedin: 'https://www.linkedin.com/in/florencia-marchesotti-7570a3212/' },
-  { name: 'Romina Albanesi',       role: 'Comunicación y Redacción',             photo: 'https://fedes.ai/fedes-consultora/landing/foto_romi.webp',    linkedin: 'https://www.linkedin.com/in/rominaalbanesi/' },
+  { name: 'Romina Albanesi',       role: 'Responsable de Comunicación',             photo: 'https://fedes.ai/fedes-consultora/landing/foto_romi.webp',    linkedin: 'https://www.linkedin.com/in/rominaalbanesi/' },
   { name: 'Paola Lopez',           role: 'Analista de Cuentas',                  photo: 'https://fedes.ai/fedes-consultora/landing/foto_paola.webp',   linkedin: 'https://www.linkedin.com/in/paola-alejandra-lópez-6117969/' },
 ];
 
