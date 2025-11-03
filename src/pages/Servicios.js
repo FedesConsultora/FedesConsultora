@@ -11,7 +11,7 @@ const Servicios = () => {
       <section className="terceraSection">
         <article className="contenedorTitulos">
           <img
-            src="https://fedes.ai/fedes-consultora/landing/lineaCorta.svg"
+            src="https://fedesconsultora.com/fedes-consultora/landing/lineaCorta.svg"
             alt="línea divisoria"
             loading="lazy"
           />

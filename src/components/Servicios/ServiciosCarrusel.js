@@ -13,27 +13,27 @@ const ServiciosCarrusel = () => {
       tituloKey: 'service.posicionamiento.titulo',
       textoKey: 'service.posicionamiento.texto',
       class: 'infoUno',
-      icono: 'https://fedes.ai/fedes-consultora/landing/iconoPosicionamiento.svg',
-      linea: 'https://fedes.ai/fedes-consultora/landing/lineaSenialadoraChica.svg',
-      imagenCamino: 'https://fedes.ai/fedes-consultora/landing/imagenCamino1.webp',
+      icono: 'https://fedesconsultora.com/fedes-consultora/landing/iconoPosicionamiento.svg',
+      linea: 'https://fedesconsultora.com/fedes-consultora/landing/lineaSenialadoraChica.svg',
+      imagenCamino: 'https://fedesconsultora.com/fedes-consultora/landing/imagenCamino1.webp',
     },
     {
       id: 'performance',
       tituloKey: 'service.performance.titulo',
       textoKey: 'service.performance.texto',
       class: 'infoDos',
-      icono: 'https://fedes.ai/fedes-consultora/landing/iconoPerformance.svg',
-      linea: 'https://fedes.ai/fedes-consultora/landing/lineaSenialadoraMediana.svg',
-      imagenCamino: 'https://fedes.ai/fedes-consultora/landing/imagenCamino2.webp',
+      icono: 'https://fedesconsultora.com/fedes-consultora/landing/iconoPerformance.svg',
+      linea: 'https://fedesconsultora.com/fedes-consultora/landing/lineaSenialadoraMediana.svg',
+      imagenCamino: 'https://fedesconsultora.com/fedes-consultora/landing/imagenCamino2.webp',
     },
     {
       id: 'consultoria',
       tituloKey: 'service.consultoria.titulo',
       textoKey: 'service.consultoria.texto',
       class: 'infoTres',
-      icono: 'https://fedes.ai/fedes-consultora/landing/iconoConsultoria.svg',
-      linea: 'https://fedes.ai/fedes-consultora/landing/lineaSenialadoraLarga.svg',
-      imagenCamino: 'https://fedes.ai/fedes-consultora/landing/imagenCamino3.webp',
+      icono: 'https://fedesconsultora.com/fedes-consultora/landing/iconoConsultoria.svg',
+      linea: 'https://fedesconsultora.com/fedes-consultora/landing/lineaSenialadoraLarga.svg',
+      imagenCamino: 'https://fedesconsultora.com/fedes-consultora/landing/imagenCamino3.webp',
     }
   ];
 
@@ -146,10 +146,10 @@ const ServiciosCarrusel = () => {
                 {totalPages > 1 && (
                   <>
                     <button onClick={handlePrev} className="prevButton">
-                      <img src="https://fedes.ai/fedes-consultora/landing/galeria_flecha_izq.png" alt={t('arrow_left')} />
+                      <img src="https://fedesconsultora.com/fedes-consultora/landing/galeria_flecha_izq.png" alt={t('arrow_left')} />
                     </button>
                     <button onClick={handleNext} className="nextButton">
-                      <img src="https://fedes.ai/fedes-consultora/landing/galeria_flecha_der.png" alt={t('arrow_right')} />
+                      <img src="https://fedesconsultora.com/fedes-consultora/landing/galeria_flecha_der.png" alt={t('arrow_right')} />
                     </button>
                   </>
                 )}

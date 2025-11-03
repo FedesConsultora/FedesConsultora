@@ -9,7 +9,7 @@ const ThankYou = () => (
       <article className="contenedorTitulos">
         <img
           className="linea"
-          src="https://www.fedesagency.com/fedes-consultora/landing/lineaChicaNegra.svg"
+          src="https://www.fedesconsultora.com/fedes-consultora/landing/lineaChicaNegra.svg"
           alt="línea divisoria"
           loading="lazy"
         />

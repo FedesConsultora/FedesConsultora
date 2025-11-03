@@ -20,13 +20,13 @@ const UserMenu = () => {
           <div className="user_img_container">
             <img
               className="userImg"
-              src="https://fedes.ai/fedes-consultora/landing/iconoUserBlack.png"
+              src="https://fedesconsultora.com/fedes-consultora/landing/iconoUserBlack.png"
               alt="Ícono de usuario de Fedes Consultora"
               width="20"
             />
             <img
               className="arrow"
-              src="https://fedes.ai/fedes-consultora/landing/flecha_abajo_azul.svg"
+              src="https://fedesconsultora.com/fedes-consultora/landing/flecha_abajo_azul.svg"
               alt="Flecha desplegable"
               height="13"
             />

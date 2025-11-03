@@ -7,7 +7,7 @@ const FooterInfo = () => {
   return (
     <article className="dudas">
       <img
-        src="https://fedes.ai/fedes-consultora/landing/lineaBlancaHorizontal.svg"
+        src="https://fedesconsultora.com/fedes-consultora/landing/lineaBlancaHorizontal.svg"
         alt="Linea Blanca Horizontal"
       />
       <p className="charlemos">{t('lets_chat')}</p>
@@ -28,7 +28,7 @@ const FooterInfo = () => {
           >
           <button className="button2">
             <img
-              src="https://fedes.ai/fedes-consultora/landing/WhatsappLogo.svg"
+              src="https://fedesconsultora.com/fedes-consultora/landing/WhatsappLogo.svg"
               alt="Whatsapp logo of Fedes Consultora"
             />
             <p className='parrafoMensaje'>{t('send_message')}</p>

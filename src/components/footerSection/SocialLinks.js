@@ -13,13 +13,13 @@ const SocialLinks = ( isHome ) => {
       <div className="redesSocialesContainer">
         <a href="https://www.youtube.com/@fedesconsultora">
           <img
-            src="https://fedes.ai/fedes-consultora/landing/youtube_blanco.png"
+            src="https://fedesconsultora.com/fedes-consultora/landing/youtube_blanco.png"
             alt="Facebook logo de Fedes Consultora"
             className="default youtube"
             loading="lazy"
           />
           <img
-            src="https://fedes.ai/fedes-consultora/landing/youtube_color.png"
+            src="https://fedesconsultora.com/fedes-consultora/landing/youtube_color.png"
             alt="Facebook logo de Fedes Consultora"
             className="hover youtube"
             loading="lazy"
@@ -27,13 +27,13 @@ const SocialLinks = ( isHome ) => {
         </a>
         <a href="https://www.instagram.com/fedesconsultora/">
           <img
-            src="https://fedes.ai/fedes-consultora/landing/instagram_blanco.svg"
+            src="https://fedesconsultora.com/fedes-consultora/landing/instagram_blanco.svg"
             alt="Instagram logo de Fedes Consultora"
             className="default"
             loading="lazy"
           />
           <img
-            src="https://fedes.ai/fedes-consultora/landing/instagram_color.svg"
+            src="https://fedesconsultora.com/fedes-consultora/landing/instagram_color.svg"
             alt="Instagram logo de Fedes Consultora"
             className="hover"
             loading="lazy"
@@ -41,13 +41,13 @@ const SocialLinks = ( isHome ) => {
         </a>
         <a href="https://www.linkedin.com/company/fedesagency/">
           <img
-            src="https://fedes.ai/fedes-consultora/landing/linkedin_blanco.svg"
+            src="https://fedesconsultora.com/fedes-consultora/landing/linkedin_blanco.svg"
             alt="LinkedIn logo de Fedes Consultora"
             className="default"
             loading="lazy"
           />
           <img
-            src="https://fedes.ai/fedes-consultora/landing/LinkedIn_color.svg"
+            src="https://fedesconsultora.com/fedes-consultora/landing/LinkedIn_color.svg"
             alt="LinkedIn logo de Fedes Consultora"
             className="hover"
             loading="lazy"

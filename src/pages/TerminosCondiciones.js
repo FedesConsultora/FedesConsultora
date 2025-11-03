@@ -12,7 +12,7 @@ const TerminosCondiciones = () => {
         </p>
         <p className="descripcion">
           Los presentes Términos y Condiciones regulan el acceso y uso del sitio
-          web <strong>fedes.ai</strong> (en adelante, el “Sitio”), titularidad de
+          web <strong>fedesconsultora.com</strong> (en adelante, el “Sitio”), titularidad de
           Fedes Solutions SRL (nombre comercial: Fedes Consultora), CUIT
           30-71861095-4, con domicilio en Plaza Paso 159, Piso 9, Calle 50, La
           Plata Noroeste, Buenos Aires (1900), Argentina (en adelante, “Fedes”,
@@ -123,7 +123,7 @@ const TerminosCondiciones = () => {
         <p>
           Para consultas sobre estos Términos podés escribirnos a:&nbsp;
           <br />
-          📧 <a href="mailto:info@fedes.ai">info@fedes.ai</a>
+          📧 <a href="mailto:info@fedesconsultora.com">info@fedesconsultora.com</a>
           <br />
           📍 Plaza Paso 159, Piso 9, La Plata Noroeste, Calle 50, 1900 – Buenos Aires, Argentina
           <br />

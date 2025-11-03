@@ -28,7 +28,7 @@ export default function PoliticaPrivacidad() {
         <p>
           <strong>Fedes Solutions SRL</strong> <br /> CUIT: 30-71861095-4 <br /> Domicilio: Plaza
           Paso 159, Piso 9, Calle 50, La Plata Noroeste, Buenos Aires (1900), Argentina
-          <br /> Mail: info@fedes.ai
+          <br /> Mail: info@fedesconsultora.com
         </p>
 
         {/* --- 2. Datos --- */}
@@ -54,7 +54,7 @@ export default function PoliticaPrivacidad() {
         <h2>4. Base legal</h2>
         <p>
           Tratamos tus datos con tu <strong>consentimiento libre, expreso e informado</strong>. Podés
-          retirarlo cuando quieras escribiendo a info@fedes.ai.
+          retirarlo cuando quieras escribiendo a info@fedesconsultora.com.
         </p>
 
         {/* --- 5. WhatsApp --- */}
@@ -131,7 +131,7 @@ export default function PoliticaPrivacidad() {
         <h2>11. Derechos de los titulares</h2>
         <p>
           Podés ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición enviando un
-          mail a info@fedes.ai con copia de tu DNI. Responderemos en un plazo máximo de 10 días
+          mail a info@fedesconsultora.com con copia de tu DNI. Responderemos en un plazo máximo de 10 días
           hábiles.
         </p>
 
@@ -155,7 +155,7 @@ export default function PoliticaPrivacidad() {
         {/* --- 14. Contacto --- */}
         <h2>14. Contacto</h2>
         <p>
-          📧 info@fedes.ai <br /> 📍 Plaza Paso 159, Piso 9, La Plata Noroeste, Calle 50, 1900 –
+          📧 info@fedesconsultora.com <br /> 📍 Plaza Paso 159, Piso 9, La Plata Noroeste, Calle 50, 1900 –
           Buenos Aires, Argentina <br /> 📞 +54 221 309 2529
         </p>
       </div>

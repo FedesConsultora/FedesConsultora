@@ -3,13 +3,13 @@ import React, {
 } from 'react';
 
 const TEAM = [
-  { name: 'Andre Coronel Vargas',  role: 'Analista Multimedia',                  photo: 'https://fedes.ai/fedes-consultora/landing/foto_andre.webp',   linkedin: 'https://www.linkedin.com/in/andr%C3%A9-wilber-coronel-vargas/' },
-  { name: 'Mateo Germano',         role: 'Analista Multimedia',                  photo: 'https://fedes.ai/fedes-consultora/landing/foto_mateo.webp',   linkedin: 'https://www.linkedin.com/in/mateo-germano-898b872b1/' },
-  { name: 'Gonzalo Cañibano',      role: 'Analista de Cuentas',                  photo: 'https://fedes.ai/fedes-consultora/landing/foto_gonzalo.webp', linkedin: 'https://www.linkedin.com/in/gonzalo-canibano-a703872a/' },
-  { name: 'Enzo Pinotti',          role: 'Desarrollador',                        photo: 'https://fedes.ai/fedes-consultora/landing/foto_enzo.webp',    linkedin: 'https://www.linkedin.com/in/enzo-daniel-pinotti-667270179/' },
-  { name: 'Florencia Marchesotti', role: 'Analista en Diseño',                   photo: 'https://fedes.ai/fedes-consultora/landing/foto_flor.webp',    linkedin: 'https://www.linkedin.com/in/florencia-marchesotti-7570a3212/' },
-  { name: 'Romina Albanesi',       role: 'Responsable de Comunicación',             photo: 'https://fedes.ai/fedes-consultora/landing/foto_romi.webp',    linkedin: 'https://www.linkedin.com/in/rominaalbanesi/' },
-  { name: 'Paola Lopez',           role: 'Analista de Cuentas',                  photo: 'https://fedes.ai/fedes-consultora/landing/foto_paola.webp',   linkedin: 'https://www.linkedin.com/in/paola-alejandra-lópez-6117969/' },
+  { name: 'Andre Coronel Vargas',  role: 'Analista Multimedia',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_andre.webp',   linkedin: 'https://www.linkedin.com/in/andr%C3%A9-wilber-coronel-vargas/' },
+  { name: 'Mateo Germano',         role: 'Analista Multimedia',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_mateo.webp',   linkedin: 'https://www.linkedin.com/in/mateo-germano-898b872b1/' },
+  { name: 'Gonzalo Cañibano',      role: 'Analista de Cuentas',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_gonzalo.webp', linkedin: 'https://www.linkedin.com/in/gonzalo-canibano-a703872a/' },
+  { name: 'Enzo Pinotti',          role: 'Desarrollador',                        photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_enzo.webp',    linkedin: 'https://www.linkedin.com/in/enzo-daniel-pinotti-667270179/' },
+  { name: 'Florencia Marchesotti', role: 'Analista en Diseño',                   photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_flor.webp',    linkedin: 'https://www.linkedin.com/in/florencia-marchesotti-7570a3212/' },
+  { name: 'Romina Albanesi',       role: 'Responsable de Comunicación',             photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_romi.webp',    linkedin: 'https://www.linkedin.com/in/rominaalbanesi/' },
+  { name: 'Paola Lopez',           role: 'Analista de Cuentas',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_paola.webp',   linkedin: 'https://www.linkedin.com/in/paola-alejandra-lópez-6117969/' },
 ];
 
 const LinkedInIcon = () => (
@@ -146,7 +146,7 @@ export default function TeamCarousel() {
       <article className="equipoHeader">
         <p>Equipo</p>
         <img
-          src="https://fedesagency.com/fedes-consultora/landing/lineaChicaNegra.svg"
+          src="https://fedesconsultora.com/fedes-consultora/landing/lineaChicaNegra.svg"
           alt="Detalle"
           loading="lazy"
         />

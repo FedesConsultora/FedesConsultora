@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next'; // Importamos el hook de traducción
 
-const HeaderInfoSection = () => {
+const   HeaderInfoSection = () => {
   const { t } = useTranslation(); // Usamos el hook de traducción
 
   return (
@@ -24,7 +24,7 @@ const HeaderInfoSection = () => {
       </article>
       <article className="imgHeader">
         <img 
-          src="https://fedes.ai/fedes-consultora/landing/fotoRedondeada2.webp" 
+          src="https://fedesconsultora.com/fedes-consultora/landing/fotoRedondeada2.webp" 
           alt="Foto redondeada de Fedes Consultora" 
           loading="lazy" 
         />

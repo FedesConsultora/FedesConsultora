@@ -10,7 +10,7 @@ const FedesSection = () => {
                 <h3>FEDERICO JUAN</h3>
                 <p>CoFounder y CGO</p>
                 <img
-                src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular.svg"
+                src="https://fedesconsultora.com/fedes-consultora/landing/recuadro_semicircular.svg"
                 alt={t('semi_circular_frame')}
                 loading="lazy"
                 />
@@ -26,7 +26,7 @@ const FedesSection = () => {
                 <div className="contenedorBotonLinkedin">
                 {t('view_linkedin')}
                 <img
-                    src="https://fedes.ai/fedes-consultora/landing/flechaDerecha.svg"
+                    src="https://fedesconsultora.com/fedes-consultora/landing/flechaDerecha.svg"
                     alt={t('arrow_right')}
                     loading="lazy"
                 />
@@ -38,7 +38,7 @@ const FedesSection = () => {
                 <h3>FEDERICO CHIRONI</h3>
                 <p>CoFounder y CEO</p>
                 <img
-                src="https://fedes.ai/fedes-consultora/landing/recuadro_semicircular.svg"
+                src="https://fedesconsultora.com/fedes-consultora/landing/recuadro_semicircular.svg"
                 alt={t('semi_circular_frame')}
                 loading="lazy"
                 />
@@ -53,7 +53,7 @@ const FedesSection = () => {
                 <div className="contenedorBotonLinkedin">
                 {t('view_linkedin')}
                 <img
-                    src="https://fedes.ai/fedes-consultora/landing/flechaDerecha.svg"
+                    src="https://fedesconsultora.com/fedes-consultora/landing/flechaDerecha.svg"
                     alt={t('arrow_right')}
                     loading="lazy"
                 />
