@@ -1,0 +1,480 @@
+// Estilos para las Tarjetas Digitales (vCard Landing Pages)
+// Diseño elegante estilo Fedes
+
+.tarjetaDigitalContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background-attachment: fixed;
+
+    // Efecto de partículas sutiles
+    &::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:
+            radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.1), transparent),
+            radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.08), transparent),
+            radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.1), transparent),
+            radial-gradient(2px 2px at 130px 80px, rgba(255, 255, 255, 0.06), transparent);
+        background-size: 200px 200px;
+        animation: twinkle 4s ease-in-out infinite alternate;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.tarjetaCard {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 25px 60px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Header con foto de perfil
+.tarjetaHeader {
+    background: linear-gradient(135deg, #44718d 0%, #2d546e 50%, #1a3a4a 100%);
+    padding: 2.5rem 2rem 5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    // Patrón decorativo sutil
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 40px;
+        background: #ffffff;
+        border-radius: 40px 40px 0 0;
+    }
+
+    .avatarContainer {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+
+        .avatarImage {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .avatarPlaceholder {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #44718d 0%, #5a8ba6 100%);
+            border: 5px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            span {
+                font-family: 'Sohne Fett', sans-serif;
+                font-size: 2.5rem;
+                color: #fff;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+// Body de la tarjeta
+.tarjetaBody {
+    padding: 4rem 1.8rem 2rem;
+    text-align: center;
+
+    .nombreCompleto {
+        font-family: 'Sohne Fett', sans-serif;
+        font-size: 1.8rem;
+        color: #1D1D1B;
+        margin-bottom: 0.25rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    .cargo {
+        font-family: 'DJR Banner Bold', sans-serif;
+        font-size: 0.9rem;
+        color: #44718d;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 0.8rem;
+        font-weight: 700;
+    }
+
+    .empresaInfo {
+        margin-bottom: 1.5rem;
+
+        .empresa {
+            font-family: 'Sohne Kraftig', sans-serif;
+            font-size: 1rem;
+            color: #666;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: #f8f9fa;
+            border-radius: 20px;
+        }
+    }
+}
+
+// Separador elegante
+.separadorElegante {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #44718d 0%, #5a8ba6 100%);
+    border-radius: 2px;
+    margin: 0 auto 1.5rem;
+}
+
+// Info de contacto - Estilo elegante
+.contactoInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    .contactoItem {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.9rem 1.2rem;
+        background: #f8f9fa;
+        border-radius: 14px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+
+        &:hover {
+            background: #fff;
+            border-color: #44718d;
+            transform: translateX(5px);
+            box-shadow: -4px 4px 15px rgba(68, 113, 141, 0.15);
+
+            .contactoIconWrapper {
+                background: #44718d;
+
+                .contactoIcon {
+                    color: #fff;
+                }
+            }
+        }
+
+        .contactoIconWrapper {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(68, 113, 141, 0.1) 0%, rgba(68, 113, 141, 0.05) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+
+            .contactoIcon {
+                font-size: 1.1rem;
+                color: #44718d;
+                transition: color 0.3s ease;
+            }
+        }
+
+        .contactoTexto {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .contactoLabel {
+                font-family: 'Sohne Leicht', sans-serif;
+                font-size: 0.75rem;
+                color: #999;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .contactoValor {
+                font-family: 'Sohne Kraftig', sans-serif;
+                font-size: 0.9rem;
+                color: #1D1D1B;
+            }
+        }
+    }
+}
+
+// Botón LinkedIn elegante
+.redesSocialesTarjeta {
+    margin-bottom: 1.5rem;
+
+    .redSocialBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        width: 100%;
+        padding: 0.85rem 1.5rem;
+        background: #0077b5;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #fff;
+        font-family: 'Sohne Kraftig', sans-serif;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+
+        .redSocialIcon {
+            font-size: 1.3rem;
+        }
+
+        &:hover {
+            background: #005885;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 119, 181, 0.3);
+        }
+    }
+}
+
+// Botón Agendame
+.agendameContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .botonAgendame {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-family: 'DJR Banner Bold', sans-serif;
+        font-size: 1.15rem;
+        color: #fff;
+        background: linear-gradient(135deg, #44718d 0%, #2d546e 100%);
+        border: none;
+        border-radius: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 24px rgba(68, 113, 141, 0.25);
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+
+        .btnIcon {
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(68, 113, 141, 0.35);
+            background: linear-gradient(135deg, #5a8ba6 0%, #44718d 100%);
+        }
+
+        &:active {
+            transform: translateY(-1px);
+        }
+    }
+
+    .opcionesGuardado {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        animation: slideDown 0.3s ease-out;
+        padding: 0.5rem;
+        background: #f8f9fa;
+        border-radius: 14px;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .opcionBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        padding: 0.75rem 1.5rem;
+        font-family: 'Sohne Kraftig', sans-serif;
+        font-size: 0.9rem;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        background: #fff;
+        color: #1D1D1B;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .opcionIcon {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            border-color: #44718d;
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+
+        // Estilos específicos para cada plataforma
+        &.google:hover {
+            border-color: #4285f4;
+            color: #4285f4;
+
+            .opcionIcon {
+                color: #4285f4;
+            }
+        }
+
+        &.apple:hover {
+            border-color: #000;
+            color: #000;
+
+            .opcionIcon {
+                color: #000;
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 480px) {
+    .tarjetaDigitalContainer {
+        padding: 1rem 0.75rem;
+        min-height: 100dvh;
+    }
+
+    .tarjetaCard {
+        border-radius: 20px;
+    }
+
+    .tarjetaHeader {
+        padding: 2rem 1.5rem 4rem;
+
+        .avatarContainer {
+            bottom: -40px;
+
+            .avatarImage,
+            .avatarPlaceholder {
+                width: 100px;
+                height: 100px;
+                border-width: 4px;
+            }
+
+            .avatarPlaceholder span {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .tarjetaBody {
+        padding: 3.5rem 1.5rem 1.5rem;
+
+        .nombreCompleto {
+            font-size: 1.5rem;
+        }
+
+        .cargo {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+        }
+    }
+
+    .contactoInfo .contactoItem {
+        padding: 0.8rem 1rem;
+
+        .contactoIconWrapper {
+            width: 38px;
+            height: 38px;
+        }
+
+        .contactoTexto .contactoValor {
+            font-size: 0.85rem;
+        }
+    }
+
+    .agendameContainer .botonAgendame {
+        font-size: 1.05rem;
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+// Desktop enhancements
+@media (min-width: 768px) {
+    .tarjetaCard {
+        max-width: 420px;
+    }
+
+    .tarjetaHeader {
+        padding: 3rem 2rem 5.5rem;
+
+        .avatarContainer {
+            bottom: -55px;
+
+            .avatarImage,
+            .avatarPlaceholder {
+                width: 130px;
+                height: 130px;
+            }
+        }
+    }
+
+    .tarjetaBody {
+        padding: 4.5rem 2rem 2rem;
+
+        .nombreCompleto {
+            font-size: 2rem;
+        }
+    }
+}

@@ -14,7 +14,9 @@ body {
 }
 
 /* Títulos con Sohne Fett */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Sohne Fett', sans-serif;
     font-weight: 700;
 }
@@ -24,15 +26,18 @@ h1, h2, h3 {
     font-family: 'Sohne Extraleicht Kursiv', sans-serif;
     font-style: italic;
 }
+
 button {
     font-family: 'DJR_Banner', sans-serif;
 }
 
 /* Botones y detalles con DJR Banner */
-button, .btn  {
+button,
+.btn {
     font-family: 'DJR Banner Bold', sans-serif;
     font-weight: 700;
-    letter-spacing: 0.5px; /* Mejora la legibilidad en los botones */
+    letter-spacing: 0.5px;
+    /* Mejora la legibilidad en los botones */
 }
 
 @import './header';
@@ -51,3 +56,5 @@ button, .btn  {
 @import './kickoff2025';
 @import './creadoresTresC';
 @import './articleLayout';
+@import './onboardingEmpresas';
+@import './tarjetasDigitales';

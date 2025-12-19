@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer';
 import Main from './components/layout/Main';
 import Home from './pages/Home';
 import './styles/main.scss';
-import './i18n'; 
+import './i18n';
 import Nosotros from './pages/Nosotros';
 import Servicios from './pages/Servicios';
 import Galeria from './pages/Galeria';
@@ -21,16 +21,22 @@ import Kickoff2025 from './pages/BlogPages/Kickoff2025';
 import ThankYou from './pages/ThankYou';
 import CreadoresTresC from './pages/BlogPages/TresC';
 import CreatividadInnovacion from './pages/BlogPages/CreatividadInnovacion';
-import PosicionamientoEstrategico from './pages/BlogPages/PosicionamientoEstrategico';
 import CRMIntegradoEcommerce from './pages/BlogPages/CRMIntegradoEcommerce';
 import SEOEcommerce from './pages/BlogPages/SEOEcommerce';
 import GrowthMarketing from './pages/BlogPages/GrowthMarketing';
+import PosicionamientoEstrategico from './pages/BlogPages/PosicionamientoEstrategico';
 
+// 🚀 Nueva página de onboarding
+import OnboardingEmpresas from './pages/OnboardingEmpresas';
 
+// 📱 Tarjetas Digitales (NFT/QR)
+import TarjetaMartin from './pages/TarjetasDigitales/TarjetaMartin';
+import TarjetaFedericoJuan from './pages/TarjetasDigitales/TarjetaFedericoJuan';
+import TarjetaFedericoChironi from './pages/TarjetasDigitales/TarjetaFedericoChironi';
 
 const AppContent = () => {
   const location = useLocation();
-  
+
   const getContainerClass = () => {
     switch (location.pathname) {
       case '/':
@@ -45,6 +51,9 @@ const AppContent = () => {
         return 'contactanos';
       case '/blog':
         return 'blog';
+      // nueva clase para jugar con estilos si querés
+      case '/onboarding-empresas':
+        return 'onboarding';
       default:
         return '';
     }
@@ -52,8 +61,8 @@ const AppContent = () => {
 
   return (
     <div className={`containerApp ${getContainerClass()}`}>
-      <Header /> 
-      <Main> 
+      <Header />
+      <Main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/nosotros" element={<Nosotros />} />
@@ -72,10 +81,17 @@ const AppContent = () => {
           <Route path="/seo-para-ecommerce" element={<SEOEcommerce />} />
           <Route path="/growth-marketing" element={<GrowthMarketing />} />
 
+          {/* 🔒 Ventana oculta de onboarding (link directo) */}
+          <Route path="/onboarding-empresas" element={<OnboardingEmpresas />} />
+
+          {/* 📱 Tarjetas Digitales NFT/QR (acceso solo por link directo) */}
+          <Route path="/tarjeta-martin" element={<TarjetaMartin />} />
+          <Route path="/tarjeta-federico-juan" element={<TarjetaFedericoJuan />} />
+          <Route path="/tarjeta-federico-chironi" element={<TarjetaFedericoChironi />} />
+
           <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
           <Route path="/thank-you" element={<ThankYou />} />
-
         </Routes>
       </Main>
       <Footer />

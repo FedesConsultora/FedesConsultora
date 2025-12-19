@@ -70,3 +70,55 @@ export const getGaleriaFotos = async () => {
       return { success: false };
     }
   };
+
+  /**
+ * Envía los datos del STEP 0 del onboarding a Google Sheets.
+ */
+export const enviarOnboardingStep0 = async (formData) => {
+  try {
+    const payload = {
+      ...formData,
+      origen: "onboarding_step0_web",
+    };
+
+    await fetch(`${API_URL}?action=onboardingStep0`, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error enviando Onboarding STEP 0:", error);
+    return { success: false };
+  }
+};
+
+/**
+ * Envía los datos del STEP 1 del onboarding a Google Sheets.
+ */
+export const enviarOnboardingStep1 = async (formData) => {
+  try {
+    const payload = {
+      ...formData,
+      origen: "onboarding_step1_web",
+    };
+
+    await fetch(`${API_URL}?action=onboardingStep1`, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error enviando Onboarding STEP 1:", error);
+    return { success: false };
+  }
+};
