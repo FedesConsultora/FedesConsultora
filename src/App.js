@@ -59,9 +59,11 @@ const AppContent = () => {
     }
   };
 
+  const isCardPage = location.pathname.includes('/feders/cards/');
+
   return (
     <div className={`containerApp ${getContainerClass()}`}>
-      <Header />
+      {!isCardPage && <Header />}
       <Main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -94,7 +96,7 @@ const AppContent = () => {
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Main>
-      <Footer />
+      {!isCardPage && <Footer />}
     </div>
   );
 };
