@@ -1,7 +1,7 @@
 // src/pages/TarjetasDigitales/TarjetaFedericoChironi.js
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { FaPhone, FaEnvelope, FaLinkedin, FaDownload, FaGoogle, FaApple, FaUserPlus } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaLinkedin, FaUserPlus } from 'react-icons/fa';
 import { generateVCard, downloadVCard } from '../../utils/vCardGenerator';
 
 const contactData = {
@@ -14,28 +14,17 @@ const contactData = {
     company: 'Fedes Consultora',
     website: 'https://fedesconsultora.com',
     address: 'La Plata, Buenos Aires, Argentina',
-    linkedin: '', // Completar después
+    linkedin: 'https://www.linkedin.com/in/federicochironi/',
     // Foto: colocar en public/assets/team/ o similar
     photo: '/assets/team/federico-chironi.jpg',
 };
 
 const TarjetaFedericoChironi = () => {
-    const [showOptions, setShowOptions] = useState(false);
     const [imageError, setImageError] = useState(false);
 
     const handleDownloadVCard = () => {
         const vCardContent = generateVCard(contactData);
         downloadVCard(vCardContent, `${contactData.firstName}_${contactData.lastName}.vcf`);
-        setShowOptions(false);
-    };
-
-    const handleGoogleContacts = () => {
-        handleDownloadVCard();
-        window.open('https://contacts.google.com/', '_blank');
-    };
-
-    const handleAppleContacts = () => {
-        handleDownloadVCard();
     };
 
     return (
@@ -98,12 +87,11 @@ const TarjetaFedericoChironi = () => {
                                     <span className="contactoValor">{contactData.email}</span>
                                 </div>
                             </a>
-
                         </div>
 
                         {/* LinkedIn */}
                         <div className="redesSocialesTarjeta">
-                            <a href={contactData.linkedin || 'https://www.linkedin.com/company/fedesagency/'} target="_blank" rel="noopener noreferrer" className="redSocialBtn">
+                            <a href={contactData.linkedin} target="_blank" rel="noopener noreferrer" className="redSocialBtn">
                                 <FaLinkedin className="redSocialIcon" />
                                 <span>Conectar en LinkedIn</span>
                             </a>
@@ -113,28 +101,10 @@ const TarjetaFedericoChironi = () => {
                         <div className="agendameContainer">
                             <button
                                 className="botonAgendame"
-                                onClick={() => setShowOptions(!showOptions)}
+                                onClick={handleDownloadVCard}
                             >
                                 <FaUserPlus className="btnIcon" /> Agendame
                             </button>
-
-                            {/* Opciones de guardado */}
-                            {showOptions && (
-                                <div className="opcionesGuardado">
-                                    <button onClick={handleDownloadVCard} className="opcionBtn">
-                                        <FaDownload className="opcionIcon" />
-                                        <span>Descargar vCard</span>
-                                    </button>
-                                    <button onClick={handleGoogleContacts} className="opcionBtn google">
-                                        <FaGoogle className="opcionIcon" />
-                                        <span>Google Contacts</span>
-                                    </button>
-                                    <button onClick={handleAppleContacts} className="opcionBtn apple">
-                                        <FaApple className="opcionIcon" />
-                                        <span>Apple Contacts</span>
-                                    </button>
-                                </div>
-                            )}
                         </div>
                     </div>
                 </section>

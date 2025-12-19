@@ -85,9 +85,9 @@ const AppContent = () => {
           <Route path="/onboarding-empresas" element={<OnboardingEmpresas />} />
 
           {/* 📱 Tarjetas Digitales NFT/QR (acceso solo por link directo) */}
-          <Route path="/tarjeta-martin" element={<TarjetaMartin />} />
-          <Route path="/tarjeta-federico-juan" element={<TarjetaFedericoJuan />} />
-          <Route path="/tarjeta-federico-chironi" element={<TarjetaFedericoChironi />} />
+          <Route path="/feders/cards/martinspinelli" element={<TarjetaMartin />} />
+          <Route path="/feders/cards/fedejuan" element={<TarjetaFedericoJuan />} />
+          <Route path="/feders/cards/federicochironi" element={<TarjetaFedericoChironi />} />
 
           <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
