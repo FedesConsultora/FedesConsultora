@@ -33,6 +33,7 @@ import OnboardingEmpresas from './pages/OnboardingEmpresas';
 import TarjetaMartin from './pages/TarjetasDigitales/TarjetaMartin';
 import TarjetaFedericoJuan from './pages/TarjetasDigitales/TarjetaFedericoJuan';
 import TarjetaFedericoChironi from './pages/TarjetasDigitales/TarjetaFedericoChironi';
+import OdooLanding from './pages/OdooLanding';
 
 const AppContent = () => {
   const location = useLocation();
@@ -54,16 +55,20 @@ const AppContent = () => {
       // nueva clase para jugar con estilos si querés
       case '/onboarding-empresas':
         return 'onboarding';
+      case '/odoo':
+        return 'odoo';
       default:
         return '';
     }
   };
 
   const isCardPage = location.pathname.includes('/feders/cards/');
+  const isOdooPage = location.pathname === '/odoo';
+  const hideLayout = isCardPage || isOdooPage;
 
   return (
     <div className={`containerApp ${getContainerClass()}`}>
-      {!isCardPage && <Header />}
+      {!hideLayout && <Header />}
       <Main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -91,12 +96,15 @@ const AppContent = () => {
           <Route path="/feders/cards/fedejuan" element={<TarjetaFedericoJuan />} />
           <Route path="/feders/cards/federicochironi" element={<TarjetaFedericoChironi />} />
 
+          {/* 🌿 Landing QR Odoo / Agromarketing */}
+          <Route path="/odoo" element={<OdooLanding />} />
+
           <Route path="/politica-de-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/terminos-y-condiciones" element={<TerminosCondiciones />} />
           <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Main>
-      {!isCardPage && <Footer />}
+      {!hideLayout && <Footer />}
     </div>
   );
 };

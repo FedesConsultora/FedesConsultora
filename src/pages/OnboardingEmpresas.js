@@ -1,45 +1,23 @@
 // src/pages/OnboardingEmpresas.js
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import OnboardingLogin from '../components/Onboarding/OnboardingLogin';
 import OnboardingStep0 from '../components/Onboarding/OnboardingStep0';
 import OnboardingStep1 from '../components/Onboarding/OnboardingStep1';
 import {
   enviarOnboardingStep0,
   enviarOnboardingStep1,
+  saveOnboardingProgress,
+  getOnboardingProgress,
 } from '../services/googleApi';
 
-const STEP0_STORAGE_KEY = 'fedes_onboarding_step0';
-
-const STEP0_FIELDS = [
-  'fantasyName',
-  'cuit',
-  'mainContactName',
-  'address',
-  'email',
-  'taxpayerType',
-  'facebookUrl',
-  'facebookAdminUser',
-  'facebookGrantPermission',
-  'facebookBMId',
-  'instagramUser',
-  'instagramPassword',
-  'instagramFollowers',
-  'tiktokUser',
-  'tiktokPassword',
-  'tiktokFollowers',
-  'youtubeUrl',
-  'youtubeAddAdmin',
-  'linkedinUrl',
-  'linkedinAddFede',
-  'usesOtherChannels',
-  'otherChannelsDetail',
-  'driveBrandFolderUrl',
-  'driveRawContentFolderUrl',
-];
-
 const OnboardingEmpresas = () => {
-  const [currentStep, setCurrentStep] = useState(0); // 0 = Legajo, 1 = Preguntas
+  const [currentStep, setCurrentStep] = useState(0); // 0 = Login, 1 = Legajo, 2 = Preguntas
+  const [cuit, setCuit] = useState(''); // CUIT del usuario
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoadingProgress, setIsLoadingProgress] = useState(false);
+  const [progressMessage, setProgressMessage] = useState('');
   const [errors, setErrors] = useState({});
+  const autoSaveTimeoutRef = useRef(null);
 
   const [formData, setFormData] = useState({
     // ===== Step 0 - Legajo de cliente =====
@@ -103,58 +81,86 @@ const OnboardingEmpresas = () => {
     [formData]
   );
 
-  // Cargar Step 0 desde localStorage si existe
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  // Auto-guardar progreso cuando cambia el formulario
+  const autoSaveProgress = useCallback(async () => {
+    if (!cuit || currentStep === 0 || isSubmitted) return;
 
     try {
-      const stored = window.localStorage.getItem(STEP0_STORAGE_KEY);
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        setFormData((prev) => ({
-          ...prev,
-          ...parsed,
-        }));
-      }
-    } catch (err) {
-      console.error('Error leyendo step0 de localStorage', err);
+      await saveOnboardingProgress(cuit, formData, currentStep);
+      setProgressMessage('✓ Progreso guardado');
+      setTimeout(() => setProgressMessage(''), 2000);
+    } catch (error) {
+      console.error('Error auto-guardando:', error);
     }
-  }, []);
+  }, [cuit, formData, currentStep, isSubmitted]);
 
-  // 🔒 No dejar salir si hay cambios y no enviaron
+  // Efecto para auto-guardar con debounce
+  useEffect(() => {
+    if (!cuit || currentStep === 0 || isSubmitted) return;
+
+    // Limpiar timeout anterior
+    if (autoSaveTimeoutRef.current) {
+      clearTimeout(autoSaveTimeoutRef.current);
+    }
+
+    // Crear nuevo timeout
+    autoSaveTimeoutRef.current = setTimeout(() => {
+      autoSaveProgress();
+    }, 2000); // Auto-guardar después de 2 segundos sin cambios
+
+    return () => {
+      if (autoSaveTimeoutRef.current) {
+        clearTimeout(autoSaveTimeoutRef.current);
+      }
+    };
+  }, [formData, autoSaveProgress, cuit, currentStep, isSubmitted]);
+
+  // 🔒 No dejar salir si hay cambios y no enviaron (solo en pasos 1 y 2)
   useEffect(() => {
     const handleBeforeUnload = (event) => {
-      if (!isSubmitted && isDirty) {
+      // Solo mostrar warning si estás en Step 1 o 2, no en Login (Step 0)
+      if (!isSubmitted && isDirty && currentStep > 0) {
         event.preventDefault();
         event.returnValue = '';
       }
     };
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [isSubmitted, isDirty]);
+  }, [isSubmitted, isDirty, currentStep]);
+
+  // Manejar submit del CUIT (paso 0)
+  const handleCuitSubmit = async (submittedCuit) => {
+    setIsLoadingProgress(true);
+    setCuit(submittedCuit);
+
+    try {
+      // Intentar recuperar progreso existente
+      const progress = await getOnboardingProgress(submittedCuit);
+
+      if (progress && progress.formData && !progress.isCompleted) {
+        // Cargar progreso existente
+        setFormData(progress.formData);
+        setCurrentStep(progress.currentStep || 1);
+        setProgressMessage('✓ Progreso anterior cargado');
+        setTimeout(() => setProgressMessage(''), 3000);
+      } else {
+        // No hay progreso, comenzar desde el inicio
+        setFormData((prev) => ({ ...prev, cuit: submittedCuit }));
+        setCurrentStep(1);
+      }
+    } catch (error) {
+      console.error('Error cargando progreso:', error);
+      // En caso de error, continuar normalmente
+      setFormData((prev) => ({ ...prev, cuit: submittedCuit }));
+      setCurrentStep(1);
+    } finally {
+      setIsLoadingProgress(false);
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setFormData((prev) => {
-      const updated = { ...prev, [name]: value };
-
-      // Si es un campo del Step 0, lo persistimos en localStorage
-      if (STEP0_FIELDS.includes(name) && typeof window !== 'undefined') {
-        try {
-          const step0Data = {};
-          STEP0_FIELDS.forEach((field) => {
-            step0Data[field] = updated[field] || '';
-          });
-          window.localStorage.setItem(STEP0_STORAGE_KEY, JSON.stringify(step0Data));
-        } catch (err) {
-          console.error('Error guardando step0 en localStorage', err);
-        }
-      }
-
-      return updated;
-    });
-
+    setFormData((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: undefined }));
   };
 
@@ -172,23 +178,57 @@ const OnboardingEmpresas = () => {
   };
 
   const handleNext = async () => {
-    if (currentStep === 0) {
+    if (currentStep === 1) {
       if (!validateStep0()) return;
 
       try {
         await enviarOnboardingStep0(formData);
+        await saveOnboardingProgress(cuit, formData, 2); // Guardar antes de avanzar
       } catch (error) {
         console.error('Error enviando STEP 0:', error);
         // No bloqueamos el avance si falla
       }
 
-      setCurrentStep(1);
+      setCurrentStep(2);
     }
   };
 
   const handleBack = () => {
-    if (currentStep === 1) {
+    if (currentStep === 2) {
+      setCurrentStep(1);
+    } else if (currentStep === 1) {
       setCurrentStep(0);
+      setCuit('');
+      setFormData({
+        fantasyName: '',
+        cuit: '',
+        mainContactName: '',
+        address: '',
+        email: '',
+        taxpayerType: '',
+        facebookUrl: '',
+        facebookAdminUser: '',
+        facebookGrantPermission: 'si',
+        facebookBMId: '629423051411438',
+        instagramUser: '',
+        instagramPassword: '',
+        instagramFollowers: '',
+        tiktokUser: '',
+        tiktokPassword: '',
+        tiktokFollowers: '',
+        youtubeUrl: '',
+        youtubeAddAdmin: 'si',
+        linkedinUrl: '',
+        linkedinAddFede: 'si',
+        usesOtherChannels: 'no',
+        otherChannelsDetail: '',
+        driveBrandFolderUrl: '',
+        driveRawContentFolderUrl: '',
+        q1: '', q2: '', q3: '', q4: '', q5: '',
+        q6: '', q7: '', q8: '', q9: '', q10: '',
+        q11: '', q12: '', q13: '', q14: '', q15: '',
+        q16: '', q17: '', q18: '', q19: '', q20: '',
+      });
     }
   };
 
@@ -197,13 +237,10 @@ const OnboardingEmpresas = () => {
 
     try {
       await enviarOnboardingStep1(formData);
+      // Marcar como completado en el backend
+      await saveOnboardingProgress(cuit, formData, currentStep, true);
       console.log('Onboarding enviado:', formData);
       setIsSubmitted(true);
-
-      // Limpiamos el step0 persistido
-      if (typeof window !== 'undefined') {
-        window.localStorage.removeItem(STEP0_STORAGE_KEY);
-      }
     } catch (error) {
       console.error('Error enviando formulario (STEP 1):', error);
     }
@@ -212,17 +249,21 @@ const OnboardingEmpresas = () => {
   const renderStepIndicator = () => (
     <div className="onboarding-steps">
       <div
-        className={`step-item ${currentStep === 0 ? 'active' : ''} ${isSubmitted ? 'completed' : ''
-          }`}
+        className={`step-item ${currentStep === 0 ? 'active' : ''} ${currentStep > 0 ? 'completed' : ''}`}
       >
         <div className="step-circle">0</div>
+        <div className="step-label">Login</div>
+      </div>
+      <div
+        className={`step-item ${currentStep === 1 ? 'active' : ''} ${currentStep > 1 ? 'completed' : ''} ${isSubmitted ? 'completed' : ''}`}
+      >
+        <div className="step-circle">1</div>
         <div className="step-label">Legajo de cliente</div>
       </div>
       <div
-        className={`step-item ${currentStep === 1 ? 'active' : ''} ${isSubmitted ? 'completed' : ''
-          }`}
+        className={`step-item ${currentStep === 2 ? 'active' : ''} ${isSubmitted ? 'completed' : ''}`}
       >
-        <div className="step-circle">1</div>
+        <div className="step-circle">2</div>
         <div className="step-label">Preguntas de onboarding</div>
       </div>
     </div>
@@ -245,6 +286,13 @@ const OnboardingEmpresas = () => {
         <div className="onboarding-layout">
           <aside className="onboarding-sidebar">
             {renderStepIndicator()}
+
+            {progressMessage && (
+              <div className="progress-message">
+                {progressMessage}
+              </div>
+            )}
+
             <div className="sidebar-card">
               <h3>¿Por qué te pedimos esto?</h3>
               <p>
@@ -277,12 +325,19 @@ const OnboardingEmpresas = () => {
             </div>
           </aside>
 
-          <form className="onboarding-form" onSubmit={handleSubmit}>
+          <div className="onboarding-form">
             {currentStep === 0 && (
-              <OnboardingStep0 formData={formData} errors={errors} onChange={handleChange} />
+              <OnboardingLogin
+                onCuitSubmit={handleCuitSubmit}
+                isLoading={isLoadingProgress}
+              />
             )}
 
             {currentStep === 1 && (
+              <OnboardingStep0 formData={formData} errors={errors} onChange={handleChange} />
+            )}
+
+            {currentStep === 2 && (
               <OnboardingStep1 formData={formData} onChange={handleChange} />
             )}
 
@@ -294,23 +349,38 @@ const OnboardingEmpresas = () => {
                   onClick={handleBack}
                   disabled={isSubmitted}
                 >
+                  Volver al inicio
+                </button>
+              )}
+
+              {currentStep === 2 && (
+                <button
+                  type="button"
+                  className="btn-secondary"
+                  onClick={handleBack}
+                  disabled={isSubmitted}
+                >
                   Volver al paso anterior
                 </button>
               )}
 
-              {currentStep === 0 && (
+              {currentStep === 1 && (
                 <button
                   type="button"
                   className="btn-primary"
                   onClick={handleNext}
                   disabled={isSubmitted}
                 >
-                  Continuar al Paso 1
+                  Continuar al Paso 2
                 </button>
               )}
 
-              {currentStep === 1 && !isSubmitted && (
-                <button type="submit" className="btn-primary">
+              {currentStep === 2 && !isSubmitted && (
+                <button
+                  type="button"
+                  className="btn-primary"
+                  onClick={handleSubmit}
+                >
                   Enviar formulario
                 </button>
               )}
@@ -321,7 +391,7 @@ const OnboardingEmpresas = () => {
                 </a>
               )}
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </main>

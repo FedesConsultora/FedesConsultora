@@ -3,13 +3,13 @@ import React, {
 } from 'react';
 
 const TEAM = [
-  { name: 'Andre Coronel Vargas',  role: 'Analista Multimedia',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_andre.webp',   linkedin: 'https://www.linkedin.com/in/andr%C3%A9-wilber-coronel-vargas/' },
-  { name: 'Mateo Germano',         role: 'Analista Multimedia',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_mateo.webp',   linkedin: 'https://www.linkedin.com/in/mateo-germano-898b872b1/' },
-  { name: 'Gonzalo Cañibano',      role: 'Analista de Cuentas',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_gonzalo.webp', linkedin: 'https://www.linkedin.com/in/gonzalo-canibano-a703872a/' },
-  { name: 'Enzo Pinotti',          role: 'Desarrollador',                        photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_enzo.webp',    linkedin: 'https://www.linkedin.com/in/enzo-daniel-pinotti-667270179/' },
-  { name: 'Florencia Marchesotti', role: 'Analista en Diseño',                   photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_flor.webp',    linkedin: 'https://www.linkedin.com/in/florencia-marchesotti-7570a3212/' },
-  { name: 'Romina Albanesi',       role: 'Responsable de Comunicación',             photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_romi.webp',    linkedin: 'https://www.linkedin.com/in/rominaalbanesi/' },
-  { name: 'Paola Lopez',           role: 'Analista de Cuentas',                  photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_paola.webp',   linkedin: 'https://www.linkedin.com/in/paola-alejandra-lópez-6117969/' },
+
+  { name: 'Mateo Germano', role: 'Analista Multimedia', photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_mateo.webp', linkedin: 'https://www.linkedin.com/in/mateo-germano-898b872b1/' },
+  { name: 'Gonzalo Cañibano', role: 'Analista de Cuentas', photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_gonzalo.webp', linkedin: 'https://www.linkedin.com/in/gonzalo-canibano-a703872a/' },
+  { name: 'Enzo Pinotti', role: 'Desarrollador', photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_enzo.webp', linkedin: 'https://www.linkedin.com/in/enzo-daniel-pinotti-667270179/' },
+  { name: 'Florencia Marchesotti', role: 'Analista en Diseño', photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_flor.webp', linkedin: 'https://www.linkedin.com/in/florencia-marchesotti-7570a3212/' },
+  { name: 'Romina Albanesi', role: 'Responsable de Comunicación', photo: 'https://fedesconsultora.com/fedes-consultora/landing/foto_romi.webp', linkedin: 'https://www.linkedin.com/in/rominaalbanesi/' },
+
 ];
 
 const LinkedInIcon = () => (
@@ -24,20 +24,20 @@ const LinkedInIcon = () => (
 export default function TeamCarousel() {
   const LOOP = useMemo(() => [...TEAM, ...TEAM, ...TEAM], []);
   const containerRef = useRef(null);
-  const trackRef     = useRef(null);
+  const trackRef = useRef(null);
 
   const [paused, setPaused] = useState(false);
-  const draggingRef         = useRef(false);
+  const draggingRef = useRef(false);
 
-  const posRef      = useRef(0);
-  const cycleRef    = useRef(0);
-  const startXRef   = useRef(0);
+  const posRef = useRef(0);
+  const cycleRef = useRef(0);
+  const startXRef = useRef(0);
   const startPosRef = useRef(0);
-  const rafRef      = useRef(null);
-  const lastTsRef   = useRef(0);
+  const rafRef = useRef(null);
+  const lastTsRef = useRef(0);
 
   // ↑ “un poco más rápido”
-  const speedRef    = useRef(36); // px/seg
+  const speedRef = useRef(36); // px/seg
 
   const normalize = useCallback((x) => {
     const C = cycleRef.current || 0;
@@ -114,7 +114,7 @@ export default function TeamCarousel() {
     if (!el) return;
     draggingRef.current = true;
     setPaused(true);
-    startXRef.current   = e.clientX ?? 0;
+    startXRef.current = e.clientX ?? 0;
     startPosRef.current = posRef.current;
     el.classList.add('is-dragging');
     el.setPointerCapture?.(e.pointerId);
@@ -142,7 +142,7 @@ export default function TeamCarousel() {
   }, []);
 
   return (
-    <section className="teamCarouselSection" role="region" aria-label="Equipo Fedes">
+    <section className="teamCarouselSection" aria-label="Equipo Fedes">
       <article className="equipoHeader">
         <p>Equipo</p>
         <img
